@@ -1,0 +1,2369 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+FacebookSEO
+</name>
+</assembly>
+<members>
+<member name="T:FacebookSEO.My.MyWebExtension">
+ <summary>
+ Module used to define the properties that are available in the My Namespace for Web projects.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:FacebookSEO.My.MyWebExtension.Application">
+ <summary>
+ Returns information about the current application.
+ </summary>
+</member>
+<member name="P:FacebookSEO.My.MyWebExtension.Computer">
+ <summary>
+ Returns information about the host computer.
+ </summary>
+</member>
+<member name="P:FacebookSEO.My.MyWebExtension.User">
+ <summary>
+ Returns information for the current Web user.
+ </summary>
+</member>
+<member name="P:FacebookSEO.My.MyWebExtension.Request">
+ <summary>
+ Returns Request object.
+ </summary>
+</member>
+<member name="P:FacebookSEO.My.MyWebExtension.Response">
+ <summary>
+ Returns Response object.
+ </summary>
+</member>
+<member name="P:FacebookSEO.My.MyWebExtension.Log">
+ <summary>
+ Returns the Asp log object.
+ </summary>
+</member>
+<member name="P:FacebookSEO.My.MyWebExtension.WebServices">
+ <summary>
+ Provides access to WebServices added to this project.
+ </summary>
+</member>
+<member name="T:FacebookSEO.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:FacebookSEO.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:FacebookSEO.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:FacebookSEO.Common.SetCookies(System.String,System.String)">
+ <summary>
+ create a cookie and set value
+ </summary>
+ <param name="cookieName"></param>
+ <param name="cookieVal"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:FacebookSEO.Common.GetCookies(System.String)">
+ <summary>
+ 获取某个特定Cookie的值
+ </summary>
+ <param name="cookieName"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:FacebookSEO.Common.ClearCookies(System.String)">
+ <summary>
+ 清除某个cookie
+ </summary>
+ <param name="cookieName"></param>
+ <remarks></remarks>
+</member>
+<member name="F:FacebookSEO._Default1._ReItems">
+<summary>
+ReItems control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:FacebookSEO._Default1._AspNetPager1">
+<summary>
+AspNetPager1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:FacebookSEO.ChangePassword._ChangeUserPassword">
+<summary>
+ChangeUserPassword control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:FacebookSEO.Login._RegisterHyperLink">
+<summary>
+RegisterHyperLink control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:FacebookSEO.Login._LoginUser">
+<summary>
+LoginUser control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:FacebookSEO.Register._RegisterUser">
+<summary>
+RegisterUser control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:FacebookSEO.Register._RegisterUserWizardStep">
+<summary>
+RegisterUserWizardStep control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="T:FacebookSEO.EmailAlerterEntitiesForRefreshFBToken">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.EmailAlerterEntitiesForRefreshFBToken.#ctor">
+ <summary>
+ Initializes a new EmailAlerterEntitiesForRefreshFBToken object using the connection string found in the 'EmailAlerterEntitiesForRefreshFBToken' section of the application configuration file.
+ </summary>
+</member>
+<member name="M:FacebookSEO.EmailAlerterEntitiesForRefreshFBToken.#ctor(System.String)">
+ <summary>
+ Initialize a new EmailAlerterEntitiesForRefreshFBToken object.
+ </summary>
+</member>
+<member name="M:FacebookSEO.EmailAlerterEntitiesForRefreshFBToken.#ctor(System.Data.EntityClient.EntityConnection)">
+ <summary>
+ Initialize a new EmailAlerterEntitiesForRefreshFBToken object.
+ </summary>
+</member>
+<member name="P:FacebookSEO.EmailAlerterEntitiesForRefreshFBToken.EmailAlerterTokens">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.EmailAlerterEntitiesForRefreshFBToken.AddToEmailAlerterTokens(FacebookSEO.EmailAlerterToken)">
+ <summary>
+ Deprecated Method for adding a new object to the EmailAlerterTokens EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member>
+<member name="T:FacebookSEO.EmailAlerterToken">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.EmailAlerterToken.CreateEmailAlerterToken(System.Int32)">
+ <summary>
+ Create a new EmailAlerterToken object.
+ </summary>
+ <param name="id">Initial value of the id property.</param>
+</member>
+<member name="P:FacebookSEO.EmailAlerterToken.id">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.EmailAlerterToken.type">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.EmailAlerterToken.shortTimeToken">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.EmailAlerterToken.longTimeToken">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.EmailAlerterToken.longTokenExpireDate">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="T:FacebookSEO.FaceBookForSEOEntities">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.#ctor">
+ <summary>
+ Initializes a new FaceBookForSEOEntities object using the connection string found in the 'FaceBookForSEOEntities' section of the application configuration file.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.#ctor(System.String)">
+ <summary>
+ Initialize a new FaceBookForSEOEntities object.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.#ctor(System.Data.EntityClient.EntityConnection)">
+ <summary>
+ Initialize a new FaceBookForSEOEntities object.
+ </summary>
+</member>
+<member name="P:FacebookSEO.FaceBookForSEOEntities.Ads">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.FaceBookForSEOEntities.Ads_Issue">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.FaceBookForSEOEntities.AutomationPlans">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.FaceBookForSEOEntities.Categories">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.FaceBookForSEOEntities.Clicks_Issue">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.FaceBookForSEOEntities.ContactLists_Issue">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.FaceBookForSEOEntities.Convertions_Issue">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.FaceBookForSEOEntities.Issues">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.FaceBookForSEOEntities.Opens_Issue">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.FaceBookForSEOEntities.PlanTypes">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.FaceBookForSEOEntities.Products">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.FaceBookForSEOEntities.Products_Issue">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.FaceBookForSEOEntities.Promotions">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.FaceBookForSEOEntities.RssContactLists">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.FaceBookForSEOEntities.RssSubscriptions">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.FaceBookForSEOEntities.Sections">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.FaceBookForSEOEntities.SentLogs">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.FaceBookForSEOEntities.SplitContactLists">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.FaceBookForSEOEntities.sysdiagrams">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.FaceBookForSEOEntities.Templates">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.FaceBookForSEOEntities.TemplateCategories">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.FaceBookForSEOEntities.TemplateInfoes">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.FaceBookForSEOEntities.TemplateLibraries">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.FaceBookForSEOEntities.AutomationSites">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.FaceBookForSEOEntities.CateTags">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.FaceBookForSEOEntities.Tokens">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.FaceBookForSEOEntities.KeyWords">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.AddToAds(FacebookSEO.Ad)">
+ <summary>
+ Deprecated Method for adding a new object to the Ads EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.AddToAds_Issue(FacebookSEO.Ads_Issue)">
+ <summary>
+ Deprecated Method for adding a new object to the Ads_Issue EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.AddToAutomationPlans(FacebookSEO.AutomationPlan)">
+ <summary>
+ Deprecated Method for adding a new object to the AutomationPlans EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.AddToCategories(FacebookSEO.Category)">
+ <summary>
+ Deprecated Method for adding a new object to the Categories EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.AddToClicks_Issue(FacebookSEO.Clicks_Issue)">
+ <summary>
+ Deprecated Method for adding a new object to the Clicks_Issue EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.AddToContactLists_Issue(FacebookSEO.ContactLists_Issue)">
+ <summary>
+ Deprecated Method for adding a new object to the ContactLists_Issue EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.AddToConvertions_Issue(FacebookSEO.Convertions_Issue)">
+ <summary>
+ Deprecated Method for adding a new object to the Convertions_Issue EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.AddToIssues(FacebookSEO.Issue)">
+ <summary>
+ Deprecated Method for adding a new object to the Issues EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.AddToOpens_Issue(FacebookSEO.Opens_Issue)">
+ <summary>
+ Deprecated Method for adding a new object to the Opens_Issue EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.AddToPlanTypes(FacebookSEO.PlanType)">
+ <summary>
+ Deprecated Method for adding a new object to the PlanTypes EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.AddToProducts(FacebookSEO.Product)">
+ <summary>
+ Deprecated Method for adding a new object to the Products EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.AddToProducts_Issue(FacebookSEO.Products_Issue)">
+ <summary>
+ Deprecated Method for adding a new object to the Products_Issue EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.AddToPromotions(FacebookSEO.Promotion)">
+ <summary>
+ Deprecated Method for adding a new object to the Promotions EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.AddToRssContactLists(FacebookSEO.RssContactList)">
+ <summary>
+ Deprecated Method for adding a new object to the RssContactLists EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.AddToRssSubscriptions(FacebookSEO.RssSubscription)">
+ <summary>
+ Deprecated Method for adding a new object to the RssSubscriptions EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.AddToSections(FacebookSEO.Section)">
+ <summary>
+ Deprecated Method for adding a new object to the Sections EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.AddToSentLogs(FacebookSEO.SentLog)">
+ <summary>
+ Deprecated Method for adding a new object to the SentLogs EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.AddToSplitContactLists(FacebookSEO.SplitContactList)">
+ <summary>
+ Deprecated Method for adding a new object to the SplitContactLists EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.AddTosysdiagrams(FacebookSEO.sysdiagram)">
+ <summary>
+ Deprecated Method for adding a new object to the sysdiagrams EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.AddToTemplates(FacebookSEO.Template)">
+ <summary>
+ Deprecated Method for adding a new object to the Templates EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.AddToTemplateCategories(FacebookSEO.TemplateCategory)">
+ <summary>
+ Deprecated Method for adding a new object to the TemplateCategories EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.AddToTemplateInfoes(FacebookSEO.TemplateInfo)">
+ <summary>
+ Deprecated Method for adding a new object to the TemplateInfoes EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.AddToTemplateLibraries(FacebookSEO.TemplateLibrary)">
+ <summary>
+ Deprecated Method for adding a new object to the TemplateLibraries EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.AddToAutomationSites(FacebookSEO.AutomationSite)">
+ <summary>
+ Deprecated Method for adding a new object to the AutomationSites EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.AddToCateTags(FacebookSEO.CateTag)">
+ <summary>
+ Deprecated Method for adding a new object to the CateTags EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.AddToTokens(FacebookSEO.Token)">
+ <summary>
+ Deprecated Method for adding a new object to the Tokens EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.AddToKeyWords(FacebookSEO.KeyWord)">
+ <summary>
+ Deprecated Method for adding a new object to the KeyWords EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member>
+<member name="M:FacebookSEO.FaceBookForSEOEntities.GetPostsFacebookSeo(System.String,System.String,System.String)">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+ <param name="siteid">No Metadata Documentation available.</param>
+ <param name="prodType">No Metadata Documentation available.</param>
+ <param name="keyWord">No Metadata Documentation available.</param>
+</member>
+<member name="T:FacebookSEO.Ad">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.Ad.CreateAd(System.Int64)">
+ <summary>
+ Create a new Ad object.
+ </summary>
+ <param name="adID">Initial value of the AdID property.</param>
+</member>
+<member name="P:FacebookSEO.Ad.AdID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Ad.Ad1">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Ad.Url">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Ad.PictureUrl">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Ad.Description">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Ad.SizeHeight">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Ad.SizeWidth">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Ad.SiteID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Ad.Type">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Ad.Lastupdate">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Ad.Price">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Ad.Discount">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Ad.Ads_Issue">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Ad.Categories">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Ad.AutomationSite">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Ad.AutomationSiteReference">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="T:FacebookSEO.Ads_Issue">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.Ads_Issue.CreateAds_Issue(System.Int64,System.Int32,System.Int64)">
+ <summary>
+ Create a new Ads_Issue object.
+ </summary>
+ <param name="adId">Initial value of the AdId property.</param>
+ <param name="siteId">Initial value of the SiteId property.</param>
+ <param name="issueID">Initial value of the IssueID property.</param>
+</member>
+<member name="P:FacebookSEO.Ads_Issue.AdId">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Ads_Issue.SiteId">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Ads_Issue.IssueID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Ads_Issue.Ad">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Ads_Issue.AdReference">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Ads_Issue.Issue">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Ads_Issue.IssueReference">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Ads_Issue.AutomationSite">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Ads_Issue.AutomationSiteReference">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="T:FacebookSEO.AutomationPlan">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.AutomationPlan.CreateAutomationPlan(System.Int32,System.String)">
+ <summary>
+ Create a new AutomationPlan object.
+ </summary>
+ <param name="siteID">Initial value of the SiteID property.</param>
+ <param name="planType">Initial value of the PlanType property.</param>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.SiteID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.PlanType">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.StartAt">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.EndAt">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.IntervalDay">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.WeekDays">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.SenderName">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.SenderEmail">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.TemplateID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.Status">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.SplitContactCount">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.URL">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.Categories">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.Day_Of_Week">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.ContactList">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.CampaignStatus">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.ScheduleTimeInteval">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.ListType">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.SearchAPIType">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.SearchStartDayInterval">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.SearchEndDayInterval">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.UrlSpecialCode">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.LimitQuantity">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.SellerEmail">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.TimeLimit">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.TriggerForNFC">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.SubjectForNFC">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.PlanType1">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.PlanType1Reference">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.Template">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.TemplateReference">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.AutomationSite">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationPlan.AutomationSiteReference">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="T:FacebookSEO.AutomationSite">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.AutomationSite.CreateAutomationSite(System.Int32)">
+ <summary>
+ Create a new AutomationSite object.
+ </summary>
+ <param name="siteid">Initial value of the siteid property.</param>
+</member>
+<member name="P:FacebookSEO.AutomationSite.siteid">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationSite.SiteName">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationSite.SiteNameSc">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationSite.SpreadLogin">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationSite.AppID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationSite.DllType">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationSite.SiteUrl">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationSite.Description">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationSite.volumn">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationSite.shopUrl">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationSite.k11SiteUrl">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationSite.k11SiteUrlSC">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationSite.CreateTime">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationSite.Ads">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationSite.Ads_Issue">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationSite.AutomationPlans">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationSite.Categories">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationSite.Issues">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationSite.Products">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationSite.Products_Issue">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.AutomationSite.SentLogs">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="T:FacebookSEO.Category">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.Category.CreateCategory(System.Int32)">
+ <summary>
+ Create a new Category object.
+ </summary>
+ <param name="categoryID">Initial value of the CategoryID property.</param>
+</member>
+<member name="P:FacebookSEO.Category.CategoryID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Category.ParentID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Category.Category1">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Category.SiteID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Category.LastUpdate">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Category.Description">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Category.Url">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Category.PictureUrl">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Category.PictureAlt">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Category.SizeHeight">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Category.SizeWidth">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Category.Gender">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Category.Ads">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Category.Products">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Category.AutomationSite">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Category.AutomationSiteReference">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="T:FacebookSEO.CateTag">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.CateTag.CreateCateTag(System.Int32)">
+ <summary>
+ Create a new CateTag object.
+ </summary>
+ <param name="id">Initial value of the ID property.</param>
+</member>
+<member name="P:FacebookSEO.CateTag.ID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.CateTag.CateName">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.CateTag.CateNameSC">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.CateTag.ParentID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.CateTag.HasShopID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.CateTag.CateUrl">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.CateTag.CateUrlSc">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="T:FacebookSEO.Clicks_Issue">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.Clicks_Issue.CreateClicks_Issue(System.Int64)">
+ <summary>
+ Create a new Clicks_Issue object.
+ </summary>
+ <param name="clickID">Initial value of the ClickID property.</param>
+</member>
+<member name="P:FacebookSEO.Clicks_Issue.ClickID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Clicks_Issue.IssueID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Clicks_Issue.SpreadCampId">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Clicks_Issue.SubEmail">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Clicks_Issue.ClickUrl">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Clicks_Issue.ClickDate">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Clicks_Issue.siteid">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="T:FacebookSEO.ContactLists_Issue">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.ContactLists_Issue.CreateContactLists_Issue(System.Int64,System.String)">
+ <summary>
+ Create a new ContactLists_Issue object.
+ </summary>
+ <param name="issueID">Initial value of the IssueID property.</param>
+ <param name="contactList">Initial value of the ContactList property.</param>
+</member>
+<member name="P:FacebookSEO.ContactLists_Issue.IssueID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.ContactLists_Issue.ContactList">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.ContactLists_Issue.SendTime">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.ContactLists_Issue.SendingStatus">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.ContactLists_Issue.Issue">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.ContactLists_Issue.IssueReference">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="T:FacebookSEO.Convertions_Issue">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.Convertions_Issue.CreateConvertions_Issue(System.Int64)">
+ <summary>
+ Create a new Convertions_Issue object.
+ </summary>
+ <param name="convertID">Initial value of the ConvertID property.</param>
+</member>
+<member name="P:FacebookSEO.Convertions_Issue.ConvertID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Convertions_Issue.IssueID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Convertions_Issue.SpreadCampId">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Convertions_Issue.SubEmail">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Convertions_Issue.ConvertType">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Convertions_Issue.ConvertUrl">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Convertions_Issue.ConvertValue">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Convertions_Issue.ConvertTime">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Convertions_Issue.siteid">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="T:FacebookSEO.Issue">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.Issue.CreateIssue(System.Int64,System.DateTime)">
+ <summary>
+ Create a new Issue object.
+ </summary>
+ <param name="issueID">Initial value of the IssueID property.</param>
+ <param name="issueDate">Initial value of the IssueDate property.</param>
+</member>
+<member name="P:FacebookSEO.Issue.IssueID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Issue.IssueDate">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Issue.Subject">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Issue.SiteID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Issue.PlanType">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Issue.SentStatus">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Issue.SpreadCampId">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Issue.Ads_Issue">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Issue.ContactLists_Issue">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Issue.Issues1">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Issue.Issues1Reference">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Issue.Issue1">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Issue.Issue1Reference">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Issue.PlanType1">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Issue.PlanType1Reference">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Issue.Products_Issue">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Issue.AutomationSite">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Issue.AutomationSiteReference">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="T:FacebookSEO.KeyWord">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.KeyWord.CreateKeyWord(System.Int32)">
+ <summary>
+ Create a new KeyWord object.
+ </summary>
+ <param name="id">Initial value of the ID property.</param>
+</member>
+<member name="P:FacebookSEO.KeyWord.ID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.KeyWord.KeyWord1">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.KeyWord.Type">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.KeyWord.KeyUrl">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.KeyWord.Siteid">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="T:FacebookSEO.Opens_Issue">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.Opens_Issue.CreateOpens_Issue(System.Int64)">
+ <summary>
+ Create a new Opens_Issue object.
+ </summary>
+ <param name="openID">Initial value of the OpenID property.</param>
+</member>
+<member name="P:FacebookSEO.Opens_Issue.OpenID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Opens_Issue.IssueID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Opens_Issue.SpreadCampId">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Opens_Issue.SubEmail">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Opens_Issue.OpenDate">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Opens_Issue.siteid">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="T:FacebookSEO.PlanType">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.PlanType.CreatePlanType(System.String)">
+ <summary>
+ Create a new PlanType object.
+ </summary>
+ <param name="planType1">Initial value of the PlanType1 property.</param>
+</member>
+<member name="P:FacebookSEO.PlanType.PlanType1">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.PlanType.Description">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.PlanType.AutomationPlans">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.PlanType.Issues">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.PlanType.SplitContactLists">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.PlanType.Templates">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="T:FacebookSEO.Product">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.Product.CreateProduct(System.Int64)">
+ <summary>
+ Create a new Product object.
+ </summary>
+ <param name="prodouctID">Initial value of the ProdouctID property.</param>
+</member>
+<member name="P:FacebookSEO.Product.ProdouctID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Product.Prodouct">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Product.Url">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Product.Price">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Product.Discount">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Product.Sales">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Product.PictureUrl">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Product.LastUpdate">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Product.Description">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Product.SiteID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Product.Currency">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Product.PictureAlt">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Product.SizeHeight">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Product.SizeWidth">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Product.TbScore">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Product.TbComment">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Product.FreeShippingImg">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Product.ShipsImg">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Product.ExpiredDate">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Product.Products_Issue">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Product.Categories">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Product.AutomationSite">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Product.AutomationSiteReference">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="T:FacebookSEO.Products_Issue">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.Products_Issue.CreateProducts_Issue(System.Int64,System.Int32,System.Int64,System.String)">
+ <summary>
+ Create a new Products_Issue object.
+ </summary>
+ <param name="productId">Initial value of the ProductId property.</param>
+ <param name="siteId">Initial value of the SiteId property.</param>
+ <param name="issueID">Initial value of the IssueID property.</param>
+ <param name="sectionID">Initial value of the SectionID property.</param>
+</member>
+<member name="P:FacebookSEO.Products_Issue.ProductId">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Products_Issue.SiteId">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Products_Issue.IssueID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Products_Issue.SectionID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Products_Issue.Priority">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Products_Issue.Issue">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Products_Issue.IssueReference">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Products_Issue.Product">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Products_Issue.ProductReference">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Products_Issue.Section">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Products_Issue.SectionReference">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Products_Issue.AutomationSite">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Products_Issue.AutomationSiteReference">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="T:FacebookSEO.Promotion">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.Promotion.CreatePromotion(System.Int32,System.String,System.String)">
+ <summary>
+ Create a new Promotion object.
+ </summary>
+ <param name="itemID">Initial value of the ItemID property.</param>
+ <param name="itemName">Initial value of the ItemName property.</param>
+ <param name="description">Initial value of the Description property.</param>
+</member>
+<member name="P:FacebookSEO.Promotion.ItemID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Promotion.ItemName">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Promotion.Description">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="T:FacebookSEO.RssContactList">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.RssContactList.CreateRssContactList(System.Int32)">
+ <summary>
+ Create a new RssContactList object.
+ </summary>
+ <param name="contactListId">Initial value of the ContactListId property.</param>
+</member>
+<member name="P:FacebookSEO.RssContactList.ContactListId">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.RssContactList.RssId">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.RssContactList.ContactListName">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="T:FacebookSEO.RssSubscription">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.RssSubscription.CreateRssSubscription(System.Int32,System.Int32)">
+ <summary>
+ Create a new RssSubscription object.
+ </summary>
+ <param name="rssId">Initial value of the RssId property.</param>
+ <param name="siteID">Initial value of the SiteID property.</param>
+</member>
+<member name="P:FacebookSEO.RssSubscription.RssId">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.RssSubscription.URL">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.RssSubscription.SpreadLogin">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.RssSubscription.StartAt">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.RssSubscription.EndAt">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.RssSubscription.IntervalDay">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.RssSubscription.WeekDays">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.RssSubscription.SenderName">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.RssSubscription.SenderEmail">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.RssSubscription.Template">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.RssSubscription.Status">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.RssSubscription.ExcludeSubject">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.RssSubscription.DefaultSubject">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.RssSubscription.rssType">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.RssSubscription.AppID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.RssSubscription.Categories">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.RssSubscription.SiteID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="T:FacebookSEO.Section">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.Section.CreateSection(System.String)">
+ <summary>
+ Create a new Section object.
+ </summary>
+ <param name="sectionID">Initial value of the SectionID property.</param>
+</member>
+<member name="P:FacebookSEO.Section.SectionID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Section.Section1">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Section.Products_Issue">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="T:FacebookSEO.SentLog">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.SentLog.CreateSentLog(System.Int32)">
+ <summary>
+ Create a new SentLog object.
+ </summary>
+ <param name="sentLogId">Initial value of the SentLogId property.</param>
+</member>
+<member name="P:FacebookSEO.SentLog.SentLogId">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.SentLog.RssId">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.SentLog.Subject">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.SentLog.LastSentAt">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.SentLog.SiteID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.SentLog.PlanType">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.SentLog.AutomationSite">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.SentLog.AutomationSiteReference">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="T:FacebookSEO.SplitContactList">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.SplitContactList.CreateSplitContactList(System.String,System.String,System.Boolean,System.Int32)">
+ <summary>
+ Create a new SplitContactList object.
+ </summary>
+ <param name="shopName">Initial value of the ShopName property.</param>
+ <param name="contactListName">Initial value of the ContactListName property.</param>
+ <param name="flag">Initial value of the Flag property.</param>
+ <param name="splitID">Initial value of the SplitID property.</param>
+</member>
+<member name="P:FacebookSEO.SplitContactList.ShopName">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.SplitContactList.ContactListName">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.SplitContactList.RssType">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.SplitContactList.Flag">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.SplitContactList.SiteID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.SplitContactList.PlanType">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.SplitContactList.SplitID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.SplitContactList.SendTime">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.SplitContactList.SendingStatus">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.SplitContactList.PlanType1">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.SplitContactList.PlanType1Reference">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="T:FacebookSEO.sysdiagram">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.sysdiagram.Createsysdiagram(System.String,System.Int32,System.Int32)">
+ <summary>
+ Create a new sysdiagram object.
+ </summary>
+ <param name="name">Initial value of the name property.</param>
+ <param name="principal_id">Initial value of the principal_id property.</param>
+ <param name="diagram_id">Initial value of the diagram_id property.</param>
+</member>
+<member name="P:FacebookSEO.sysdiagram.name">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.sysdiagram.principal_id">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.sysdiagram.diagram_id">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.sysdiagram.version">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.sysdiagram.definition">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="T:FacebookSEO.Template">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.Template.CreateTemplate(System.Int32,System.String,System.String,System.String)">
+ <summary>
+ Create a new Template object.
+ </summary>
+ <param name="tid">Initial value of the Tid property.</param>
+ <param name="userName">Initial value of the UserName property.</param>
+ <param name="templateName">Initial value of the TemplateName property.</param>
+ <param name="contents">Initial value of the Contents property.</param>
+</member>
+<member name="P:FacebookSEO.Template.Tid">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Template.UserName">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Template.TemplateName">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Template.Contents">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Template.RssID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Template.SiteID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Template.tType">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Template.PlanType">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Template.AutomationPlans">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Template.PlanType1">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Template.PlanType1Reference">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="T:FacebookSEO.TemplateCategory">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.TemplateCategory.CreateTemplateCategory(System.Int64)">
+ <summary>
+ Create a new TemplateCategory object.
+ </summary>
+ <param name="categoryId">Initial value of the CategoryId property.</param>
+</member>
+<member name="P:FacebookSEO.TemplateCategory.CategoryId">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.TemplateCategory.SiteType">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="T:FacebookSEO.TemplateInfo">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.TemplateInfo.CreateTemplateInfo(System.Int64)">
+ <summary>
+ Create a new TemplateInfo object.
+ </summary>
+ <param name="siteId">Initial value of the SiteId property.</param>
+</member>
+<member name="P:FacebookSEO.TemplateInfo.SiteId">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.TemplateInfo.PlanType">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.TemplateInfo.SortedCates">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.TemplateInfo.DisplayCount">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.TemplateInfo.Modified">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="T:FacebookSEO.TemplateLibrary">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.TemplateLibrary.CreateTemplateLibrary(System.Int64)">
+ <summary>
+ Create a new TemplateLibrary object.
+ </summary>
+ <param name="tid">Initial value of the Tid property.</param>
+</member>
+<member name="P:FacebookSEO.TemplateLibrary.Tid">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.TemplateLibrary.Contents">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.TemplateLibrary.Description">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.TemplateLibrary.CategoryId">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.TemplateLibrary.Demo">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="T:FacebookSEO.Token">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.Token.CreateToken(System.Int32)">
+ <summary>
+ Create a new Token object.
+ </summary>
+ <param name="id">Initial value of the id property.</param>
+</member>
+<member name="P:FacebookSEO.Token.id">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Token.type">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Token.shortTimeToken">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Token.longTimeToken">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.Token.longTokenExpireDate">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="T:FacebookSEO.GetPostsFacebookSeo_Result">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="M:FacebookSEO.GetPostsFacebookSeo_Result.CreateGetPostsFacebookSeo_Result(System.Int64,System.Int32)">
+ <summary>
+ Create a new GetPostsFacebookSeo_Result object.
+ </summary>
+ <param name="prodouctID">Initial value of the ProdouctID property.</param>
+ <param name="siteID">Initial value of the SiteID property.</param>
+</member>
+<member name="P:FacebookSEO.GetPostsFacebookSeo_Result.ProdouctID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.GetPostsFacebookSeo_Result.Prodouct">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.GetPostsFacebookSeo_Result.Url">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.GetPostsFacebookSeo_Result.Price">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.GetPostsFacebookSeo_Result.Discount">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.GetPostsFacebookSeo_Result.Sales">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.GetPostsFacebookSeo_Result.PictureUrl">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.GetPostsFacebookSeo_Result.Description">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.GetPostsFacebookSeo_Result.SiteID">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.GetPostsFacebookSeo_Result.Currency">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.GetPostsFacebookSeo_Result.PictureAlt">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.GetPostsFacebookSeo_Result.SiteName">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.GetPostsFacebookSeo_Result.k11siteurl">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="P:FacebookSEO.GetPostsFacebookSeo_Result.sitetitlename">
+ <summary>
+ No Metadata Documentation available.
+ </summary>
+</member>
+<member name="F:FacebookSEO.shops._form1">
+<summary>
+form1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="M:FacebookSEO.shops.FilterKeyword(System.String)">
+ <summary>
+ 匹配一串文本中的“#** ” 或“#***#”类型的文字，这些文字组提取出来作为k11Seo关键字用
+ </summary>
+ <param name="postText"></param>
+ <returns>返回文字组list</returns>
+ <remarks></remarks>
+</member>
+<member name="M:FacebookSEO.shops.InsertKeyWord(System.Collections.Generic.List{System.String},System.String,System.Int32)">
+ <summary>
+ 将获取的一串关键字保存至数据库,来源于微博的type='tst',来源于facebook则type='fb'
+ </summary>
+ <param name="keyWords"></param>
+ <param name="type">tst或“”</param>
+ <remarks>点击链接url均保存在字段KeyURl</remarks>
+</member>
+<member name="F:FacebookSEO.Site._HeadContent">
+<summary>
+HeadContent control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:FacebookSEO.Site._MainContent">
+<summary>
+MainContent control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:FacebookSEO.TokenManage._form1">
+<summary>
+form1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:FacebookSEO.TokenManage._txtLongTokenExpriedin">
+<summary>
+txtLongTokenExpriedin control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:FacebookSEO.TokenManage._txtShortToken">
+<summary>
+txtShortToken control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:FacebookSEO.TokenManage._btnGetNewLongtoken">
+<summary>
+btnGetNewLongtoken control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:FacebookSEO.TokenManage._lbllongTimeToken">
+<summary>
+lbllongTimeToken control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+</members>
+</doc>

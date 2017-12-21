@@ -84,7 +84,7 @@ Public Class AutoModel
                             If Not (planType = "NFE" OrElse planType = "NFC") Then '非Notification For Expiration/Notification For Click
 
                                 Dim issueId As Integer = InsertIssue(nowTime, list.SiteId, planType)
-
+                                Common.LogText(issueId.ToString)
                                 If (issueId > 0) Then
                                     Dim dllType As String = list.DllType.Trim().ToLower()
                                     Common.LogText("dlltype:" & dllType)

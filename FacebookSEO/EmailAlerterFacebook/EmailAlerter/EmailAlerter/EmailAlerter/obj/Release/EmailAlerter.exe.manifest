@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Gc0Q3mrgo/m2sl7qkahmoowjO6o=</dsig:DigestValue>
+        <dsig:DigestValue>10c8+bZW3R4l/Ixezk8SuecTYCA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,7 +61,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>KQmqeMWnrv2kZWc3XR+NUKdL/PE=</dsig:DigestValue>
+        <dsig:DigestValue>NE8L5tnkVFCf2Fcd9WzVf1pVIiU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -85,7 +85,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>2lhV7nk5sAHrMsrrgm8qO2GKtW4=</dsig:DigestValue>
+        <dsig:DigestValue>ECeO38TfjS+ls50zLWsEzknqmGU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -97,7 +97,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>xJ9mCnhK4/plE/kr6NbqPqdsUSc=</dsig:DigestValue>
+        <dsig:DigestValue>uKPVWrKn03vWdpS8DPIQTSftMWM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -137,13 +137,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="EmailAlerter.exe.config" size="4622">
+  <file name="EmailAlerter.exe.config" size="4552">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>dLOpOxRDMBRINnnUDYQGi9ndeaQ=</dsig:DigestValue>
+      <dsig:DigestValue>yyHOxQZXthg0AgDaGcVL1xMc2gs=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Lib\Analysis.dll" size="1051648">

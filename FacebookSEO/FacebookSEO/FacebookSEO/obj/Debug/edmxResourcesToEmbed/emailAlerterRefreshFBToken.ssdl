@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmailAlerterModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="EmailAlerterModelStoreContainer">
+    <EntitySet Name="Token" EntityType="EmailAlerterModel.Store.Token" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Token">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="type" Type="varchar" MaxLength="10" />
+    <Property Name="shortTimeToken" Type="varchar" MaxLength="1024" />
+    <Property Name="longTimeToken" Type="varchar" MaxLength="1024" />
+    <Property Name="longTokenExpireDate" Type="datetime" />
+  </EntityType>
+</Schema>

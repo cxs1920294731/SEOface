@@ -1,0 +1,52 @@
+﻿<title>K11 - 香港K11购物艺术馆</title>
+    <link rel="stylesheet" type="text/css" href="/Styles/K11style.css" />
+    <meta name="description" content="香港K11商场是全球首个购物艺术馆。K11香港购物中心也是把艺术，人文，自然三大核心元素融合的香港艺术馆。" /> 
+    <meta name="keywords" content="尖沙嘴, 尖沙咀, TST, Tsimshatsui, Tsim Sha Tsui, 香港K11动态" /> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .paginator { font: 17px Arial, Helvetica, sans-serif;padding:20px 40px 20px 0; margin: 0px;}
+        .paginator a {padding: 6px 12px; border: solid 1px #ddd; background: #fff; text-decoration: none;margin-right: 2px;color:#d9946e }
+        .paginator a:visited {padding: 6px 12px; border: solid 1px #ddd; background: #fff; text-decoration: none;}
+        .paginator .cpb {padding: 6px 12px;font-weight: bold; font-size: 16px;border:none}
+        .paginator a:hover {color: #fff; background: #d4d4d4;border-color:#d4d4d4;text-decoration: none;}
+    </style>
+<script>
+    //目的：解决时间过长问题
+    //思路：优化字符串查找的算法
+    //步骤：
+    var lengthOfLongestSubstring = function (s) {
+        var max = 0, index;
+        var x = 0, array = [];
+        for (let i = 0, j = s.length; i < j; i++) {
+            array.unshift(s[i]);//加到最前面
+            index = is_check(array, s[i + 1]);
+
+            if (index > -1) {
+                array.splice(-1, index + 1);
+                if (max < x) {
+                    max = x;
+                }
+                x = x - index + 1;
+            } else {
+                x++;
+            }
+            if (max > (j - i)) {
+                break;
+            }
+        }
+        console.log(max);
+        return max;
+    };
+    //存在返回索引。不存在返回-1
+    var is_check = function (s, index) {
+        var j = s.length;
+        for (let i = 0; i < j ; i++) {
+            if (s[i] == index) {
+                return i+1;
+            }
+        }
+        return -1;
+    };
+    lengthOfLongestSubstring("abcabcbb");
+</script>

@@ -1,0 +1,550 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EmailAlerterModelStoreContainer" CdmEntityContainer="EmailAlerterEntities">
+    <EntitySetMapping Name="Ads">
+      <EntityTypeMapping TypeName="EmailAlerterModel.Ad">
+        <MappingFragment StoreEntitySet="Ads">
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Lastupdate" ColumnName="Lastupdate" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+          <ScalarProperty Name="SizeWidth" ColumnName="SizeWidth" />
+          <ScalarProperty Name="SizeHeight" ColumnName="SizeHeight" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PictureUrl" ColumnName="PictureUrl" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Ad1" ColumnName="Ad" />
+          <ScalarProperty Name="AdID" ColumnName="AdID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ads_Issue">
+      <EntityTypeMapping TypeName="EmailAlerterModel.Ads_Issue">
+        <MappingFragment StoreEntitySet="Ads_Issue">
+          <ScalarProperty Name="IssueID" ColumnName="IssueID" />
+          <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+          <ScalarProperty Name="AdId" ColumnName="AdId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AutomationSites">
+      <EntityTypeMapping TypeName="EmailAlerterModel.AutomationSite">
+        <MappingFragment StoreEntitySet="AutomationSites">
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LogoImgUrl" ColumnName="LogoImgUrl" />
+          <ScalarProperty Name="volumn" ColumnName="volumn" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="SiteUrl" ColumnName="SiteUrl" />
+          <ScalarProperty Name="DllType" ColumnName="DllType" />
+          <ScalarProperty Name="AppID" ColumnName="AppID" />
+          <ScalarProperty Name="SpreadLogin" ColumnName="SpreadLogin" />
+          <ScalarProperty Name="SiteName" ColumnName="SiteName" />
+          <ScalarProperty Name="siteid" ColumnName="siteid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="EmailAlerterModel.Category">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="BackUpUrls" ColumnName="BackUpUrls" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="SizeWidth" ColumnName="SizeWidth" />
+          <ScalarProperty Name="SizeHeight" ColumnName="SizeHeight" />
+          <ScalarProperty Name="PictureAlt" ColumnName="PictureAlt" />
+          <ScalarProperty Name="PictureUrl" ColumnName="PictureUrl" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+          <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+          <ScalarProperty Name="Category1" ColumnName="Category" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clicks_Issue">
+      <EntityTypeMapping TypeName="EmailAlerterModel.Clicks_Issue">
+        <MappingFragment StoreEntitySet="Clicks_Issue">
+          <ScalarProperty Name="siteid" ColumnName="siteid" />
+          <ScalarProperty Name="ClickDate" ColumnName="ClickDate" />
+          <ScalarProperty Name="ClickUrl" ColumnName="ClickUrl" />
+          <ScalarProperty Name="SubEmail" ColumnName="SubEmail" />
+          <ScalarProperty Name="SpreadCampId" ColumnName="SpreadCampId" />
+          <ScalarProperty Name="IssueID" ColumnName="IssueID" />
+          <ScalarProperty Name="ClickID" ColumnName="ClickID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContactLists_Issue">
+      <EntityTypeMapping TypeName="EmailAlerterModel.ContactLists_Issue">
+        <MappingFragment StoreEntitySet="ContactLists_Issue">
+          <ScalarProperty Name="SendingStatus" ColumnName="SendingStatus" />
+          <ScalarProperty Name="SendTime" ColumnName="SendTime" />
+          <ScalarProperty Name="ContactList" ColumnName="ContactList" />
+          <ScalarProperty Name="IssueID" ColumnName="IssueID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Convertions_Issue">
+      <EntityTypeMapping TypeName="EmailAlerterModel.Convertions_Issue">
+        <MappingFragment StoreEntitySet="Convertions_Issue">
+          <ScalarProperty Name="siteid" ColumnName="siteid" />
+          <ScalarProperty Name="ConvertTime" ColumnName="ConvertTime" />
+          <ScalarProperty Name="ConvertValue" ColumnName="ConvertValue" />
+          <ScalarProperty Name="ConvertUrl" ColumnName="ConvertUrl" />
+          <ScalarProperty Name="ConvertType" ColumnName="ConvertType" />
+          <ScalarProperty Name="SubEmail" ColumnName="SubEmail" />
+          <ScalarProperty Name="SpreadCampId" ColumnName="SpreadCampId" />
+          <ScalarProperty Name="IssueID" ColumnName="IssueID" />
+          <ScalarProperty Name="ConvertID" ColumnName="ConvertID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Issues">
+      <EntityTypeMapping TypeName="EmailAlerterModel.Issue">
+        <MappingFragment StoreEntitySet="Issues">
+          <ScalarProperty Name="NtesCampId" ColumnName="NtesCampId" />
+          <ScalarProperty Name="SpreadCampId" ColumnName="SpreadCampId" />
+          <ScalarProperty Name="SentStatus" ColumnName="SentStatus" />
+          <ScalarProperty Name="PlanType" ColumnName="PlanType" />
+          <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="IssueDate" ColumnName="IssueDate" />
+          <ScalarProperty Name="IssueID" ColumnName="IssueID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Opens_Issue">
+      <EntityTypeMapping TypeName="EmailAlerterModel.Opens_Issue">
+        <MappingFragment StoreEntitySet="Opens_Issue">
+          <ScalarProperty Name="siteid" ColumnName="siteid" />
+          <ScalarProperty Name="OpenDate" ColumnName="OpenDate" />
+          <ScalarProperty Name="SubEmail" ColumnName="SubEmail" />
+          <ScalarProperty Name="SpreadCampId" ColumnName="SpreadCampId" />
+          <ScalarProperty Name="IssueID" ColumnName="IssueID" />
+          <ScalarProperty Name="OpenID" ColumnName="OpenID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanTypes">
+      <EntityTypeMapping TypeName="EmailAlerterModel.PlanType">
+        <MappingFragment StoreEntitySet="PlanTypes">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PlanType1" ColumnName="PlanType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="EmailAlerterModel.Product">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+          <ScalarProperty Name="ExpiredDate" ColumnName="ExpiredDate" />
+          <ScalarProperty Name="ShipsImg" ColumnName="ShipsImg" />
+          <ScalarProperty Name="FreeShippingImg" ColumnName="FreeShippingImg" />
+          <ScalarProperty Name="TbComment" ColumnName="TbComment" />
+          <ScalarProperty Name="TbScore" ColumnName="TbScore" />
+          <ScalarProperty Name="SizeWidth" ColumnName="SizeWidth" />
+          <ScalarProperty Name="SizeHeight" ColumnName="SizeHeight" />
+          <ScalarProperty Name="PictureAlt" ColumnName="PictureAlt" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+          <ScalarProperty Name="PictureUrl" ColumnName="PictureUrl" />
+          <ScalarProperty Name="Sales" ColumnName="Sales" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Prodouct" ColumnName="Prodouct" />
+          <ScalarProperty Name="ProdouctID" ColumnName="ProdouctID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products_Issue">
+      <EntityTypeMapping TypeName="EmailAlerterModel.Products_Issue">
+        <MappingFragment StoreEntitySet="Products_Issue">
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+          <ScalarProperty Name="IssueID" ColumnName="IssueID" />
+          <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RssContactLists">
+      <EntityTypeMapping TypeName="EmailAlerterModel.RssContactList">
+        <MappingFragment StoreEntitySet="RssContactLists">
+          <ScalarProperty Name="ContactListName" ColumnName="ContactListName" />
+          <ScalarProperty Name="RssId" ColumnName="RssId" />
+          <ScalarProperty Name="ContactListId" ColumnName="ContactListId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RssSubscriptions">
+      <EntityTypeMapping TypeName="EmailAlerterModel.RssSubscription">
+        <MappingFragment StoreEntitySet="RssSubscriptions">
+          <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+          <ScalarProperty Name="Categories" ColumnName="Categories" />
+          <ScalarProperty Name="AppID" ColumnName="AppID" />
+          <ScalarProperty Name="rssType" ColumnName="rssType" />
+          <ScalarProperty Name="DefaultSubject" ColumnName="DefaultSubject" />
+          <ScalarProperty Name="ExcludeSubject" ColumnName="ExcludeSubject" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Template" ColumnName="Template" />
+          <ScalarProperty Name="SenderEmail" ColumnName="SenderEmail" />
+          <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+          <ScalarProperty Name="WeekDays" ColumnName="WeekDays" />
+          <ScalarProperty Name="IntervalDay" ColumnName="IntervalDay" />
+          <ScalarProperty Name="EndAt" ColumnName="EndAt" />
+          <ScalarProperty Name="StartAt" ColumnName="StartAt" />
+          <ScalarProperty Name="SpreadLogin" ColumnName="SpreadLogin" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="RssId" ColumnName="RssId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sections">
+      <EntityTypeMapping TypeName="EmailAlerterModel.Section">
+        <MappingFragment StoreEntitySet="Sections">
+          <ScalarProperty Name="Section1" ColumnName="Section" />
+          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SentLogs">
+      <EntityTypeMapping TypeName="EmailAlerterModel.SentLog">
+        <MappingFragment StoreEntitySet="SentLogs">
+          <ScalarProperty Name="PlanType" ColumnName="PlanType" />
+          <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+          <ScalarProperty Name="LastSentAt" ColumnName="LastSentAt" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="RssId" ColumnName="RssId" />
+          <ScalarProperty Name="SentLogId" ColumnName="SentLogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SplitContactLists">
+      <EntityTypeMapping TypeName="EmailAlerterModel.SplitContactList">
+        <MappingFragment StoreEntitySet="SplitContactLists">
+          <ScalarProperty Name="SendingStatus" ColumnName="SendingStatus" />
+          <ScalarProperty Name="SendTime" ColumnName="SendTime" />
+          <ScalarProperty Name="SplitID" ColumnName="SplitID" />
+          <ScalarProperty Name="PlanType" ColumnName="PlanType" />
+          <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="RssType" ColumnName="RssType" />
+          <ScalarProperty Name="ContactListName" ColumnName="ContactListName" />
+          <ScalarProperty Name="ShopName" ColumnName="ShopName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Templates">
+      <EntityTypeMapping TypeName="EmailAlerterModel.Template">
+        <MappingFragment StoreEntitySet="Template">
+          <ScalarProperty Name="LatestModifyTime" ColumnName="LatestModifyTime" />
+          <ScalarProperty Name="PlanType" ColumnName="PlanType" />
+          <ScalarProperty Name="tType" ColumnName="tType" />
+          <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+          <ScalarProperty Name="RssID" ColumnName="RssID" />
+          <ScalarProperty Name="Contents" ColumnName="Contents" />
+          <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Tid" ColumnName="Tid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TemplateInfoes">
+      <EntityTypeMapping TypeName="EmailAlerterModel.TemplateInfo">
+        <MappingFragment StoreEntitySet="TemplateInfo">
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+          <ScalarProperty Name="DisplayCount" ColumnName="DisplayCount" />
+          <ScalarProperty Name="SortedCates" ColumnName="SortedCates" />
+          <ScalarProperty Name="PlanType" ColumnName="PlanType" />
+          <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TemplateLibraries">
+      <EntityTypeMapping TypeName="EmailAlerterModel.TemplateLibrary">
+        <MappingFragment StoreEntitySet="TemplateLibrary">
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Demo" ColumnName="Demo" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Contents" ColumnName="Contents" />
+          <ScalarProperty Name="Tid" ColumnName="Tid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AdsCategory" TypeName="EmailAlerterModel.AdsCategory" StoreEntitySet="AdsCategory">
+      <EndProperty Name="Category">
+        <ScalarProperty Name="CategoryID" ColumnName="CategoryId" />
+      </EndProperty>
+      <EndProperty Name="Ad">
+        <ScalarProperty Name="AdID" ColumnName="AdsId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ProductCategory" TypeName="EmailAlerterModel.ProductCategory" StoreEntitySet="ProductCategory">
+      <EndProperty Name="Product">
+        <ScalarProperty Name="ProdouctID" ColumnName="ProductID" />
+      </EndProperty>
+      <EndProperty Name="Category">
+        <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="Tokens">
+      <EntityTypeMapping TypeName="EmailAlerterModel.Token">
+        <MappingFragment StoreEntitySet="Token">
+          <ScalarProperty Name="longTokenExpireDate" ColumnName="longTokenExpireDate" />
+          <ScalarProperty Name="longTimeToken" ColumnName="longTimeToken" />
+          <ScalarProperty Name="shortTimeToken" ColumnName="shortTimeToken" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BannerRegexes">
+      <EntityTypeMapping TypeName="EmailAlerterModel.BannerRegex">
+        <MappingFragment StoreEntitySet="BannerRegex">
+          <ScalarProperty Name="noRepeatSentDays" ColumnName="noRepeatSentDays" />
+          <ScalarProperty Name="pageEncoding" ColumnName="pageEncoding" />
+          <ScalarProperty Name="cookie" ColumnName="cookie" />
+          <ScalarProperty Name="hrefRegText" ColumnName="hrefRegText" />
+          <ScalarProperty Name="srcRegText" ColumnName="srcRegText" />
+          <ScalarProperty Name="bannerRegText" ColumnName="bannerRegText" />
+          <ScalarProperty Name="bannerEndIndex" ColumnName="bannerEndIndex" />
+          <ScalarProperty Name="bannerStartIndex" ColumnName="bannerStartIndex" />
+          <ScalarProperty Name="bannerFormUrl" ColumnName="bannerFormUrl" />
+          <ScalarProperty Name="planType" ColumnName="planType" />
+          <ScalarProperty Name="siteId" ColumnName="siteId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetAutoPlanInfos" FunctionName="EmailAlerterModel.Store.GetAutoPlanInfos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmailAlerterModel.AutoPlanInfo">
+          <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+          <ScalarProperty Name="PlanType" ColumnName="PlanType" />
+          <ScalarProperty Name="StartAt" ColumnName="StartAt" />
+          <ScalarProperty Name="EndAt" ColumnName="EndAt" />
+          <ScalarProperty Name="IntervalDay" ColumnName="IntervalDay" />
+          <ScalarProperty Name="WeekDays" ColumnName="WeekDays" />
+          <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+          <ScalarProperty Name="SenderEmail" ColumnName="SenderEmail" />
+          <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="SplitContactCount" ColumnName="SplitContactCount" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="Categories" ColumnName="Categories" />
+          <ScalarProperty Name="Day_Of_Week" ColumnName="Day_Of_Week" />
+          <ScalarProperty Name="ContactList" ColumnName="ContactList" />
+          <ScalarProperty Name="CampaignStatus" ColumnName="CampaignStatus" />
+          <ScalarProperty Name="ScheduleTimeInteval" ColumnName="ScheduleTimeInteval" />
+          <ScalarProperty Name="SearchAPIType" ColumnName="SearchAPIType" />
+          <ScalarProperty Name="SearchStartDayInterval" ColumnName="SearchStartDayInterval" />
+          <ScalarProperty Name="SearchEndDayInterval" ColumnName="SearchEndDayInterval" />
+          <ScalarProperty Name="UrlSpecialCode" ColumnName="UrlSpecialCode" />
+          <ScalarProperty Name="ListType" ColumnName="ListType" />
+          <ScalarProperty Name="LimitQuantity" ColumnName="LimitQuantity" />
+          <ScalarProperty Name="SellerEmail" ColumnName="SellerEmail" />
+          <ScalarProperty Name="TimeLimit" ColumnName="TimeLimit" />
+          <ScalarProperty Name="TriggerForNFC" ColumnName="TriggerForNFC" />
+          <ScalarProperty Name="SubjectForNFC" ColumnName="SubjectForNFC" />
+          <ScalarProperty Name="ShopType" ColumnName="ShopType" />
+          <ScalarProperty Name="displayCount" ColumnName="displayCount" />
+          <ScalarProperty Name="bannerFromUrl" ColumnName="bannerFromUrl" />
+          <ScalarProperty Name="bannerRegex" ColumnName="bannerRegex" />
+          <ScalarProperty Name="bannerIndex" ColumnName="bannerIndex" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+          <ScalarProperty Name="sitename" ColumnName="sitename" />
+          <ScalarProperty Name="spreadLogin" ColumnName="spreadLogin" />
+          <ScalarProperty Name="appid" ColumnName="appid" />
+          <ScalarProperty Name="dlltype" ColumnName="dlltype" />
+          <ScalarProperty Name="siteurl" ColumnName="siteurl" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="logoimgurl" ColumnName="logoimgurl" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetOneAutoPlanInfo" FunctionName="EmailAlerterModel.Store.GetOneAutoPlanInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmailAlerterModel.AutoPlanInfo">
+          <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+          <ScalarProperty Name="PlanType" ColumnName="PlanType" />
+          <ScalarProperty Name="StartAt" ColumnName="StartAt" />
+          <ScalarProperty Name="EndAt" ColumnName="EndAt" />
+          <ScalarProperty Name="IntervalDay" ColumnName="IntervalDay" />
+          <ScalarProperty Name="WeekDays" ColumnName="WeekDays" />
+          <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+          <ScalarProperty Name="SenderEmail" ColumnName="SenderEmail" />
+          <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="SplitContactCount" ColumnName="SplitContactCount" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="Categories" ColumnName="Categories" />
+          <ScalarProperty Name="Day_Of_Week" ColumnName="Day_Of_Week" />
+          <ScalarProperty Name="ContactList" ColumnName="ContactList" />
+          <ScalarProperty Name="CampaignStatus" ColumnName="CampaignStatus" />
+          <ScalarProperty Name="ScheduleTimeInteval" ColumnName="ScheduleTimeInteval" />
+          <ScalarProperty Name="SearchAPIType" ColumnName="SearchAPIType" />
+          <ScalarProperty Name="SearchStartDayInterval" ColumnName="SearchStartDayInterval" />
+          <ScalarProperty Name="SearchEndDayInterval" ColumnName="SearchEndDayInterval" />
+          <ScalarProperty Name="UrlSpecialCode" ColumnName="UrlSpecialCode" />
+          <ScalarProperty Name="ListType" ColumnName="ListType" />
+          <ScalarProperty Name="LimitQuantity" ColumnName="LimitQuantity" />
+          <ScalarProperty Name="SellerEmail" ColumnName="SellerEmail" />
+          <ScalarProperty Name="TimeLimit" ColumnName="TimeLimit" />
+          <ScalarProperty Name="TriggerForNFC" ColumnName="TriggerForNFC" />
+          <ScalarProperty Name="SubjectForNFC" ColumnName="SubjectForNFC" />
+          <ScalarProperty Name="ShopType" ColumnName="ShopType" />
+          <ScalarProperty Name="displayCount" ColumnName="displayCount" />
+          <ScalarProperty Name="bannerFromUrl" ColumnName="bannerFromUrl" />
+          <ScalarProperty Name="bannerRegex" ColumnName="bannerRegex" />
+          <ScalarProperty Name="bannerIndex" ColumnName="bannerIndex" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+          <ScalarProperty Name="sitename" ColumnName="sitename" />
+          <ScalarProperty Name="spreadLogin" ColumnName="spreadLogin" />
+          <ScalarProperty Name="appid" ColumnName="appid" />
+          <ScalarProperty Name="dlltype" ColumnName="dlltype" />
+          <ScalarProperty Name="siteurl" ColumnName="siteurl" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="logoimgurl" ColumnName="logoimgurl" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetProdpathbyCates" FunctionName="EmailAlerterModel.Store.GetProdPathsbyCates">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EmailAlerterModel.CateProdpath">
+          <ScalarProperty Name="cateId" ColumnName="categoryID" />
+          <ScalarProperty Name="cateName" ColumnName="Category" />
+          <ScalarProperty Name="cateUrl" ColumnName="url" />
+          <ScalarProperty Name="siteId" ColumnName="siteId" />
+          <ScalarProperty Name="planType" ColumnName="planType" />
+          <ScalarProperty Name="fileType" ColumnName="fileType" />
+          <ScalarProperty Name="prodcate" ColumnName="prodcate" />
+          <ScalarProperty Name="cateParam" ColumnName="cateParam" />
+          <ScalarProperty Name="prodPath" ColumnName="prodPath" />
+          <ScalarProperty Name="productPath" ColumnName="productPath" />
+          <ScalarProperty Name="productAttri" ColumnName="productAttri" />
+          <ScalarProperty Name="urlPath" ColumnName="urlPath" />
+          <ScalarProperty Name="urlAttri" ColumnName="urlAttri" />
+          <ScalarProperty Name="pricePath" ColumnName="pricePath" />
+          <ScalarProperty Name="priceAttri" ColumnName="priceAttri" />
+          <ScalarProperty Name="discountPath" ColumnName="discountPath" />
+          <ScalarProperty Name="discountAttri" ColumnName="discountAttri" />
+          <ScalarProperty Name="salesPath" ColumnName="salesPath" />
+          <ScalarProperty Name="salesAttri" ColumnName="salesAttri" />
+          <ScalarProperty Name="pictureUrlPath" ColumnName="pictureUrlPath" />
+          <ScalarProperty Name="pictureUrlAttri" ColumnName="pictureUrlAttri" />
+          <ScalarProperty Name="descriptionPath" ColumnName="descriptionPath" />
+          <ScalarProperty Name="descriptionAttri" ColumnName="descriptionAttri" />
+          <ScalarProperty Name="pictureAltPath" ColumnName="pictureAltPath" />
+          <ScalarProperty Name="pictureAltAttri" ColumnName="pictureAltAttri" />
+          <ScalarProperty Name="currencyChar" ColumnName="currencyChar" />
+          <ScalarProperty Name="prodDisplayCount" ColumnName="prodDisplayCount" />
+          <ScalarProperty Name="cookie" ColumnName="cookie" />
+          <ScalarProperty Name="pageEncoding" ColumnName="pageEncoding" />
+          <ScalarProperty Name="noRepeatSentDays" ColumnName="noRepeatSentDays" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="ProductPaths">
+      <EntityTypeMapping TypeName="EmailAlerterModel.ProductPath">
+        <MappingFragment StoreEntitySet="ProductPaths">
+          <ScalarProperty Name="validityPeriod" ColumnName="validityPeriod" />
+          <ScalarProperty Name="issueDateAttri" ColumnName="issueDateAttri" />
+          <ScalarProperty Name="issueDate" ColumnName="issueDate" />
+          <ScalarProperty Name="noRepeatSentDays" ColumnName="noRepeatSentDays" />
+          <ScalarProperty Name="pageEncoding" ColumnName="pageEncoding" />
+          <ScalarProperty Name="cookie" ColumnName="cookie" />
+          <ScalarProperty Name="prodDisplayCount" ColumnName="prodDisplayCount" />
+          <ScalarProperty Name="currencyChar" ColumnName="currencyChar" />
+          <ScalarProperty Name="pictureAltAttri" ColumnName="pictureAltAttri" />
+          <ScalarProperty Name="pictureAltPath" ColumnName="pictureAltPath" />
+          <ScalarProperty Name="descriptionAttri" ColumnName="descriptionAttri" />
+          <ScalarProperty Name="descriptionPath" ColumnName="descriptionPath" />
+          <ScalarProperty Name="pictureUrlAttri" ColumnName="pictureUrlAttri" />
+          <ScalarProperty Name="pictureUrlPath" ColumnName="pictureUrlPath" />
+          <ScalarProperty Name="salesAttri" ColumnName="salesAttri" />
+          <ScalarProperty Name="salesPath" ColumnName="salesPath" />
+          <ScalarProperty Name="discountAttri" ColumnName="discountAttri" />
+          <ScalarProperty Name="discountPath" ColumnName="discountPath" />
+          <ScalarProperty Name="priceAttri" ColumnName="priceAttri" />
+          <ScalarProperty Name="pricePath" ColumnName="pricePath" />
+          <ScalarProperty Name="urlAttri" ColumnName="urlAttri" />
+          <ScalarProperty Name="urlPath" ColumnName="urlPath" />
+          <ScalarProperty Name="productAttri" ColumnName="productAttri" />
+          <ScalarProperty Name="productPath1" ColumnName="productPath" />
+          <ScalarProperty Name="prodPath" ColumnName="prodPath" />
+          <ScalarProperty Name="cateParam" ColumnName="cateParam" />
+          <ScalarProperty Name="prodcate" ColumnName="prodcate" />
+          <ScalarProperty Name="fileType" ColumnName="fileType" />
+          <ScalarProperty Name="planType" ColumnName="planType" />
+          <ScalarProperty Name="siteId" ColumnName="siteId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AutomationPlans">
+      <EntityTypeMapping TypeName="EmailAlerterModel.AutomationPlan">
+        <MappingFragment StoreEntitySet="AutomationPlan">
+          <ScalarProperty Name="TemplateEngine" ColumnName="TemplateEngine" />
+          <ScalarProperty Name="ContactType" ColumnName="ContactType" />
+          <ScalarProperty Name="IsAssociateSite" ColumnName="IsAssociateSite" />
+          <ScalarProperty Name="ExcludeList" ColumnName="ExcludeList" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="bannerIndex" ColumnName="bannerIndex" />
+          <ScalarProperty Name="bannerRegex" ColumnName="bannerRegex" />
+          <ScalarProperty Name="bannerFromUrl" ColumnName="bannerFromUrl" />
+          <ScalarProperty Name="displayCount" ColumnName="displayCount" />
+          <ScalarProperty Name="ShopType" ColumnName="ShopType" />
+          <ScalarProperty Name="SubjectForNFC" ColumnName="SubjectForNFC" />
+          <ScalarProperty Name="TriggerForNFC" ColumnName="TriggerForNFC" />
+          <ScalarProperty Name="TimeLimit" ColumnName="TimeLimit" />
+          <ScalarProperty Name="SellerEmail" ColumnName="SellerEmail" />
+          <ScalarProperty Name="LimitQuantity" ColumnName="LimitQuantity" />
+          <ScalarProperty Name="UrlSpecialCode" ColumnName="UrlSpecialCode" />
+          <ScalarProperty Name="SearchEndDayInterval" ColumnName="SearchEndDayInterval" />
+          <ScalarProperty Name="SearchStartDayInterval" ColumnName="SearchStartDayInterval" />
+          <ScalarProperty Name="SearchAPIType" ColumnName="SearchAPIType" />
+          <ScalarProperty Name="ListType" ColumnName="ListType" />
+          <ScalarProperty Name="ScheduleTimeInteval" ColumnName="ScheduleTimeInteval" />
+          <ScalarProperty Name="CampaignStatus" ColumnName="CampaignStatus" />
+          <ScalarProperty Name="ContactList" ColumnName="ContactList" />
+          <ScalarProperty Name="Day_Of_Week" ColumnName="Day_Of_Week" />
+          <ScalarProperty Name="Categories" ColumnName="Categories" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="SplitContactCount" ColumnName="SplitContactCount" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="MultiTemplate" ColumnName="MultiTemplate" />
+          <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+          <ScalarProperty Name="SenderEmail" ColumnName="SenderEmail" />
+          <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+          <ScalarProperty Name="WeekDays" ColumnName="WeekDays" />
+          <ScalarProperty Name="IntervalDay" ColumnName="IntervalDay" />
+          <ScalarProperty Name="EndAt" ColumnName="EndAt" />
+          <ScalarProperty Name="StartAt" ColumnName="StartAt" />
+          <ScalarProperty Name="PlanType" ColumnName="PlanType" />
+          <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContactSettings">
+      <EntityTypeMapping TypeName="EmailAlerterModel.ContactSetting">
+        <MappingFragment StoreEntitySet="ContactSetting">
+          <ScalarProperty Name="MaxSend" ColumnName="MaxSend" />
+          <ScalarProperty Name="IsNTES" ColumnName="IsNTES" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="PlanType" ColumnName="PlanType" />
+          <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

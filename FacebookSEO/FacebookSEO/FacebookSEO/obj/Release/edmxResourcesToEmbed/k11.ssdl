@@ -1,0 +1,800 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FaceBookForSEOModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="FaceBookForSEOModelStoreContainer">
+    <EntitySet Name="Ads" EntityType="FaceBookForSEOModel.Store.Ads" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Ads_Issue" EntityType="FaceBookForSEOModel.Store.Ads_Issue" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AdsCategory" EntityType="FaceBookForSEOModel.Store.AdsCategory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AutomationPlan" EntityType="FaceBookForSEOModel.Store.AutomationPlan" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AutomationSites" EntityType="FaceBookForSEOModel.Store.AutomationSites" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Categories" EntityType="FaceBookForSEOModel.Store.Categories" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CateTags" EntityType="FaceBookForSEOModel.Store.CateTags" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Clicks_Issue" EntityType="FaceBookForSEOModel.Store.Clicks_Issue" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ContactLists_Issue" EntityType="FaceBookForSEOModel.Store.ContactLists_Issue" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Convertions_Issue" EntityType="FaceBookForSEOModel.Store.Convertions_Issue" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Issues" EntityType="FaceBookForSEOModel.Store.Issues" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="KeyWords" EntityType="FaceBookForSEOModel.Store.KeyWords" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Opens_Issue" EntityType="FaceBookForSEOModel.Store.Opens_Issue" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PlanTypes" EntityType="FaceBookForSEOModel.Store.PlanTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductCategory" EntityType="FaceBookForSEOModel.Store.ProductCategory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Products" EntityType="FaceBookForSEOModel.Store.Products" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Products_Issue" EntityType="FaceBookForSEOModel.Store.Products_Issue" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Promotions" EntityType="FaceBookForSEOModel.Store.Promotions" store:Type="Tables" store:Schema="dbo" store:Name="Promotions">
+      <DefiningQuery>SELECT 
+      [Promotions].[ItemID] AS [ItemID], 
+      [Promotions].[ItemName] AS [ItemName], 
+      [Promotions].[Description] AS [Description]
+      FROM [dbo].[Promotions] AS [Promotions]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="RssContactLists" EntityType="FaceBookForSEOModel.Store.RssContactLists" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RssSubscriptions" EntityType="FaceBookForSEOModel.Store.RssSubscriptions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sections" EntityType="FaceBookForSEOModel.Store.Sections" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SentLogs" EntityType="FaceBookForSEOModel.Store.SentLogs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SplitContactLists" EntityType="FaceBookForSEOModel.Store.SplitContactLists" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="FaceBookForSEOModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Template" EntityType="FaceBookForSEOModel.Store.Template" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TemplateCategory" EntityType="FaceBookForSEOModel.Store.TemplateCategory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TemplateInfo" EntityType="FaceBookForSEOModel.Store.TemplateInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TemplateLibrary" EntityType="FaceBookForSEOModel.Store.TemplateLibrary" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Token" EntityType="FaceBookForSEOModel.Store.Token" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Ads_AutomationSites" Association="FaceBookForSEOModel.Store.FK_Ads_AutomationSites">
+      <End Role="AutomationSites" EntitySet="AutomationSites" />
+      <End Role="Ads" EntitySet="Ads" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ads_Issue_Ads" Association="FaceBookForSEOModel.Store.FK_Ads_Issue_Ads">
+      <End Role="Ads" EntitySet="Ads" />
+      <End Role="Ads_Issue" EntitySet="Ads_Issue" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ads_Issue_AutomationSites" Association="FaceBookForSEOModel.Store.FK_Ads_Issue_AutomationSites">
+      <End Role="AutomationSites" EntitySet="AutomationSites" />
+      <End Role="Ads_Issue" EntitySet="Ads_Issue" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ads_Issue_Issue" Association="FaceBookForSEOModel.Store.FK_Ads_Issue_Issue">
+      <End Role="Issues" EntitySet="Issues" />
+      <End Role="Ads_Issue" EntitySet="Ads_Issue" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AdsCategory_Ads" Association="FaceBookForSEOModel.Store.FK_AdsCategory_Ads">
+      <End Role="Ads" EntitySet="Ads" />
+      <End Role="AdsCategory" EntitySet="AdsCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AdsCategory_Categories" Association="FaceBookForSEOModel.Store.FK_AdsCategory_Categories">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="AdsCategory" EntitySet="AdsCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AutomationPlan_AutomationSites" Association="FaceBookForSEOModel.Store.FK_AutomationPlan_AutomationSites">
+      <End Role="AutomationSites" EntitySet="AutomationSites" />
+      <End Role="AutomationPlan" EntitySet="AutomationPlan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AutomationPlan_PlanType" Association="FaceBookForSEOModel.Store.FK_AutomationPlan_PlanType">
+      <End Role="PlanTypes" EntitySet="PlanTypes" />
+      <End Role="AutomationPlan" EntitySet="AutomationPlan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AutomationPlan_Template" Association="FaceBookForSEOModel.Store.FK_AutomationPlan_Template">
+      <End Role="Template" EntitySet="Template" />
+      <End Role="AutomationPlan" EntitySet="AutomationPlan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Categories_AutomationSites" Association="FaceBookForSEOModel.Store.FK_Categories_AutomationSites">
+      <End Role="AutomationSites" EntitySet="AutomationSites" />
+      <End Role="Categories" EntitySet="Categories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContactLists_Issue_Issue" Association="FaceBookForSEOModel.Store.FK_ContactLists_Issue_Issue">
+      <End Role="Issues" EntitySet="Issues" />
+      <End Role="ContactLists_Issue" EntitySet="ContactLists_Issue" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Issues_Ads_Issue" Association="FaceBookForSEOModel.Store.FK_Issues_Ads_Issue">
+      <End Role="Issues" EntitySet="Issues" />
+      <End Role="Issues1" EntitySet="Issues" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Issues_AutomationSites" Association="FaceBookForSEOModel.Store.FK_Issues_AutomationSites">
+      <End Role="AutomationSites" EntitySet="AutomationSites" />
+      <End Role="Issues" EntitySet="Issues" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Issues_PlanTypes" Association="FaceBookForSEOModel.Store.FK_Issues_PlanTypes">
+      <End Role="PlanTypes" EntitySet="PlanTypes" />
+      <End Role="Issues" EntitySet="Issues" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductCategory_Categories" Association="FaceBookForSEOModel.Store.FK_ProductCategory_Categories">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="ProductCategory" EntitySet="ProductCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductCategory_Products" Association="FaceBookForSEOModel.Store.FK_ProductCategory_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="ProductCategory" EntitySet="ProductCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_AutomationSites" Association="FaceBookForSEOModel.Store.FK_Products_AutomationSites">
+      <End Role="AutomationSites" EntitySet="AutomationSites" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Issue_AutomationSites" Association="FaceBookForSEOModel.Store.FK_Products_Issue_AutomationSites">
+      <End Role="AutomationSites" EntitySet="AutomationSites" />
+      <End Role="Products_Issue" EntitySet="Products_Issue" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Issue_Issue" Association="FaceBookForSEOModel.Store.FK_Products_Issue_Issue">
+      <End Role="Issues" EntitySet="Issues" />
+      <End Role="Products_Issue" EntitySet="Products_Issue" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Issue_Products" Association="FaceBookForSEOModel.Store.FK_Products_Issue_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Products_Issue" EntitySet="Products_Issue" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Issue_Sections" Association="FaceBookForSEOModel.Store.FK_Products_Issue_Sections">
+      <End Role="Sections" EntitySet="Sections" />
+      <End Role="Products_Issue" EntitySet="Products_Issue" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SentLogs_AutomationSites" Association="FaceBookForSEOModel.Store.FK_SentLogs_AutomationSites">
+      <End Role="AutomationSites" EntitySet="AutomationSites" />
+      <End Role="SentLogs" EntitySet="SentLogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SplitContactLists_PlanTypes" Association="FaceBookForSEOModel.Store.FK_SplitContactLists_PlanTypes">
+      <End Role="PlanTypes" EntitySet="PlanTypes" />
+      <End Role="SplitContactLists" EntitySet="SplitContactLists" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Template_PlanTypes" Association="FaceBookForSEOModel.Store.FK_Template_PlanTypes">
+      <End Role="PlanTypes" EntitySet="PlanTypes" />
+      <End Role="Template" EntitySet="Template" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Ads">
+    <Key>
+      <PropertyRef Name="AdID" />
+    </Key>
+    <Property Name="AdID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="nvarchar" MaxLength="200" />
+    <Property Name="Url" Type="nvarchar" MaxLength="1024" />
+    <Property Name="PictureUrl" Type="nvarchar" MaxLength="1024" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="SizeHeight" Type="int" />
+    <Property Name="SizeWidth" Type="int" />
+    <Property Name="SiteID" Type="int" />
+    <Property Name="Type" Type="char" MaxLength="1" />
+    <Property Name="Lastupdate" Type="datetime" />
+    <Property Name="Price" Type="money" />
+    <Property Name="Discount" Type="money" />
+  </EntityType>
+  <EntityType Name="Ads_Issue">
+    <Key>
+      <PropertyRef Name="AdId" />
+      <PropertyRef Name="SiteId" />
+      <PropertyRef Name="IssueID" />
+    </Key>
+    <Property Name="AdId" Type="bigint" Nullable="false" />
+    <Property Name="SiteId" Type="int" Nullable="false" />
+    <Property Name="IssueID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AdsCategory">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+      <PropertyRef Name="AdsId" />
+    </Key>
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="AdsId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AutomationPlan">
+    <Key>
+      <PropertyRef Name="SiteID" />
+      <PropertyRef Name="PlanType" />
+    </Key>
+    <Property Name="SiteID" Type="int" Nullable="false" />
+    <Property Name="PlanType" Type="char" Nullable="false" MaxLength="4" />
+    <Property Name="StartAt" Type="datetime" />
+    <Property Name="EndAt" Type="datetime" />
+    <Property Name="IntervalDay" Type="float" />
+    <Property Name="WeekDays" Type="nvarchar" MaxLength="7" />
+    <Property Name="SenderName" Type="nvarchar" MaxLength="800" />
+    <Property Name="SenderEmail" Type="nvarchar" MaxLength="200" />
+    <Property Name="TemplateID" Type="int" />
+    <Property Name="Status" Type="char" MaxLength="1" />
+    <Property Name="SplitContactCount" Type="tinyint" />
+    <Property Name="URL" Type="nvarchar" MaxLength="1024" />
+    <Property Name="Categories" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Day_Of_Week" Type="nvarchar" MaxLength="7" />
+    <Property Name="ContactList" Type="nvarchar(max)" />
+    <Property Name="CampaignStatus" Type="char" MaxLength="3" />
+    <Property Name="ScheduleTimeInteval" Type="float" />
+    <Property Name="ListType" Type="char" MaxLength="3" />
+    <Property Name="SearchAPIType" Type="char" MaxLength="3" />
+    <Property Name="SearchStartDayInterval" Type="int" />
+    <Property Name="SearchEndDayInterval" Type="int" />
+    <Property Name="UrlSpecialCode" Type="nvarchar" MaxLength="1024" />
+    <Property Name="LimitQuantity" Type="bigint" />
+    <Property Name="SellerEmail" Type="nvarchar" MaxLength="1024" />
+    <Property Name="TimeLimit" Type="nvarchar" MaxLength="1024" />
+    <Property Name="TriggerForNFC" Type="int" />
+    <Property Name="SubjectForNFC" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="AutomationSites">
+    <Key>
+      <PropertyRef Name="siteid" />
+    </Key>
+    <Property Name="siteid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SiteName" Type="nvarchar" MaxLength="100" />
+    <Property Name="SiteNameSc" Type="nvarchar" MaxLength="100" />
+    <Property Name="SpreadLogin" Type="nvarchar" MaxLength="200" />
+    <Property Name="AppID" Type="nvarchar" MaxLength="200" />
+    <Property Name="DllType" Type="nvarchar" MaxLength="50" />
+    <Property Name="SiteUrl" Type="nvarchar" MaxLength="1024" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" />
+    <Property Name="volumn" Type="bigint" />
+    <Property Name="shopUrl" Type="nvarchar" MaxLength="1024" />
+    <Property Name="k11SiteUrl" Type="nvarchar" MaxLength="1024" />
+    <Property Name="k11SiteUrlSC" Type="nvarchar" MaxLength="1024" />
+    <Property Name="CreateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ParentID" Type="int" />
+    <Property Name="Category" Type="nvarchar" MaxLength="400" />
+    <Property Name="SiteID" Type="int" />
+    <Property Name="LastUpdate" Type="datetime" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Url" Type="nvarchar" MaxLength="1024" />
+    <Property Name="PictureUrl" Type="nvarchar" MaxLength="1024" />
+    <Property Name="PictureAlt" Type="nvarchar" MaxLength="300" />
+    <Property Name="SizeHeight" Type="int" />
+    <Property Name="SizeWidth" Type="int" />
+    <Property Name="Gender" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="CateTags">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CateName" Type="varchar" MaxLength="50" />
+    <Property Name="CateNameSC" Type="varchar" MaxLength="50" />
+    <Property Name="ParentID" Type="int" />
+    <Property Name="HasShopID" Type="varchar" MaxLength="500" />
+    <Property Name="CateUrl" Type="varchar" MaxLength="250" />
+    <Property Name="CateUrlSc" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Clicks_Issue">
+    <Key>
+      <PropertyRef Name="ClickID" />
+    </Key>
+    <Property Name="ClickID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IssueID" Type="bigint" />
+    <Property Name="SpreadCampId" Type="bigint" />
+    <Property Name="SubEmail" Type="nvarchar" MaxLength="1024" />
+    <Property Name="ClickUrl" Type="nvarchar" MaxLength="1024" />
+    <Property Name="ClickDate" Type="date" />
+    <Property Name="siteid" Type="int" />
+  </EntityType>
+  <EntityType Name="ContactLists_Issue">
+    <Key>
+      <PropertyRef Name="IssueID" />
+      <PropertyRef Name="ContactList" />
+    </Key>
+    <Property Name="IssueID" Type="bigint" Nullable="false" />
+    <Property Name="ContactList" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="SendTime" Type="datetime" />
+    <Property Name="SendingStatus" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Convertions_Issue">
+    <Key>
+      <PropertyRef Name="ConvertID" />
+    </Key>
+    <Property Name="ConvertID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IssueID" Type="bigint" />
+    <Property Name="SpreadCampId" Type="bigint" />
+    <Property Name="SubEmail" Type="nvarchar" MaxLength="1024" />
+    <Property Name="ConvertType" Type="nvarchar" MaxLength="50" />
+    <Property Name="ConvertUrl" Type="nvarchar" MaxLength="1024" />
+    <Property Name="ConvertValue" Type="nchar" MaxLength="10" />
+    <Property Name="ConvertTime" Type="date" />
+    <Property Name="siteid" Type="int" />
+  </EntityType>
+  <EntityType Name="Issues">
+    <Key>
+      <PropertyRef Name="IssueID" />
+    </Key>
+    <Property Name="IssueID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IssueDate" Type="datetime" Nullable="false" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="250" />
+    <Property Name="SiteID" Type="int" />
+    <Property Name="PlanType" Type="char" MaxLength="4" />
+    <Property Name="SentStatus" Type="char" MaxLength="2" />
+    <Property Name="SpreadCampId" Type="bigint" />
+  </EntityType>
+  <EntityType Name="KeyWords">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="KeyWord" Type="nvarchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="10" />
+    <Property Name="KeyUrl" Type="varchar" MaxLength="250" />
+    <Property Name="Siteid" Type="int" />
+  </EntityType>
+  <EntityType Name="Opens_Issue">
+    <Key>
+      <PropertyRef Name="OpenID" />
+    </Key>
+    <Property Name="OpenID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IssueID" Type="bigint" />
+    <Property Name="SpreadCampId" Type="bigint" />
+    <Property Name="SubEmail" Type="nvarchar" MaxLength="1024" />
+    <Property Name="OpenDate" Type="date" />
+    <Property Name="siteid" Type="int" />
+  </EntityType>
+  <EntityType Name="PlanTypes">
+    <Key>
+      <PropertyRef Name="PlanType" />
+    </Key>
+    <Property Name="PlanType" Type="char" Nullable="false" MaxLength="4" />
+    <Property Name="Description" Type="nchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ProductCategory">
+    <Key>
+      <PropertyRef Name="ProductID" />
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="ProductID" Type="bigint" Nullable="false" />
+    <Property Name="CategoryID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="ProdouctID" />
+    </Key>
+    <Property Name="ProdouctID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Prodouct" Type="nvarchar" MaxLength="250" />
+    <Property Name="Url" Type="nvarchar" MaxLength="1024" />
+    <Property Name="Price" Type="money" />
+    <Property Name="Discount" Type="money" />
+    <Property Name="Sales" Type="int" />
+    <Property Name="PictureUrl" Type="nvarchar" MaxLength="1024" />
+    <Property Name="LastUpdate" Type="datetime" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="SiteID" Type="int" />
+    <Property Name="Currency" Type="char" MaxLength="3" />
+    <Property Name="PictureAlt" Type="nvarchar" MaxLength="1024" />
+    <Property Name="SizeHeight" Type="int" />
+    <Property Name="SizeWidth" Type="int" />
+    <Property Name="TbScore" Type="money" />
+    <Property Name="TbComment" Type="int" />
+    <Property Name="FreeShippingImg" Type="nvarchar" MaxLength="1024" />
+    <Property Name="ShipsImg" Type="nvarchar" MaxLength="1024" />
+    <Property Name="ExpiredDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Products_Issue">
+    <Key>
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="SiteId" />
+      <PropertyRef Name="IssueID" />
+      <PropertyRef Name="SectionID" />
+    </Key>
+    <Property Name="ProductId" Type="bigint" Nullable="false" />
+    <Property Name="SiteId" Type="int" Nullable="false" />
+    <Property Name="IssueID" Type="bigint" Nullable="false" />
+    <Property Name="SectionID" Type="char" Nullable="false" MaxLength="4" />
+    <Property Name="Priority" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'FaceBookForSEO.dbo.Promotions' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Promotions">
+    <Key>
+      <PropertyRef Name="ItemID" />
+      <PropertyRef Name="ItemName" />
+      <PropertyRef Name="Description" />
+    </Key>
+    <Property Name="ItemID" Type="int" Nullable="false" />
+    <Property Name="ItemName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="RssContactLists">
+    <Key>
+      <PropertyRef Name="ContactListId" />
+    </Key>
+    <Property Name="ContactListId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RssId" Type="int" />
+    <Property Name="ContactListName" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="RssSubscriptions">
+    <Key>
+      <PropertyRef Name="RssId" />
+    </Key>
+    <Property Name="RssId" Type="int" Nullable="false" />
+    <Property Name="URL" Type="nvarchar" MaxLength="1000" />
+    <Property Name="SpreadLogin" Type="nvarchar" MaxLength="200" />
+    <Property Name="StartAt" Type="datetime" />
+    <Property Name="EndAt" Type="datetime" />
+    <Property Name="IntervalDay" Type="float" />
+    <Property Name="WeekDays" Type="nvarchar" MaxLength="7" />
+    <Property Name="SenderName" Type="nvarchar" MaxLength="800" />
+    <Property Name="SenderEmail" Type="nvarchar" MaxLength="200" />
+    <Property Name="Template" Type="nvarchar(max)" />
+    <Property Name="Status" Type="char" MaxLength="1" />
+    <Property Name="ExcludeSubject" Type="nvarchar(max)" />
+    <Property Name="DefaultSubject" Type="nvarchar" MaxLength="1000" />
+    <Property Name="rssType" Type="char" MaxLength="10" />
+    <Property Name="AppID" Type="nvarchar" MaxLength="200" />
+    <Property Name="Categories" Type="nvarchar" MaxLength="1000" />
+    <Property Name="SiteID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Sections">
+    <Key>
+      <PropertyRef Name="SectionID" />
+    </Key>
+    <Property Name="SectionID" Type="char" Nullable="false" MaxLength="4" />
+    <Property Name="Section" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="SentLogs">
+    <Key>
+      <PropertyRef Name="SentLogId" />
+    </Key>
+    <Property Name="SentLogId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RssId" Type="int" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="1000" />
+    <Property Name="LastSentAt" Type="datetime" />
+    <Property Name="SiteID" Type="int" />
+    <Property Name="PlanType" Type="char" MaxLength="4" />
+  </EntityType>
+  <EntityType Name="SplitContactLists">
+    <Key>
+      <PropertyRef Name="SplitID" />
+    </Key>
+    <Property Name="ShopName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ContactListName" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="RssType" Type="varchar" MaxLength="20" />
+    <Property Name="Flag" Type="bit" Nullable="false" />
+    <Property Name="SiteID" Type="int" />
+    <Property Name="PlanType" Type="char" MaxLength="4" />
+    <Property Name="SplitID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SendTime" Type="datetime" />
+    <Property Name="SendingStatus" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Template">
+    <Key>
+      <PropertyRef Name="Tid" />
+    </Key>
+    <Property Name="Tid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="TemplateName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Contents" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="RssID" Type="int" />
+    <Property Name="SiteID" Type="int" />
+    <Property Name="tType" Type="char" MaxLength="1" />
+    <Property Name="PlanType" Type="char" MaxLength="4" />
+  </EntityType>
+  <EntityType Name="TemplateCategory">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SiteType" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TemplateInfo">
+    <Key>
+      <PropertyRef Name="SiteId" />
+    </Key>
+    <Property Name="SiteId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PlanType" Type="char" MaxLength="2" />
+    <Property Name="SortedCates" Type="nvarchar" MaxLength="1000" />
+    <Property Name="DisplayCount" Type="int" />
+    <Property Name="Modified" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TemplateLibrary">
+    <Key>
+      <PropertyRef Name="Tid" />
+    </Key>
+    <Property Name="Tid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Contents" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" />
+    <Property Name="CategoryId" Type="bigint" />
+    <Property Name="Demo" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Token">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="type" Type="varchar" MaxLength="10" />
+    <Property Name="shortTimeToken" Type="varchar" MaxLength="1024" />
+    <Property Name="longTimeToken" Type="varchar" MaxLength="1024" />
+    <Property Name="longTokenExpireDate" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_Ads_AutomationSites">
+    <End Role="AutomationSites" Type="FaceBookForSEOModel.Store.AutomationSites" Multiplicity="0..1" />
+    <End Role="Ads" Type="FaceBookForSEOModel.Store.Ads" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AutomationSites">
+        <PropertyRef Name="siteid" />
+      </Principal>
+      <Dependent Role="Ads">
+        <PropertyRef Name="SiteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ads_Issue_Ads">
+    <End Role="Ads" Type="FaceBookForSEOModel.Store.Ads" Multiplicity="1" />
+    <End Role="Ads_Issue" Type="FaceBookForSEOModel.Store.Ads_Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ads">
+        <PropertyRef Name="AdID" />
+      </Principal>
+      <Dependent Role="Ads_Issue">
+        <PropertyRef Name="AdId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ads_Issue_AutomationSites">
+    <End Role="AutomationSites" Type="FaceBookForSEOModel.Store.AutomationSites" Multiplicity="1" />
+    <End Role="Ads_Issue" Type="FaceBookForSEOModel.Store.Ads_Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AutomationSites">
+        <PropertyRef Name="siteid" />
+      </Principal>
+      <Dependent Role="Ads_Issue">
+        <PropertyRef Name="SiteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ads_Issue_Issue">
+    <End Role="Issues" Type="FaceBookForSEOModel.Store.Issues" Multiplicity="1" />
+    <End Role="Ads_Issue" Type="FaceBookForSEOModel.Store.Ads_Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Issues">
+        <PropertyRef Name="IssueID" />
+      </Principal>
+      <Dependent Role="Ads_Issue">
+        <PropertyRef Name="IssueID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AdsCategory_Ads">
+    <End Role="Ads" Type="FaceBookForSEOModel.Store.Ads" Multiplicity="1" />
+    <End Role="AdsCategory" Type="FaceBookForSEOModel.Store.AdsCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ads">
+        <PropertyRef Name="AdID" />
+      </Principal>
+      <Dependent Role="AdsCategory">
+        <PropertyRef Name="AdsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AdsCategory_Categories">
+    <End Role="Categories" Type="FaceBookForSEOModel.Store.Categories" Multiplicity="1" />
+    <End Role="AdsCategory" Type="FaceBookForSEOModel.Store.AdsCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categories">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="AdsCategory">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AutomationPlan_AutomationSites">
+    <End Role="AutomationSites" Type="FaceBookForSEOModel.Store.AutomationSites" Multiplicity="1" />
+    <End Role="AutomationPlan" Type="FaceBookForSEOModel.Store.AutomationPlan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AutomationSites">
+        <PropertyRef Name="siteid" />
+      </Principal>
+      <Dependent Role="AutomationPlan">
+        <PropertyRef Name="SiteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AutomationPlan_PlanType">
+    <End Role="PlanTypes" Type="FaceBookForSEOModel.Store.PlanTypes" Multiplicity="1" />
+    <End Role="AutomationPlan" Type="FaceBookForSEOModel.Store.AutomationPlan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanTypes">
+        <PropertyRef Name="PlanType" />
+      </Principal>
+      <Dependent Role="AutomationPlan">
+        <PropertyRef Name="PlanType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AutomationPlan_Template">
+    <End Role="Template" Type="FaceBookForSEOModel.Store.Template" Multiplicity="0..1" />
+    <End Role="AutomationPlan" Type="FaceBookForSEOModel.Store.AutomationPlan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Template">
+        <PropertyRef Name="Tid" />
+      </Principal>
+      <Dependent Role="AutomationPlan">
+        <PropertyRef Name="TemplateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Categories_AutomationSites">
+    <End Role="AutomationSites" Type="FaceBookForSEOModel.Store.AutomationSites" Multiplicity="0..1" />
+    <End Role="Categories" Type="FaceBookForSEOModel.Store.Categories" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AutomationSites">
+        <PropertyRef Name="siteid" />
+      </Principal>
+      <Dependent Role="Categories">
+        <PropertyRef Name="SiteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContactLists_Issue_Issue">
+    <End Role="Issues" Type="FaceBookForSEOModel.Store.Issues" Multiplicity="1" />
+    <End Role="ContactLists_Issue" Type="FaceBookForSEOModel.Store.ContactLists_Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Issues">
+        <PropertyRef Name="IssueID" />
+      </Principal>
+      <Dependent Role="ContactLists_Issue">
+        <PropertyRef Name="IssueID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Issues_Ads_Issue">
+    <End Role="Issues" Type="FaceBookForSEOModel.Store.Issues" Multiplicity="1" />
+    <End Role="Issues1" Type="FaceBookForSEOModel.Store.Issues" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Issues">
+        <PropertyRef Name="IssueID" />
+      </Principal>
+      <Dependent Role="Issues1">
+        <PropertyRef Name="IssueID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Issues_AutomationSites">
+    <End Role="AutomationSites" Type="FaceBookForSEOModel.Store.AutomationSites" Multiplicity="0..1" />
+    <End Role="Issues" Type="FaceBookForSEOModel.Store.Issues" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AutomationSites">
+        <PropertyRef Name="siteid" />
+      </Principal>
+      <Dependent Role="Issues">
+        <PropertyRef Name="SiteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Issues_PlanTypes">
+    <End Role="PlanTypes" Type="FaceBookForSEOModel.Store.PlanTypes" Multiplicity="0..1" />
+    <End Role="Issues" Type="FaceBookForSEOModel.Store.Issues" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanTypes">
+        <PropertyRef Name="PlanType" />
+      </Principal>
+      <Dependent Role="Issues">
+        <PropertyRef Name="PlanType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductCategory_Categories">
+    <End Role="Categories" Type="FaceBookForSEOModel.Store.Categories" Multiplicity="1" />
+    <End Role="ProductCategory" Type="FaceBookForSEOModel.Store.ProductCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categories">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="ProductCategory">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductCategory_Products">
+    <End Role="Products" Type="FaceBookForSEOModel.Store.Products" Multiplicity="1" />
+    <End Role="ProductCategory" Type="FaceBookForSEOModel.Store.ProductCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProdouctID" />
+      </Principal>
+      <Dependent Role="ProductCategory">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_AutomationSites">
+    <End Role="AutomationSites" Type="FaceBookForSEOModel.Store.AutomationSites" Multiplicity="0..1" />
+    <End Role="Products" Type="FaceBookForSEOModel.Store.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AutomationSites">
+        <PropertyRef Name="siteid" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="SiteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Issue_AutomationSites">
+    <End Role="AutomationSites" Type="FaceBookForSEOModel.Store.AutomationSites" Multiplicity="1" />
+    <End Role="Products_Issue" Type="FaceBookForSEOModel.Store.Products_Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AutomationSites">
+        <PropertyRef Name="siteid" />
+      </Principal>
+      <Dependent Role="Products_Issue">
+        <PropertyRef Name="SiteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Issue_Issue">
+    <End Role="Issues" Type="FaceBookForSEOModel.Store.Issues" Multiplicity="1" />
+    <End Role="Products_Issue" Type="FaceBookForSEOModel.Store.Products_Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Issues">
+        <PropertyRef Name="IssueID" />
+      </Principal>
+      <Dependent Role="Products_Issue">
+        <PropertyRef Name="IssueID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Issue_Products">
+    <End Role="Products" Type="FaceBookForSEOModel.Store.Products" Multiplicity="1" />
+    <End Role="Products_Issue" Type="FaceBookForSEOModel.Store.Products_Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProdouctID" />
+      </Principal>
+      <Dependent Role="Products_Issue">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Issue_Sections">
+    <End Role="Sections" Type="FaceBookForSEOModel.Store.Sections" Multiplicity="1" />
+    <End Role="Products_Issue" Type="FaceBookForSEOModel.Store.Products_Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sections">
+        <PropertyRef Name="SectionID" />
+      </Principal>
+      <Dependent Role="Products_Issue">
+        <PropertyRef Name="SectionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SentLogs_AutomationSites">
+    <End Role="AutomationSites" Type="FaceBookForSEOModel.Store.AutomationSites" Multiplicity="0..1" />
+    <End Role="SentLogs" Type="FaceBookForSEOModel.Store.SentLogs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AutomationSites">
+        <PropertyRef Name="siteid" />
+      </Principal>
+      <Dependent Role="SentLogs">
+        <PropertyRef Name="SiteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SplitContactLists_PlanTypes">
+    <End Role="PlanTypes" Type="FaceBookForSEOModel.Store.PlanTypes" Multiplicity="0..1" />
+    <End Role="SplitContactLists" Type="FaceBookForSEOModel.Store.SplitContactLists" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanTypes">
+        <PropertyRef Name="PlanType" />
+      </Principal>
+      <Dependent Role="SplitContactLists">
+        <PropertyRef Name="PlanType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Template_PlanTypes">
+    <End Role="PlanTypes" Type="FaceBookForSEOModel.Store.PlanTypes" Multiplicity="0..1" />
+    <End Role="Template" Type="FaceBookForSEOModel.Store.Template" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanTypes">
+        <PropertyRef Name="PlanType" />
+      </Principal>
+      <Dependent Role="Template">
+        <PropertyRef Name="PlanType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="GetPostsFacebookSeo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="siteid" Type="varchar" Mode="In" />
+    <Parameter Name="prodType" Type="varchar" Mode="In" />
+    <Parameter Name="keyWord" Type="varchar" Mode="In" />
+  </Function>
+</Schema>

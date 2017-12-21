@@ -1,0 +1,889 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmailAlerterModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="EmailAlerterEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+    <EntitySet Name="Ads" EntityType="EmailAlerterModel.Ad" />
+    <EntitySet Name="Ads_Issue" EntityType="EmailAlerterModel.Ads_Issue" />
+    <EntitySet Name="AutomationSites" EntityType="EmailAlerterModel.AutomationSite" />
+    <EntitySet Name="Categories" EntityType="EmailAlerterModel.Category" />
+    <EntitySet Name="Clicks_Issue" EntityType="EmailAlerterModel.Clicks_Issue" />
+    <EntitySet Name="ContactLists_Issue" EntityType="EmailAlerterModel.ContactLists_Issue" />
+    <EntitySet Name="Convertions_Issue" EntityType="EmailAlerterModel.Convertions_Issue" />
+    <EntitySet Name="Issues" EntityType="EmailAlerterModel.Issue" />
+    <EntitySet Name="Opens_Issue" EntityType="EmailAlerterModel.Opens_Issue" />
+    <EntitySet Name="PlanTypes" EntityType="EmailAlerterModel.PlanType" />
+    <EntitySet Name="Products" EntityType="EmailAlerterModel.Product" />
+    <EntitySet Name="Products_Issue" EntityType="EmailAlerterModel.Products_Issue" />
+    <EntitySet Name="RssContactLists" EntityType="EmailAlerterModel.RssContactList" />
+    <EntitySet Name="RssSubscriptions" EntityType="EmailAlerterModel.RssSubscription" />
+    <EntitySet Name="Sections" EntityType="EmailAlerterModel.Section" />
+    <EntitySet Name="SentLogs" EntityType="EmailAlerterModel.SentLog" />
+    <EntitySet Name="SplitContactLists" EntityType="EmailAlerterModel.SplitContactList" />
+    <EntitySet Name="Templates" EntityType="EmailAlerterModel.Template" />
+    <EntitySet Name="TemplateInfoes" EntityType="EmailAlerterModel.TemplateInfo" />
+    <EntitySet Name="TemplateLibraries" EntityType="EmailAlerterModel.TemplateLibrary" />
+    <AssociationSet Name="FK_Ads_AutomationSites" Association="EmailAlerterModel.FK_Ads_AutomationSites">
+      <End Role="AutomationSite" EntitySet="AutomationSites" />
+      <End Role="Ad" EntitySet="Ads" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ads_Issue_Ads" Association="EmailAlerterModel.FK_Ads_Issue_Ads">
+      <End Role="Ad" EntitySet="Ads" />
+      <End Role="Ads_Issue" EntitySet="Ads_Issue" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ads_Issue_AutomationSites" Association="EmailAlerterModel.FK_Ads_Issue_AutomationSites">
+      <End Role="AutomationSite" EntitySet="AutomationSites" />
+      <End Role="Ads_Issue" EntitySet="Ads_Issue" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ads_Issue_Issue" Association="EmailAlerterModel.FK_Ads_Issue_Issue">
+      <End Role="Issue" EntitySet="Issues" />
+      <End Role="Ads_Issue" EntitySet="Ads_Issue" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Categories_AutomationSites" Association="EmailAlerterModel.FK_Categories_AutomationSites">
+      <End Role="AutomationSite" EntitySet="AutomationSites" />
+      <End Role="Category" EntitySet="Categories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Issues_AutomationSites" Association="EmailAlerterModel.FK_Issues_AutomationSites">
+      <End Role="AutomationSite" EntitySet="AutomationSites" />
+      <End Role="Issue" EntitySet="Issues" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_AutomationSites" Association="EmailAlerterModel.FK_Products_AutomationSites">
+      <End Role="AutomationSite" EntitySet="AutomationSites" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Issue_AutomationSites" Association="EmailAlerterModel.FK_Products_Issue_AutomationSites">
+      <End Role="AutomationSite" EntitySet="AutomationSites" />
+      <End Role="Products_Issue" EntitySet="Products_Issue" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SentLogs_AutomationSites" Association="EmailAlerterModel.FK_SentLogs_AutomationSites">
+      <End Role="AutomationSite" EntitySet="AutomationSites" />
+      <End Role="SentLog" EntitySet="SentLogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContactLists_Issue_Issue" Association="EmailAlerterModel.FK_ContactLists_Issue_Issue">
+      <End Role="Issue" EntitySet="Issues" />
+      <End Role="ContactLists_Issue" EntitySet="ContactLists_Issue" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Issues_Ads_Issue" Association="EmailAlerterModel.FK_Issues_Ads_Issue">
+      <End Role="Issue" EntitySet="Issues" />
+      <End Role="Issue1" EntitySet="Issues" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Issues_PlanTypes" Association="EmailAlerterModel.FK_Issues_PlanTypes">
+      <End Role="PlanType" EntitySet="PlanTypes" />
+      <End Role="Issue" EntitySet="Issues" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Issue_Issue" Association="EmailAlerterModel.FK_Products_Issue_Issue">
+      <End Role="Issue" EntitySet="Issues" />
+      <End Role="Products_Issue" EntitySet="Products_Issue" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SplitContactLists_PlanTypes" Association="EmailAlerterModel.FK_SplitContactLists_PlanTypes">
+      <End Role="PlanType" EntitySet="PlanTypes" />
+      <End Role="SplitContactList" EntitySet="SplitContactLists" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Template_PlanTypes" Association="EmailAlerterModel.FK_Template_PlanTypes">
+      <End Role="PlanType" EntitySet="PlanTypes" />
+      <End Role="Template" EntitySet="Templates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Issue_Products" Association="EmailAlerterModel.FK_Products_Issue_Products">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="Products_Issue" EntitySet="Products_Issue" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Issue_Sections" Association="EmailAlerterModel.FK_Products_Issue_Sections">
+      <End Role="Section" EntitySet="Sections" />
+      <End Role="Products_Issue" EntitySet="Products_Issue" />
+    </AssociationSet>
+    <AssociationSet Name="AdsCategory" Association="EmailAlerterModel.AdsCategory">
+      <End Role="Ad" EntitySet="Ads" />
+      <End Role="Category" EntitySet="Categories" />
+    </AssociationSet>
+    <AssociationSet Name="ProductCategory" Association="EmailAlerterModel.ProductCategory">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <EntitySet Name="Tokens" EntityType="EmailAlerterModel.Token" />
+    <EntitySet Name="BannerRegexes" EntityType="EmailAlerterModel.BannerRegex" />
+    <FunctionImport Name="GetAutoPlanInfos" ReturnType="Collection(EmailAlerterModel.AutoPlanInfo)">
+      <Parameter Name="spreadAccount" Mode="In" Type="String" />
+      <Parameter Name="keyWord" Mode="In" Type="String" />
+      <Parameter Name="status" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetOneAutoPlanInfo" ReturnType="Collection(EmailAlerterModel.AutoPlanInfo)">
+      <Parameter Name="siteid" Mode="In" Type="Int32" />
+      <Parameter Name="planType" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetProdpathbyCates" ReturnType="Collection(EmailAlerterModel.CateProdpath)">
+      <Parameter Name="cates" Mode="In" Type="String" />
+      <Parameter Name="siteid" Mode="In" Type="Int32" />
+      <Parameter Name="plantype" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="ProductPaths" EntityType="EmailAlerterModel.ProductPath" />
+    <EntitySet Name="AutomationPlans" EntityType="EmailAlerterModel.AutomationPlan" />
+    <AssociationSet Name="FK_AutomationPlan_AutomationSites" Association="EmailAlerterModel.FK_AutomationPlan_AutomationSites">
+      <End Role="AutomationSite" EntitySet="AutomationSites" />
+      <End Role="AutomationPlan" EntitySet="AutomationPlans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AutomationPlan_PlanType" Association="EmailAlerterModel.FK_AutomationPlan_PlanType">
+      <End Role="PlanType" EntitySet="PlanTypes" />
+      <End Role="AutomationPlan" EntitySet="AutomationPlans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AutomationPlan_Template" Association="EmailAlerterModel.FK_AutomationPlan_Template">
+      <End Role="Template" EntitySet="Templates" />
+      <End Role="AutomationPlan" EntitySet="AutomationPlans" />
+    </AssociationSet>
+    <EntitySet Name="ContactSettings" EntityType="EmailAlerterModel.ContactSetting" />
+  </EntityContainer>
+  <EntityType Name="Ad">
+    <Key>
+      <PropertyRef Name="AdID" />
+    </Key>
+    <Property Type="Int64" Name="AdID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Ad1" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Url" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PictureUrl" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="SizeHeight" />
+    <Property Type="Int32" Name="SizeWidth" />
+    <Property Type="Int32" Name="SiteID" />
+    <Property Type="String" Name="Type" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="Lastupdate" Precision="3" />
+    <Property Type="Decimal" Name="Price" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Discount" Precision="19" Scale="4" />
+    <NavigationProperty Name="AutomationSite" Relationship="EmailAlerterModel.FK_Ads_AutomationSites" FromRole="Ad" ToRole="AutomationSite" />
+    <NavigationProperty Name="Ads_Issue" Relationship="EmailAlerterModel.FK_Ads_Issue_Ads" FromRole="Ad" ToRole="Ads_Issue" />
+    <NavigationProperty Name="Categories" Relationship="EmailAlerterModel.AdsCategory" FromRole="Ad" ToRole="Category" />
+  </EntityType>
+  <EntityType Name="Ads_Issue">
+    <Key>
+      <PropertyRef Name="AdId" />
+      <PropertyRef Name="SiteId" />
+      <PropertyRef Name="IssueID" />
+    </Key>
+    <Property Type="Int64" Name="AdId" Nullable="false" />
+    <Property Type="Int32" Name="SiteId" Nullable="false" />
+    <Property Type="Int64" Name="IssueID" Nullable="false" />
+    <NavigationProperty Name="Ad" Relationship="EmailAlerterModel.FK_Ads_Issue_Ads" FromRole="Ads_Issue" ToRole="Ad" />
+    <NavigationProperty Name="AutomationSite" Relationship="EmailAlerterModel.FK_Ads_Issue_AutomationSites" FromRole="Ads_Issue" ToRole="AutomationSite" />
+    <NavigationProperty Name="Issue" Relationship="EmailAlerterModel.FK_Ads_Issue_Issue" FromRole="Ads_Issue" ToRole="Issue" />
+  </EntityType>
+  <EntityType Name="AutomationSite">
+    <Key>
+      <PropertyRef Name="siteid" />
+    </Key>
+    <Property Type="Int32" Name="siteid" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="SiteName" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SpreadLogin" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AppID" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DllType" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SiteUrl" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="volumn" />
+    <NavigationProperty Name="Ads" Relationship="EmailAlerterModel.FK_Ads_AutomationSites" FromRole="AutomationSite" ToRole="Ad" />
+    <NavigationProperty Name="Ads_Issue" Relationship="EmailAlerterModel.FK_Ads_Issue_AutomationSites" FromRole="AutomationSite" ToRole="Ads_Issue" />
+    <NavigationProperty Name="Categories" Relationship="EmailAlerterModel.FK_Categories_AutomationSites" FromRole="AutomationSite" ToRole="Category" />
+    <NavigationProperty Name="Issues" Relationship="EmailAlerterModel.FK_Issues_AutomationSites" FromRole="AutomationSite" ToRole="Issue" />
+    <NavigationProperty Name="Products" Relationship="EmailAlerterModel.FK_Products_AutomationSites" FromRole="AutomationSite" ToRole="Product" />
+    <NavigationProperty Name="Products_Issue" Relationship="EmailAlerterModel.FK_Products_Issue_AutomationSites" FromRole="AutomationSite" ToRole="Products_Issue" />
+    <NavigationProperty Name="SentLogs" Relationship="EmailAlerterModel.FK_SentLogs_AutomationSites" FromRole="AutomationSite" ToRole="SentLog" />
+    <Property Type="String" Name="LogoImgUrl" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreateTime" Precision="3" />
+    <NavigationProperty Name="AutomationPlans" Relationship="EmailAlerterModel.FK_AutomationPlan_AutomationSites" FromRole="AutomationSite" ToRole="AutomationPlan" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Type="Int32" Name="CategoryID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="ParentID" />
+    <Property Type="String" Name="Category1" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="SiteID" />
+    <Property Type="DateTime" Name="LastUpdate" Precision="3" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Url" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PictureUrl" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PictureAlt" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="SizeHeight" />
+    <Property Type="Int32" Name="SizeWidth" />
+    <Property Type="String" Name="Gender" MaxLength="10" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="AutomationSite" Relationship="EmailAlerterModel.FK_Categories_AutomationSites" FromRole="Category" ToRole="AutomationSite" />
+    <NavigationProperty Name="Ads" Relationship="EmailAlerterModel.AdsCategory" FromRole="Category" ToRole="Ad" />
+    <NavigationProperty Name="Products" Relationship="EmailAlerterModel.ProductCategory" FromRole="Category" ToRole="Product" />
+    <Property Name="BackUpUrls" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Clicks_Issue">
+    <Key>
+      <PropertyRef Name="ClickID" />
+    </Key>
+    <Property Type="Int64" Name="ClickID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int64" Name="IssueID" />
+    <Property Type="Int64" Name="SpreadCampId" />
+    <Property Type="String" Name="SubEmail" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ClickUrl" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="ClickDate" Precision="0" />
+    <Property Type="Int32" Name="siteid" />
+  </EntityType>
+  <EntityType Name="ContactLists_Issue">
+    <Key>
+      <PropertyRef Name="IssueID" />
+      <PropertyRef Name="ContactList" />
+    </Key>
+    <Property Type="Int64" Name="IssueID" Nullable="false" />
+    <Property Type="String" Name="ContactList" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="SendTime" Precision="3" />
+    <Property Type="String" Name="SendingStatus" MaxLength="10" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="Issue" Relationship="EmailAlerterModel.FK_ContactLists_Issue_Issue" FromRole="ContactLists_Issue" ToRole="Issue" />
+  </EntityType>
+  <EntityType Name="Convertions_Issue">
+    <Key>
+      <PropertyRef Name="ConvertID" />
+    </Key>
+    <Property Type="Int64" Name="ConvertID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int64" Name="IssueID" />
+    <Property Type="Int64" Name="SpreadCampId" />
+    <Property Type="String" Name="SubEmail" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ConvertType" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ConvertUrl" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ConvertValue" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="DateTime" Name="ConvertTime" Precision="0" />
+    <Property Type="Int32" Name="siteid" />
+  </EntityType>
+  <EntityType Name="Issue">
+    <Key>
+      <PropertyRef Name="IssueID" />
+    </Key>
+    <Property Type="Int64" Name="IssueID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="DateTime" Name="IssueDate" Nullable="false" Precision="3" />
+    <Property Type="String" Name="Subject" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="SiteID" />
+    <Property Type="String" Name="PlanType" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="SentStatus" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Type="Int64" Name="SpreadCampId" />
+    <NavigationProperty Name="Ads_Issue" Relationship="EmailAlerterModel.FK_Ads_Issue_Issue" FromRole="Issue" ToRole="Ads_Issue" />
+    <NavigationProperty Name="AutomationSite" Relationship="EmailAlerterModel.FK_Issues_AutomationSites" FromRole="Issue" ToRole="AutomationSite" />
+    <NavigationProperty Name="ContactLists_Issue" Relationship="EmailAlerterModel.FK_ContactLists_Issue_Issue" FromRole="Issue" ToRole="ContactLists_Issue" />
+    <NavigationProperty Name="Issues1" Relationship="EmailAlerterModel.FK_Issues_Ads_Issue" FromRole="Issue" ToRole="Issue1" />
+    <NavigationProperty Name="Issue1" Relationship="EmailAlerterModel.FK_Issues_Ads_Issue" FromRole="Issue1" ToRole="Issue" />
+    <NavigationProperty Name="PlanType1" Relationship="EmailAlerterModel.FK_Issues_PlanTypes" FromRole="Issue" ToRole="PlanType" />
+    <NavigationProperty Name="Products_Issue" Relationship="EmailAlerterModel.FK_Products_Issue_Issue" FromRole="Issue" ToRole="Products_Issue" />
+    <Property Name="NtesCampId" Type="Int64" />
+  </EntityType>
+  <EntityType Name="Opens_Issue">
+    <Key>
+      <PropertyRef Name="OpenID" />
+    </Key>
+    <Property Type="Int64" Name="OpenID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int64" Name="IssueID" />
+    <Property Type="Int64" Name="SpreadCampId" />
+    <Property Type="String" Name="SubEmail" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="OpenDate" Precision="0" />
+    <Property Type="Int32" Name="siteid" />
+  </EntityType>
+  <EntityType Name="PlanType">
+    <Key>
+      <PropertyRef Name="PlanType1" />
+    </Key>
+    <Property Type="String" Name="PlanType1" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="100" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Issues" Relationship="EmailAlerterModel.FK_Issues_PlanTypes" FromRole="PlanType" ToRole="Issue" />
+    <NavigationProperty Name="SplitContactLists" Relationship="EmailAlerterModel.FK_SplitContactLists_PlanTypes" FromRole="PlanType" ToRole="SplitContactList" />
+    <NavigationProperty Name="Templates" Relationship="EmailAlerterModel.FK_Template_PlanTypes" FromRole="PlanType" ToRole="Template" />
+    <NavigationProperty Name="AutomationPlans" Relationship="EmailAlerterModel.FK_AutomationPlan_PlanType" FromRole="PlanType" ToRole="AutomationPlan" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProdouctID" />
+    </Key>
+    <Property Type="Int64" Name="ProdouctID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Prodouct" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Url" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Price" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Discount" Precision="19" Scale="4" />
+    <Property Type="Int32" Name="Sales" />
+    <Property Type="String" Name="PictureUrl" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LastUpdate" Precision="3" />
+    <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="SiteID" />
+    <Property Type="String" Name="Currency" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="PictureAlt" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="SizeHeight" />
+    <Property Type="Int32" Name="SizeWidth" />
+    <Property Type="Decimal" Name="TbScore" Precision="19" Scale="4" />
+    <Property Type="Int32" Name="TbComment" />
+    <Property Type="String" Name="FreeShippingImg" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ShipsImg" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="ExpiredDate" Precision="3" />
+    <NavigationProperty Name="AutomationSite" Relationship="EmailAlerterModel.FK_Products_AutomationSites" FromRole="Product" ToRole="AutomationSite" />
+    <NavigationProperty Name="Products_Issue" Relationship="EmailAlerterModel.FK_Products_Issue_Products" FromRole="Product" ToRole="Products_Issue" />
+    <NavigationProperty Name="Categories" Relationship="EmailAlerterModel.ProductCategory" FromRole="Product" ToRole="Category" />
+    <Property Name="PublishDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Products_Issue">
+    <Key>
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="SiteId" />
+      <PropertyRef Name="IssueID" />
+      <PropertyRef Name="SectionID" />
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Type="Int64" Name="ProductId" Nullable="false" />
+    <Property Type="Int32" Name="SiteId" Nullable="false" />
+    <Property Type="Int64" Name="IssueID" Nullable="false" />
+    <Property Type="String" Name="SectionID" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="Priority" />
+    <NavigationProperty Name="AutomationSite" Relationship="EmailAlerterModel.FK_Products_Issue_AutomationSites" FromRole="Products_Issue" ToRole="AutomationSite" />
+    <NavigationProperty Name="Issue" Relationship="EmailAlerterModel.FK_Products_Issue_Issue" FromRole="Products_Issue" ToRole="Issue" />
+    <NavigationProperty Name="Product" Relationship="EmailAlerterModel.FK_Products_Issue_Products" FromRole="Products_Issue" ToRole="Product" />
+    <NavigationProperty Name="Section" Relationship="EmailAlerterModel.FK_Products_Issue_Sections" FromRole="Products_Issue" ToRole="Section" />
+    <Property Name="CategoryId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RssContactList">
+    <Key>
+      <PropertyRef Name="ContactListId" />
+    </Key>
+    <Property Type="Int32" Name="ContactListId" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="RssId" />
+    <Property Type="String" Name="ContactListName" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="RssSubscription">
+    <Key>
+      <PropertyRef Name="RssId" />
+    </Key>
+    <Property Type="Int32" Name="RssId" Nullable="false" />
+    <Property Type="String" Name="URL" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SpreadLogin" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="StartAt" Precision="3" />
+    <Property Type="DateTime" Name="EndAt" Precision="3" />
+    <Property Type="Double" Name="IntervalDay" />
+    <Property Type="String" Name="WeekDays" MaxLength="7" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SenderName" MaxLength="800" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SenderEmail" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Template" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="ExcludeSubject" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DefaultSubject" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="rssType" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="AppID" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Categories" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="SiteID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+  </EntityType>
+  <EntityType Name="Section">
+    <Key>
+      <PropertyRef Name="SectionID" />
+    </Key>
+    <Property Type="String" Name="SectionID" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="Section1" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Products_Issue" Relationship="EmailAlerterModel.FK_Products_Issue_Sections" FromRole="Section" ToRole="Products_Issue" />
+  </EntityType>
+  <EntityType Name="SentLog">
+    <Key>
+      <PropertyRef Name="SentLogId" />
+    </Key>
+    <Property Type="Int32" Name="SentLogId" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="RssId" />
+    <Property Type="String" Name="Subject" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LastSentAt" Precision="3" />
+    <Property Type="Int32" Name="SiteID" />
+    <Property Type="String" Name="PlanType" MaxLength="4" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="AutomationSite" Relationship="EmailAlerterModel.FK_SentLogs_AutomationSites" FromRole="SentLog" ToRole="AutomationSite" />
+  </EntityType>
+  <EntityType Name="SplitContactList">
+    <Key>
+      <PropertyRef Name="SplitID" />
+    </Key>
+    <Property Type="String" Name="ShopName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContactListName" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RssType" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Flag" Nullable="false" />
+    <Property Type="Int32" Name="SiteID" />
+    <Property Type="String" Name="PlanType" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="SplitID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="DateTime" Name="SendTime" Precision="3" />
+    <Property Type="String" Name="SendingStatus" MaxLength="10" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="PlanType1" Relationship="EmailAlerterModel.FK_SplitContactLists_PlanTypes" FromRole="SplitContactList" ToRole="PlanType" />
+  </EntityType>
+  <EntityType Name="Template">
+    <Key>
+      <PropertyRef Name="Tid" />
+    </Key>
+    <Property Type="Int32" Name="Tid" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TemplateName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Contents" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="RssID" />
+    <Property Type="Int32" Name="SiteID" />
+    <Property Type="String" Name="tType" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="PlanType" MaxLength="4" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="PlanType1" Relationship="EmailAlerterModel.FK_Template_PlanTypes" FromRole="Template" ToRole="PlanType" />
+    <Property Type="DateTime" Name="LatestModifyTime" Precision="3" />
+    <NavigationProperty Name="AutomationPlans" Relationship="EmailAlerterModel.FK_AutomationPlan_Template" FromRole="Template" ToRole="AutomationPlan" />
+  </EntityType>
+  <EntityType Name="TemplateInfo">
+    <Key>
+      <PropertyRef Name="SiteId" />
+    </Key>
+    <Property Type="Int64" Name="SiteId" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="PlanType" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="SortedCates" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DisplayCount" />
+    <Property Type="DateTime" Name="Modified" Precision="3" />
+  </EntityType>
+  <EntityType Name="TemplateLibrary">
+    <Key>
+      <PropertyRef Name="Tid" />
+    </Key>
+    <Property Type="Int64" Name="Tid" Nullable="false" />
+    <Property Type="String" Name="Contents" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Demo" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="CategoryId" />
+  </EntityType>
+  <Association Name="FK_Ads_AutomationSites">
+    <End Type="EmailAlerterModel.AutomationSite" Role="AutomationSite" Multiplicity="0..1" />
+    <End Type="EmailAlerterModel.Ad" Role="Ad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AutomationSite">
+        <PropertyRef Name="siteid" />
+      </Principal>
+      <Dependent Role="Ad">
+        <PropertyRef Name="SiteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ads_Issue_Ads">
+    <End Type="EmailAlerterModel.Ad" Role="Ad" Multiplicity="1" />
+    <End Type="EmailAlerterModel.Ads_Issue" Role="Ads_Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ad">
+        <PropertyRef Name="AdID" />
+      </Principal>
+      <Dependent Role="Ads_Issue">
+        <PropertyRef Name="AdId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ads_Issue_AutomationSites">
+    <End Type="EmailAlerterModel.AutomationSite" Role="AutomationSite" Multiplicity="1" />
+    <End Type="EmailAlerterModel.Ads_Issue" Role="Ads_Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AutomationSite">
+        <PropertyRef Name="siteid" />
+      </Principal>
+      <Dependent Role="Ads_Issue">
+        <PropertyRef Name="SiteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ads_Issue_Issue">
+    <End Type="EmailAlerterModel.Issue" Role="Issue" Multiplicity="1" />
+    <End Type="EmailAlerterModel.Ads_Issue" Role="Ads_Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Issue">
+        <PropertyRef Name="IssueID" />
+      </Principal>
+      <Dependent Role="Ads_Issue">
+        <PropertyRef Name="IssueID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Categories_AutomationSites">
+    <End Type="EmailAlerterModel.AutomationSite" Role="AutomationSite" Multiplicity="0..1" />
+    <End Type="EmailAlerterModel.Category" Role="Category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AutomationSite">
+        <PropertyRef Name="siteid" />
+      </Principal>
+      <Dependent Role="Category">
+        <PropertyRef Name="SiteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Issues_AutomationSites">
+    <End Type="EmailAlerterModel.AutomationSite" Role="AutomationSite" Multiplicity="0..1" />
+    <End Type="EmailAlerterModel.Issue" Role="Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AutomationSite">
+        <PropertyRef Name="siteid" />
+      </Principal>
+      <Dependent Role="Issue">
+        <PropertyRef Name="SiteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_AutomationSites">
+    <End Type="EmailAlerterModel.AutomationSite" Role="AutomationSite" Multiplicity="0..1" />
+    <End Type="EmailAlerterModel.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AutomationSite">
+        <PropertyRef Name="siteid" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="SiteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Issue_AutomationSites">
+    <End Type="EmailAlerterModel.AutomationSite" Role="AutomationSite" Multiplicity="1" />
+    <End Type="EmailAlerterModel.Products_Issue" Role="Products_Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AutomationSite">
+        <PropertyRef Name="siteid" />
+      </Principal>
+      <Dependent Role="Products_Issue">
+        <PropertyRef Name="SiteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SentLogs_AutomationSites">
+    <End Type="EmailAlerterModel.AutomationSite" Role="AutomationSite" Multiplicity="0..1" />
+    <End Type="EmailAlerterModel.SentLog" Role="SentLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AutomationSite">
+        <PropertyRef Name="siteid" />
+      </Principal>
+      <Dependent Role="SentLog">
+        <PropertyRef Name="SiteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContactLists_Issue_Issue">
+    <End Type="EmailAlerterModel.Issue" Role="Issue" Multiplicity="1" />
+    <End Type="EmailAlerterModel.ContactLists_Issue" Role="ContactLists_Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Issue">
+        <PropertyRef Name="IssueID" />
+      </Principal>
+      <Dependent Role="ContactLists_Issue">
+        <PropertyRef Name="IssueID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Issues_Ads_Issue">
+    <End Type="EmailAlerterModel.Issue" Role="Issue" Multiplicity="1" />
+    <End Type="EmailAlerterModel.Issue" Role="Issue1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Issue">
+        <PropertyRef Name="IssueID" />
+      </Principal>
+      <Dependent Role="Issue1">
+        <PropertyRef Name="IssueID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Issues_PlanTypes">
+    <End Type="EmailAlerterModel.PlanType" Role="PlanType" Multiplicity="0..1" />
+    <End Type="EmailAlerterModel.Issue" Role="Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanType">
+        <PropertyRef Name="PlanType1" />
+      </Principal>
+      <Dependent Role="Issue">
+        <PropertyRef Name="PlanType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Issue_Issue">
+    <End Type="EmailAlerterModel.Issue" Role="Issue" Multiplicity="1" />
+    <End Type="EmailAlerterModel.Products_Issue" Role="Products_Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Issue">
+        <PropertyRef Name="IssueID" />
+      </Principal>
+      <Dependent Role="Products_Issue">
+        <PropertyRef Name="IssueID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SplitContactLists_PlanTypes">
+    <End Type="EmailAlerterModel.PlanType" Role="PlanType" Multiplicity="0..1" />
+    <End Type="EmailAlerterModel.SplitContactList" Role="SplitContactList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanType">
+        <PropertyRef Name="PlanType1" />
+      </Principal>
+      <Dependent Role="SplitContactList">
+        <PropertyRef Name="PlanType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Template_PlanTypes">
+    <End Type="EmailAlerterModel.PlanType" Role="PlanType" Multiplicity="0..1" />
+    <End Type="EmailAlerterModel.Template" Role="Template" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanType">
+        <PropertyRef Name="PlanType1" />
+      </Principal>
+      <Dependent Role="Template">
+        <PropertyRef Name="PlanType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Issue_Products">
+    <End Type="EmailAlerterModel.Product" Role="Product" Multiplicity="1" />
+    <End Type="EmailAlerterModel.Products_Issue" Role="Products_Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProdouctID" />
+      </Principal>
+      <Dependent Role="Products_Issue">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Issue_Sections">
+    <End Type="EmailAlerterModel.Section" Role="Section" Multiplicity="1" />
+    <End Type="EmailAlerterModel.Products_Issue" Role="Products_Issue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="SectionID" />
+      </Principal>
+      <Dependent Role="Products_Issue">
+        <PropertyRef Name="SectionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AdsCategory">
+    <End Type="EmailAlerterModel.Ad" Role="Ad" Multiplicity="*" />
+    <End Type="EmailAlerterModel.Category" Role="Category" Multiplicity="*" />
+  </Association>
+  <Association Name="ProductCategory">
+    <End Type="EmailAlerterModel.Category" Role="Category" Multiplicity="*" />
+    <End Type="EmailAlerterModel.Product" Role="Product" Multiplicity="*" />
+  </Association>
+  <EntityType Name="Token">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="type" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="shortTimeToken" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="longTimeToken" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="longTokenExpireDate" Precision="3" />
+  </EntityType>
+  <EntityType Name="BannerRegex">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="siteId" />
+    <Property Type="String" Name="planType" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="bannerFormUrl" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="bannerStartIndex" />
+    <Property Type="Int32" Name="bannerEndIndex" />
+    <Property Type="String" Name="bannerRegText" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="srcRegText" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="hrefRegText" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="cookie" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="pageEncoding" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="noRepeatSentDays" />
+  </EntityType>
+  <ComplexType Name="AutoPlanInfo">
+    <Property Type="Int32" Name="SiteID" Nullable="false" />
+    <Property Type="String" Name="PlanType" Nullable="false" MaxLength="4" />
+    <Property Type="DateTime" Name="StartAt" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="EndAt" Nullable="true" Precision="23" />
+    <Property Type="Double" Name="IntervalDay" Nullable="true" />
+    <Property Type="String" Name="WeekDays" Nullable="true" MaxLength="7" />
+    <Property Type="String" Name="SenderName" Nullable="true" MaxLength="800" />
+    <Property Type="String" Name="SenderEmail" Nullable="true" MaxLength="200" />
+    <Property Type="Int32" Name="TemplateID" Nullable="true" />
+    <Property Type="String" Name="Status" Nullable="true" MaxLength="1" />
+    <Property Type="Byte" Name="SplitContactCount" Nullable="true" />
+    <Property Type="String" Name="URL" Nullable="true" MaxLength="1024" />
+    <Property Type="String" Name="Categories" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="Day_Of_Week" Nullable="true" MaxLength="7" />
+    <Property Type="String" Name="ContactList" Nullable="true" />
+    <Property Type="String" Name="CampaignStatus" Nullable="true" MaxLength="3" />
+    <Property Type="Double" Name="ScheduleTimeInteval" Nullable="true" />
+    <Property Type="String" Name="SearchAPIType" Nullable="true" MaxLength="3" />
+    <Property Type="Int32" Name="SearchStartDayInterval" Nullable="true" />
+    <Property Type="Int32" Name="SearchEndDayInterval" Nullable="true" />
+    <Property Type="String" Name="UrlSpecialCode" Nullable="true" MaxLength="1024" />
+    <Property Type="String" Name="ListType" Nullable="true" MaxLength="3" />
+    <Property Type="Int64" Name="LimitQuantity" Nullable="true" />
+    <Property Type="String" Name="SellerEmail" Nullable="true" MaxLength="1024" />
+    <Property Type="String" Name="TimeLimit" Nullable="true" MaxLength="1024" />
+    <Property Type="Int32" Name="TriggerForNFC" Nullable="true" />
+    <Property Type="String" Name="SubjectForNFC" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ShopType" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="displayCount" Nullable="true" />
+    <Property Type="String" Name="bannerFromUrl" Nullable="true" MaxLength="1024" />
+    <Property Type="String" Name="bannerRegex" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="bannerIndex" Nullable="true" />
+    <Property Type="DateTime" Name="CreateTime" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="LastModifyTime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="sitename" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="spreadLogin" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="appid" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="dlltype" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="siteurl" Nullable="true" MaxLength="1024" />
+    <Property Type="String" Name="description" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="logoimgurl" Nullable="true" MaxLength="1024" />
+    <Property Type="String" Name="MultiTemplate" Nullable="true" />
+    <Property Type="String" Name="ExcludeList" Nullable="true" />
+    <Property Type="Int32" Name="ContactType" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="CateProdpath">
+    <Property Type="Int32" Name="cateId" Nullable="false" />
+    <Property Type="String" Name="cateName" Nullable="true" MaxLength="400" />
+    <Property Type="String" Name="cateUrl" Nullable="true" MaxLength="1024" />
+    <Property Type="Int32" Name="siteId" Nullable="true" />
+    <Property Type="String" Name="planType" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="fileType" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="prodcate" Nullable="true" />
+    <Property Type="String" Name="cateParam" Nullable="true" MaxLength="1024" />
+    <Property Type="String" Name="prodPath" Nullable="true" MaxLength="1024" />
+    <Property Type="String" Name="productPath" Nullable="true" MaxLength="1024" />
+    <Property Type="String" Name="productAttri" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="urlPath" Nullable="true" MaxLength="1024" />
+    <Property Type="String" Name="urlAttri" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="pricePath" Nullable="true" MaxLength="1024" />
+    <Property Type="String" Name="priceAttri" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="discountPath" Nullable="true" MaxLength="1024" />
+    <Property Type="String" Name="discountAttri" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="salesPath" Nullable="true" MaxLength="1024" />
+    <Property Type="String" Name="salesAttri" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="pictureUrlPath" Nullable="true" MaxLength="1024" />
+    <Property Type="String" Name="pictureUrlAttri" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="descriptionPath" Nullable="true" MaxLength="1024" />
+    <Property Type="String" Name="descriptionAttri" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="pictureAltPath" Nullable="true" MaxLength="1024" />
+    <Property Type="String" Name="pictureAltAttri" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="currencyChar" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="prodDisplayCount" Nullable="true" />
+    <Property Type="String" Name="cookie" Nullable="true" MaxLength="1024" />
+    <Property Type="String" Name="pageEncoding" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="noRepeatSentDays" Nullable="true" />
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="String" Name="issueDate" Nullable="false" />
+    <Property Type="String" Name="issueDateAttri" Nullable="false" />
+    <Property Type="Int32" Name="validityPeriod" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="ProductPath">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="siteId" Nullable="false" />
+    <Property Type="String" Name="planType" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="fileType" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="Int32" Name="prodcate" Nullable="false" />
+    <Property Type="String" Name="cateParam" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="prodPath" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="productPath1" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="productAttri" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="urlPath" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="urlAttri" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="pricePath" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="priceAttri" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="discountPath" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="discountAttri" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="salesPath" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="salesAttri" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="pictureUrlPath" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="pictureUrlAttri" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="descriptionPath" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="descriptionAttri" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="pictureAltPath" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="pictureAltAttri" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="currencyChar" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="prodDisplayCount" />
+    <Property Type="String" Name="cookie" Nullable="false" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="pageEncoding" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="noRepeatSentDays" Nullable="false" />
+    <Property Type="String" Name="issueDate" MaxLength="1024" FixedLength="false" Unicode="false" Nullable="true" />
+    <Property Type="String" Name="issueDateAttri" MaxLength="50" FixedLength="false" Unicode="false" Nullable="true" />
+    <Property Type="Int32" Name="validityPeriod" Nullable="true" />
+  </EntityType>
+  <EntityType Name="AutomationPlan">
+    <Key>
+      <PropertyRef Name="SiteID" />
+      <PropertyRef Name="PlanType" />
+    </Key>
+    <Property Name="SiteID" Type="Int32" Nullable="false" />
+    <Property Name="PlanType" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="StartAt" Type="DateTime" Precision="3" />
+    <Property Name="EndAt" Type="DateTime" Precision="3" />
+    <Property Name="IntervalDay" Type="Double" />
+    <Property Name="WeekDays" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+    <Property Name="SenderName" Type="String" MaxLength="800" FixedLength="false" Unicode="true" />
+    <Property Name="SenderEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TemplateID" Type="Int32" />
+    <Property Name="MultiTemplate" Type="String" MaxLength="1024" FixedLength="true" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="SplitContactCount" Type="Byte" />
+    <Property Name="URL" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="Categories" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Day_Of_Week" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+    <Property Name="ContactList" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CampaignStatus" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="ScheduleTimeInteval" Type="Double" />
+    <Property Name="ListType" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="SearchAPIType" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="SearchStartDayInterval" Type="Int32" />
+    <Property Name="SearchEndDayInterval" Type="Int32" />
+    <Property Name="UrlSpecialCode" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="LimitQuantity" Type="Int64" />
+    <Property Name="SellerEmail" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="TimeLimit" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="TriggerForNFC" Type="Int32" />
+    <Property Name="SubjectForNFC" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ShopType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="displayCount" Type="Int32" />
+    <Property Name="bannerFromUrl" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="bannerRegex" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="bannerIndex" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="ExcludeList" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsAssociateSite" Type="Boolean" />
+    <NavigationProperty Name="AutomationSite" Relationship="EmailAlerterModel.FK_AutomationPlan_AutomationSites" FromRole="AutomationPlan" ToRole="AutomationSite" />
+    <NavigationProperty Name="PlanType1" Relationship="EmailAlerterModel.FK_AutomationPlan_PlanType" FromRole="AutomationPlan" ToRole="PlanType" />
+    <NavigationProperty Name="Template" Relationship="EmailAlerterModel.FK_AutomationPlan_Template" FromRole="AutomationPlan" ToRole="Template" />
+    <Property Name="ContactType" Type="Int32" />
+    <Property Name="TemplateEngine" Type="Int32" />
+  </EntityType>
+  <Association Name="FK_AutomationPlan_AutomationSites">
+    <End Type="EmailAlerterModel.AutomationSite" Role="AutomationSite" Multiplicity="1" />
+    <End Type="EmailAlerterModel.AutomationPlan" Role="AutomationPlan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AutomationSite">
+        <PropertyRef Name="siteid" />
+      </Principal>
+      <Dependent Role="AutomationPlan">
+        <PropertyRef Name="SiteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AutomationPlan_PlanType">
+    <End Type="EmailAlerterModel.PlanType" Role="PlanType" Multiplicity="1" />
+    <End Type="EmailAlerterModel.AutomationPlan" Role="AutomationPlan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanType">
+        <PropertyRef Name="PlanType1" />
+      </Principal>
+      <Dependent Role="AutomationPlan">
+        <PropertyRef Name="PlanType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AutomationPlan_Template">
+    <End Type="EmailAlerterModel.Template" Role="Template" Multiplicity="0..1" />
+    <End Type="EmailAlerterModel.AutomationPlan" Role="AutomationPlan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Template">
+        <PropertyRef Name="Tid" />
+      </Principal>
+      <Dependent Role="AutomationPlan">
+        <PropertyRef Name="TemplateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ContactSetting">
+    <Key>
+      <PropertyRef Name="SiteId" />
+      <PropertyRef Name="PlanType" />
+      <PropertyRef Name="ContactName" />
+    </Key>
+    <Property Name="SiteId" Type="Int32" Nullable="false" />
+    <Property Name="PlanType" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ContactName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsNTES" Type="Boolean" />
+    <Property Name="MaxSend" Type="Int32" />
+  </EntityType>
+</Schema>

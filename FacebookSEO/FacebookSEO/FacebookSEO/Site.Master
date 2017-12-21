@@ -1,0 +1,105 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site.master.vb" Inherits="FacebookSEO.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>K11 - 香港K11購物藝術館</title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta name="description" content="香港K11商場是全球首個購物藝術館。K11香港購物中心也是把藝術，人文，自然三大核心元素融合的香港藝術館。" /> 
+    <meta name="keywords" content="香港K11,K11 香港,k11香港,尖沙咀K11,尖沙咀 k11,K11 尖沙咀,k11購物藝術館,k11 購物藝術館,K11泊車,k11 購物中心,k11 購物商場,k11 hk,k11 綜合商場,k11商場,k11 商場,k 11,k-11" /> 
+</head>
+<body>
+    <form runat="server">
+        <div id="global_content">
+    <div class="page">
+        <div class="header">
+            <div class="title" style="margin-left: 20px;margin-top: 20px;">
+                <a  href="http://hk.k11.com/sc/Home.aspx"><img title="K11" src="http://hk.k11.com/getmedia/d1347fe0-93fe-4a53-a722-154cd7410489/logo.png.aspx?width=87&height=45&ext=.png" alt="K11" style="border-width:0px;" />
+                <span id="p_lt_ctl00_K11Logo_btnElem_lblText"></span></a>
+            </div>
+            <div class="loginDisplay">
+                <span style="display: block; line-height: 22px; color: #333333;font-size: 12px">
+                    <a href="http://hk.k11.com/sc/About-K11/About.aspx"  target="_blank" style="color:#3e3e3e; text-decoration:none;">關於我們</a>&nbsp; &nbsp; &nbsp;
+                    <a href="http://hk.k11.com/sc/About-K11/Awards.aspx" target="_blank" style="color:#3e3e3e; text-decoration:none;">所得獎項</a>&nbsp; &nbsp;&nbsp;
+                    <a href="http://hk.k11.com/sc/Today-in-K11/Promotions.aspx" target="_blank" style="color:#3e3e3e; text-decoration:none;">精彩優惠</a>&nbsp; &nbsp;&nbsp;
+                    <a href="http://hk.k11.com/sc/Special/Parking.aspx" target="_blank" style="color:#3e3e3e; text-decoration:none;">泊車優惠</a>&nbsp; &nbsp;&nbsp;
+                    <a href="http://hk.k11.com/sc/Special/Location.aspx" target="_blank" style="color:#3e3e3e; text-decoration:none;">K11 位置</a> 
+                    &nbsp; &nbsp; &nbsp;
+                    <a href="http://hk.k11.com/sc/%E5%AA%92%E4%BD%93%E6%8A%A5%E9%81%93.aspx" target="_blank" style="color:#3e3e3e; text-decoration:none;">傳媒報道</a> &nbsp;&nbsp;&nbsp;
+                    <a href="http://www.k11designstore.com/?lang=schi" target="_blank" style="color:#3e3e3e; text-decoration:none;">K11 Designstore</a> &nbsp;&nbsp; &nbsp;
+                    <a href="http://hk.k11.com/sc/Pick11.aspx" target="_blank" style="color:#3e3e3e; text-decoration:none;">K11 Corporate</a> 
+               </span>
+               <span style="display: block; line-height: 50px; color: #333333;font-size: 20px;">
+                    <a href="http://www.klub-11.com/"  target="_blank" style="color:#3e3e3e; text-decoration:none;">Klub11</a>&nbsp;  &nbsp;
+                    <a href="http://hk.k11.com/tc/Art.aspx" target="_blank" style="color:#3e3e3e; text-decoration:none;">藝術</a>&nbsp;  &nbsp;
+                    <a href="http://hk.k11.com/tc/Shopping.aspx" target="_blank" style="color:#3e3e3e; text-decoration:none;">購物</a>&nbsp;  &nbsp;
+                    <a href="http://hk.k11.com/tc/Dining.aspx" target="_blank" style="color:#3e3e3e; text-decoration:none;">嚐悅</a>&nbsp;  &nbsp;
+                    <a href="http://hk.k11.com/tc/Today-in-K11.aspx" target="_blank" style="color:#3e3e3e; text-decoration:none;">TODAY in K11</a>
+              </span>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+
+        <div id="global_footer" style="visibility: visible;">
+          <div class="bottomGrids">
+          <div id="footer_links">
+            <div class="bottomNavLevel1"><div class="bottomNavLevel1Item"><a href="http://hk.k11.com/sc/Klub11.aspx" title="Klub11">Klub11</a></div></div>
+            <div class="bottomNavLevel1"><div class="bottomNavLevel1Item"><a href="http://hk.k11.com/sc/Art.aspx" title="艺术">艺术</a></div>
+            <ul><li><a href="http://hk.k11.com/sc/Art/Encounter-11.aspx" title="Encounters 11">Encounters 11</a></li></ul>
+            <ul><li><a href="http://hk.k11.com/sc/Art/Artist-List.aspx" title="艺术家">艺术家</a></li></ul>
+            <ul><li><a href="http://hk.k11.com/sc/Art/Artist-Klub.aspx" title="Artist Klub">Artist Klub</a></li></ul>
+            <ul><li><a href="http://hk.k11.com/sc/Art/K11-Kollection.aspx" title="K11 Kollection">K11 Kollection</a></li></ul>
+            <ul><li><a href="http://hk.k11.com/sc/Art/musiK11.aspx" title="musiK11">musiK11</a></li></ul>
+            <ul><li><a href="http://hk.k11.com/sc/Art/Artoid.aspx" title="Artoid">Artoid</a></li></ul></div>
+            <div class="bottomNavLevel1"><div class="bottomNavLevel1Item"><a href="http://hk.k11.com/sc/Shopping.aspx" title="购物">购物</a></div>
+            <ul><li><a href="http://hk.k11.com/sc/Shopping/Shop-List.aspx" title="购物总汇">购物总汇</a></li></ul>
+            <ul><li><a href="http://hk.k11.com/sc/Shopping/Floor-Plan.aspx" title="商店位置">商店位置</a></li></ul></div>
+            <div class="bottomNavLevel1"><div class="bottomNavLevel1Item"><a href="http://hk.k11.com/sc/Dining.aspx" title="尝悦">尝悦</a></div>
+            <ul><li><a href="http://hk.k11.com/sc/Dining/Dining-List.aspx" title="美食一览">美食一览</a></li></ul>
+            <ul><li><a href="http://hk.k11.com/sc/Dining/Floor-Plan.aspx" title="餐厅位置">餐厅位置</a></li></ul></div>
+            <div class="bottomNavLevel1"><div class="bottomNavLevel1Item"><a href="http://hk.k11.com/sc/Today-in-K11.aspx" title="即日登场">即日登场</a></div>
+            <ul><li><a href="http://hk.k11.com/sc/Today-in-K11/News-Event.aspx" title="资讯及活动">资讯及活动</a></li></ul>
+            <ul><li><a href="http://hk.k11.com/sc/Today-in-K11/Promotions.aspx" title="精彩优惠">精彩优惠</a></li></ul>
+            <ul><li><a href="http://hk.k11.com/sc/Today-in-K11/K11TV.aspx" title="K11TV">K11TV</a></li></ul></div>
+            
+            <div class="clearboth"></div>
+        </div>
+        <div id="footer_socials">
+            <div class="followUsTitle"><span id="p_lt_lblFollowUsTitle">追踪我们</span></div>       
+            <a href="https://www.facebook.com/k11ArtMall" class="footer_social footer_fb" target="_blank"></a>
+            <a href="https://www.youtube.com/user/k11hongkong" class="footer_social footer_yt" target="_blank"></a>
+            <a href="http://instagram.com/k11hk" class="footer_social footer_it" target="_blank"></a>
+            <a href="http://weibo.com/k11hk" class="footer_social footer_wb" target="_blank"></a>
+            <a href="http://hk.k11.com/sc/Special/eNews-Subscriptions.aspx" class="footer_social footer_en" target="_blank"></a>
+          
+            <!--div class="followUsDetail">
+                <div class="followUsItem"><a href="javascript:;" onclick="window.open('http://www.facebook.com/k11ArtMall','sharer','');return false;" class="facebook">facebook</a></div>
+                <div class="followUsItem"><a href="http://e.weibo.com/k11hk" class="sina" target="_blank">sina</a></div>
+            </div-->
+        </div>
+    </div>
+    <div id="global_footer2">
+        <span class="footermenu">
+            <a class="" href="http://hk.k11.com/sc/Special/Contact-Us.aspx" title="联络我们">联络我们</a><span>|</span>
+            <a class="" target="_self" href="http://hk.k11.com/sc/热门搜索.aspx" title="热门搜索">热门搜索</a><span>|</span>
+            <a class="" href="http://hk.k11.com/sc/Special/Our-Services.aspx" title="服务详情">服务详情</a><span>|</span>
+            <a class="" href="http://hk.k11.com/sc/Special/Career.aspx" title="就业机会">就业机会</a><span>|</span>
+            <a class="" href="http://hk.k11.com/sc/Special/Leasing.aspx" title="租务查询">租务查询</a><span>|</span>
+            <a class="" href="http://hk.k11.com/sc/Special/Disclaimer.aspx" title="免责声明">免责声明</a><span>|</span>
+            <a class="" href="http://hk.k11.com/sc/Special/Privacy-Policy.aspx" title="私隐权政策">私隐权政策</a><span>|</span>
+            <a class="" href="http://hk.k11.com/sc/Special/Sitemap.aspx" title="网站地图">网站地图</a>
+        </span>
+        <div class="copyRight">Copyright © 2014 K11. All Right Reserved.</div><span class="footermenu"></span>
+    </div>
+  </div>
+    </div>
+    </form>
+</body>
+</html>

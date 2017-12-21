@@ -1,0 +1,2 @@
+obj\Debug\_Analysis.g.vb
+obj\Debug\Activity1.g.vb

@@ -1,0 +1,2 @@
+obj\Release\_Analysis.g.vb
+obj\Release\Activity1.g.vb
