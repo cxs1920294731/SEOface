@@ -1,0 +1,91 @@
+﻿Installing assembly 'F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.InstallLog
+   assemblypath = F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.exe
+Installing service FacebookSeoService...
+Creating EventLog source FacebookSeoService in log Application...
+Rolling back assembly 'F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.InstallLog
+   assemblypath = F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.exe
+Restoring event log to previous state for source FacebookSeoService.
+Installing assembly 'F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.InstallLog
+   assemblypath = F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.exe
+Installing service FacebookSeoService...
+Service FacebookSeoService has been successfully installed.
+Creating EventLog source FacebookSeoService in log Application...
+Committing assembly 'F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.InstallLog
+   assemblypath = F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.exe
+Installing assembly 'F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.InstallLog
+   assemblypath = F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.exe
+Installing service FacebookSeoService...
+Creating EventLog source FacebookSeoService in log Application...
+Rolling back assembly 'F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.InstallLog
+   assemblypath = F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.exe
+Restoring event log to previous state for source FacebookSeoService.
+Installing assembly 'F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.InstallLog
+   assemblypath = F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.exe
+Installing service FacebookSeoService...
+Creating EventLog source FacebookSeoService in log Application...
+Rolling back assembly 'F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.InstallLog
+   assemblypath = F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.exe
+Restoring event log to previous state for source FacebookSeoService.
+Installing assembly 'F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.InstallLog
+   assemblypath = F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.exe
+Installing service FacebookSeoService...
+Creating EventLog source FacebookSeoService in log Application...
+Rolling back assembly 'F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.InstallLog
+   assemblypath = F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.exe
+Restoring event log to previous state for source FacebookSeoService.
+Installing assembly 'F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.InstallLog
+   assemblypath = F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.exe
+Installing service FacebookSeoService...
+Service FacebookSeoService has been successfully installed.
+Creating EventLog source FacebookSeoService in log Application...
+Committing assembly 'F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.InstallLog
+   assemblypath = F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.exe
+Installing assembly 'F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.InstallLog
+   assemblypath = F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.exe
+Installing service FacebookSeoServiceForGroupBuyer...
+Service FacebookSeoServiceForGroupBuyer has been successfully installed.
+Creating EventLog source FacebookSeoServiceForGroupBuyer in log Application...
+Committing assembly 'F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.InstallLog
+   assemblypath = F:\FacebookSeoForGroupBuyer20171208\FacebookSEO\EmailAlerterFacebook\EmailAlerter\EmailAlerter\EmailAlerter\bin\Release\EmailAlerter.exe

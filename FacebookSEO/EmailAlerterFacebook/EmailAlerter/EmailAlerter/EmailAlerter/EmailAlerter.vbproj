@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9B5665E6-6BBF-4EB6-8A41-B2C15581F1C3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>EmailAlerter.Service1</StartupObject>
+    <RootNamespace>EmailAlerter</RootNamespace>
+    <AssemblyName>EmailAlerter</AssemblyName>
+    <MyType>Console</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <PublishUrl>F:\seoPR\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>EmailAlerter.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>EmailAlerter.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>019D873ECA093910CDF75184D6C72688E1D1D938</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>EmailAlerter_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EDM4Everbuying, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\EDM4Everbuying.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>C:\Users\Jake\Desktop\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Jake\Desktop\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.XML.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="alerter.vb" />
+    <Compile Include="AutoModel.vb" />
+    <Compile Include="Blog.vb" />
+    <Compile Include="Common.vb" />
+    <Compile Include="Common\CacheScope.vb" />
+    <Compile Include="Common\CBO.vb" />
+    <Compile Include="Common\Config.vb" />
+    <Compile Include="Common\DataCache.vb" />
+    <Compile Include="Common\Exceptions.vb" />
+    <Compile Include="Common\Globals.vb" />
+    <Compile Include="Common\HtmlGatherHelper.vb" />
+    <Compile Include="Common\HtmlUtils.vb" />
+    <Compile Include="Common\IHydratable.vb" />
+    <Compile Include="Common\LogHelper.vb" />
+    <Compile Include="Common\Null.vb" />
+    <Compile Include="Common\ObjectMappingInfo.vb" />
+    <Compile Include="Common\UrlUtils.vb" />
+    <Compile Include="Common\XmlUtils.vb" />
+    <Compile Include="CreateCampaign.vb" />
+    <Compile Include="CreateGroupBuyerTemplate.vb" />
+    <Compile Include="GetSiteMap.vb" />
+    <Compile Include="GetSpreadReportData.vb" />
+    <Compile Include="InsertSpecialCateAndSort.vb" />
+    <Compile Include="k11EmailAlerter.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>k11EmailAlerter.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClickData.vb" />
+    <Compile Include="Models\Subscriptions.vb" />
+    <Compile Include="MyRender.vb" />
+    <Compile Include="NotificationEmail.vb" />
+    <Compile Include="Everbuying.vb" />
+    <Compile Include="GroupBuyer.vb" />
+    <Compile Include="GroupBuyer2.vb" />
+    <Compile Include="Ladies.vb" />
+    <Compile Include="Models\RssContactList.vb" />
+    <Compile Include="Models\RssSubscription.vb" />
+    <Compile Include="Models\SentLog.vb" />
+    <Compile Include="Models\SplitContactList.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="MyComparer.vb" />
+    <Compile Include="NotificationForClick.vb" />
+    <Compile Include="ProjectInstaller.Designer.vb">
+      <DependentUpon>ProjectInstaller.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectInstaller.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QuerySubscriber.vb" />
+    <Compile Include="RSS2Email.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RSS2Email.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RSS2Email.vb">
+      <DependentUpon>RSS2Email.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Service1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service1.Designer.vb">
+      <DependentUpon>Service1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SortCategory.vb" />
+    <Compile Include="SpecialCode.vb" />
+    <Compile Include="SQLDAL\RssContactLists.vb" />
+    <Compile Include="SQLDAL\RssSubscriptions.vb" />
+    <Compile Include="SQLDAL\SentLogs.vb" />
+    <Compile Include="SQLDAL\SplitContactLists.vb" />
+    <Compile Include="SQLDAL\SqlDataProvider.vb" />
+    <Compile Include="UpdateGroupBuyerData.vb" />
+    <Compile Include="UrlValid.vb" />
+    <Compile Include="Web References\IntrawWebService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SpreadService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="XMLHelper.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectInstaller.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ProjectInstaller.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Service1.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="k11EmailAlerter.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>k11EmailAlerter.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EmailAlerter_TemporaryKey.pfx" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\IntrawWebService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\IntrawWebService\Service.wsdl" />
+    <None Include="Web References\SpreadService\CampaignReport.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SpreadService\CampaignStatus.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SpreadService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\SpreadService\server.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SpreadService\service.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://iws.reasonablespread.com/">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\IntrawWebService\</RelPath>
+      <UpdateFromURL>http://iws.reasonablespread.com/</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EmailAlerter_com_reasonablespread_iws_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://service.rspread.com/">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SpreadService\</RelPath>
+      <UpdateFromURL>http://service.rspread.com/</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EmailAlerter_SpreadService_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RSS2Email.xsc">
+      <DependentUpon>RSS2Email.xsd</DependentUpon>
+    </None>
+    <None Include="RSS2Email.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RSS2Email.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="RSS2Email.xss">
+      <DependentUpon>RSS2Email.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Lib\Analysis.dll" />
+    <Content Include="Lib\EDM4Everbuying.dll" />
+    <Content Include="Lib\HtmlAgilityPack.dll" />
+    <Content Include="Lib\Microsoft.ApplicationBlocks.Data.dll" />
+    <Content Include="Lib\Newtonsoft.Json.dll" />
+    <None Include="Web References\SpreadService\service.disco" />
+    <None Include="Web References\IntrawWebService\Service.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="HtmlAgility\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\FacebookSEO\Analysis\Analysis.vbproj">
+      <Project>{c4e3d1b0-0626-4f9b-b665-22357a1a404c}</Project>
+      <Name>Analysis</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

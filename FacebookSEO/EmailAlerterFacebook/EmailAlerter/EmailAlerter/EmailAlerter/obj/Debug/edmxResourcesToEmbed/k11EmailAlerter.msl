@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FaceBookForSEOModelStoreContainer" CdmEntityContainer="FaceBookForSEOEntities">
+    <EntitySetMapping Name="AutoAds">
+      <EntityTypeMapping TypeName="FaceBookForSEOModel.AutoAd">
+        <MappingFragment StoreEntitySet="Ads">
+          <ScalarProperty Name="AdID" ColumnName="AdID" />
+          <ScalarProperty Name="Ad1" ColumnName="Ad" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="PictureUrl" ColumnName="PictureUrl" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="SizeHeight" ColumnName="SizeHeight" />
+          <ScalarProperty Name="SizeWidth" ColumnName="SizeWidth" />
+          <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Lastupdate" ColumnName="Lastupdate" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AutoAds_Issue">
+      <EntityTypeMapping TypeName="FaceBookForSEOModel.AutoAds_Issue">
+        <MappingFragment StoreEntitySet="Ads_Issue">
+          <ScalarProperty Name="AdId" ColumnName="AdId" />
+          <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+          <ScalarProperty Name="IssueID" ColumnName="IssueID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AutomationPlans">
+      <EntityTypeMapping TypeName="FaceBookForSEOModel.AutomationPlan">
+        <MappingFragment StoreEntitySet="AutomationPlan">
+          <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+          <ScalarProperty Name="PlanType" ColumnName="PlanType" />
+          <ScalarProperty Name="StartAt" ColumnName="StartAt" />
+          <ScalarProperty Name="EndAt" ColumnName="EndAt" />
+          <ScalarProperty Name="IntervalDay" ColumnName="IntervalDay" />
+          <ScalarProperty Name="WeekDays" ColumnName="WeekDays" />
+          <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+          <ScalarProperty Name="SenderEmail" ColumnName="SenderEmail" />
+          <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="SplitContactCount" ColumnName="SplitContactCount" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="Categories" ColumnName="Categories" />
+          <ScalarProperty Name="Day_Of_Week" ColumnName="Day_Of_Week" />
+          <ScalarProperty Name="ContactList" ColumnName="ContactList" />
+          <ScalarProperty Name="CampaignStatus" ColumnName="CampaignStatus" />
+          <ScalarProperty Name="ScheduleTimeInteval" ColumnName="ScheduleTimeInteval" />
+          <ScalarProperty Name="ListType" ColumnName="ListType" />
+          <ScalarProperty Name="SearchAPIType" ColumnName="SearchAPIType" />
+          <ScalarProperty Name="SearchStartDayInterval" ColumnName="SearchStartDayInterval" />
+          <ScalarProperty Name="SearchEndDayInterval" ColumnName="SearchEndDayInterval" />
+          <ScalarProperty Name="UrlSpecialCode" ColumnName="UrlSpecialCode" />
+          <ScalarProperty Name="LimitQuantity" ColumnName="LimitQuantity" />
+          <ScalarProperty Name="SellerEmail" ColumnName="SellerEmail" />
+          <ScalarProperty Name="TimeLimit" ColumnName="TimeLimit" />
+          <ScalarProperty Name="TriggerForNFC" ColumnName="TriggerForNFC" />
+          <ScalarProperty Name="SubjectForNFC" ColumnName="SubjectForNFC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AutomationSites">
+      <EntityTypeMapping TypeName="FaceBookForSEOModel.AutomationSite">
+        <MappingFragment StoreEntitySet="AutomationSites">
+          <ScalarProperty Name="siteid" ColumnName="siteid" />
+          <ScalarProperty Name="SiteName" ColumnName="SiteName" />
+          <ScalarProperty Name="SiteNameSc" ColumnName="SiteNameSc" />
+          <ScalarProperty Name="SpreadLogin" ColumnName="SpreadLogin" />
+          <ScalarProperty Name="AppID" ColumnName="AppID" />
+          <ScalarProperty Name="DllType" ColumnName="DllType" />
+          <ScalarProperty Name="SiteUrl" ColumnName="SiteUrl" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="volumn" ColumnName="volumn" />
+          <ScalarProperty Name="shopUrl" ColumnName="shopUrl" />
+          <ScalarProperty Name="k11SiteUrl" ColumnName="k11SiteUrl" />
+          <ScalarProperty Name="k11SiteUrlSC" ColumnName="k11SiteUrlSC" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AutoCategories">
+      <EntityTypeMapping TypeName="FaceBookForSEOModel.AutoCategory">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="Category1" ColumnName="Category" />
+          <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="PictureUrl" ColumnName="PictureUrl" />
+          <ScalarProperty Name="PictureAlt" ColumnName="PictureAlt" />
+          <ScalarProperty Name="SizeHeight" ColumnName="SizeHeight" />
+          <ScalarProperty Name="SizeWidth" ColumnName="SizeWidth" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CateTags">
+      <EntityTypeMapping TypeName="FaceBookForSEOModel.CateTag">
+        <MappingFragment StoreEntitySet="CateTags">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CateName" ColumnName="CateName" />
+          <ScalarProperty Name="CateNameSC" ColumnName="CateNameSC" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="HasShopID" ColumnName="HasShopID" />
+          <ScalarProperty Name="CateUrl" ColumnName="CateUrl" />
+          <ScalarProperty Name="CateUrlSc" ColumnName="CateUrlSc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AutoContactLists_Issue">
+      <EntityTypeMapping TypeName="FaceBookForSEOModel.AutoContactLists_Issue">
+        <MappingFragment StoreEntitySet="ContactLists_Issue">
+          <ScalarProperty Name="IssueID" ColumnName="IssueID" />
+          <ScalarProperty Name="ContactList" ColumnName="ContactList" />
+          <ScalarProperty Name="SendTime" ColumnName="SendTime" />
+          <ScalarProperty Name="SendingStatus" ColumnName="SendingStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AutoIssues">
+      <EntityTypeMapping TypeName="FaceBookForSEOModel.AutoIssue">
+        <MappingFragment StoreEntitySet="Issues">
+          <ScalarProperty Name="IssueID" ColumnName="IssueID" />
+          <ScalarProperty Name="IssueDate" ColumnName="IssueDate" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+          <ScalarProperty Name="PlanType" ColumnName="PlanType" />
+          <ScalarProperty Name="SentStatus" ColumnName="SentStatus" />
+          <ScalarProperty Name="SpreadCampId" ColumnName="SpreadCampId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AutoPlanTypes">
+      <EntityTypeMapping TypeName="FaceBookForSEOModel.AutoPlanType">
+        <MappingFragment StoreEntitySet="PlanTypes">
+          <ScalarProperty Name="PlanType1" ColumnName="PlanType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AutoProducts">
+      <EntityTypeMapping TypeName="FaceBookForSEOModel.AutoProduct">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="ProdouctID" ColumnName="ProdouctID" />
+          <ScalarProperty Name="Prodouct" ColumnName="Prodouct" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Sales" ColumnName="Sales" />
+          <ScalarProperty Name="PictureUrl" ColumnName="PictureUrl" />
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="PictureAlt" ColumnName="PictureAlt" />
+          <ScalarProperty Name="SizeHeight" ColumnName="SizeHeight" />
+          <ScalarProperty Name="SizeWidth" ColumnName="SizeWidth" />
+          <ScalarProperty Name="TbScore" ColumnName="TbScore" />
+          <ScalarProperty Name="TbComment" ColumnName="TbComment" />
+          <ScalarProperty Name="FreeShippingImg" ColumnName="FreeShippingImg" />
+          <ScalarProperty Name="ShipsImg" ColumnName="ShipsImg" />
+          <ScalarProperty Name="ExpiredDate" ColumnName="ExpiredDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AutoProducts_Issue">
+      <EntityTypeMapping TypeName="FaceBookForSEOModel.AutoProducts_Issue">
+        <MappingFragment StoreEntitySet="Products_Issue">
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+          <ScalarProperty Name="IssueID" ColumnName="IssueID" />
+          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Promotions">
+      <EntityTypeMapping TypeName="FaceBookForSEOModel.Promotion">
+        <MappingFragment StoreEntitySet="Promotions">
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AutoRssContactLists">
+      <EntityTypeMapping TypeName="FaceBookForSEOModel.AutoRssContactList">
+        <MappingFragment StoreEntitySet="RssContactLists">
+          <ScalarProperty Name="ContactListId" ColumnName="ContactListId" />
+          <ScalarProperty Name="RssId" ColumnName="RssId" />
+          <ScalarProperty Name="ContactListName" ColumnName="ContactListName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AutoRssSubscriptions">
+      <EntityTypeMapping TypeName="FaceBookForSEOModel.AutoRssSubscription">
+        <MappingFragment StoreEntitySet="RssSubscriptions">
+          <ScalarProperty Name="RssId" ColumnName="RssId" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="SpreadLogin" ColumnName="SpreadLogin" />
+          <ScalarProperty Name="StartAt" ColumnName="StartAt" />
+          <ScalarProperty Name="EndAt" ColumnName="EndAt" />
+          <ScalarProperty Name="IntervalDay" ColumnName="IntervalDay" />
+          <ScalarProperty Name="WeekDays" ColumnName="WeekDays" />
+          <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+          <ScalarProperty Name="SenderEmail" ColumnName="SenderEmail" />
+          <ScalarProperty Name="Template" ColumnName="Template" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ExcludeSubject" ColumnName="ExcludeSubject" />
+          <ScalarProperty Name="DefaultSubject" ColumnName="DefaultSubject" />
+          <ScalarProperty Name="rssType" ColumnName="rssType" />
+          <ScalarProperty Name="AppID" ColumnName="AppID" />
+          <ScalarProperty Name="Categories" ColumnName="Categories" />
+          <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AutoSections">
+      <EntityTypeMapping TypeName="FaceBookForSEOModel.AutoSection">
+        <MappingFragment StoreEntitySet="Sections">
+          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+          <ScalarProperty Name="Section1" ColumnName="Section" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AutoSentLogs">
+      <EntityTypeMapping TypeName="FaceBookForSEOModel.AutoSentLog">
+        <MappingFragment StoreEntitySet="SentLogs">
+          <ScalarProperty Name="SentLogId" ColumnName="SentLogId" />
+          <ScalarProperty Name="RssId" ColumnName="RssId" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="LastSentAt" ColumnName="LastSentAt" />
+          <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+          <ScalarProperty Name="PlanType" ColumnName="PlanType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AutoSplitContactLists">
+      <EntityTypeMapping TypeName="FaceBookForSEOModel.AutoSplitContactList">
+        <MappingFragment StoreEntitySet="SplitContactLists">
+          <ScalarProperty Name="ShopName" ColumnName="ShopName" />
+          <ScalarProperty Name="ContactListName" ColumnName="ContactListName" />
+          <ScalarProperty Name="RssType" ColumnName="RssType" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+          <ScalarProperty Name="PlanType" ColumnName="PlanType" />
+          <ScalarProperty Name="SplitID" ColumnName="SplitID" />
+          <ScalarProperty Name="SendTime" ColumnName="SendTime" />
+          <ScalarProperty Name="SendingStatus" ColumnName="SendingStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="FaceBookForSEOModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AutoTemplates">
+      <EntityTypeMapping TypeName="FaceBookForSEOModel.AutoTemplate">
+        <MappingFragment StoreEntitySet="Template">
+          <ScalarProperty Name="Tid" ColumnName="Tid" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
+          <ScalarProperty Name="Contents" ColumnName="Contents" />
+          <ScalarProperty Name="RssID" ColumnName="RssID" />
+          <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+          <ScalarProperty Name="tType" ColumnName="tType" />
+          <ScalarProperty Name="PlanType" ColumnName="PlanType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AutoTemplateCategories">
+      <EntityTypeMapping TypeName="FaceBookForSEOModel.AutoTemplateCategory">
+        <MappingFragment StoreEntitySet="TemplateCategory">
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="SiteType" ColumnName="SiteType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TemplateInfoes">
+      <EntityTypeMapping TypeName="FaceBookForSEOModel.TemplateInfo">
+        <MappingFragment StoreEntitySet="TemplateInfo">
+          <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+          <ScalarProperty Name="PlanType" ColumnName="PlanType" />
+          <ScalarProperty Name="SortedCates" ColumnName="SortedCates" />
+          <ScalarProperty Name="DisplayCount" ColumnName="DisplayCount" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TemplateLibraries">
+      <EntityTypeMapping TypeName="FaceBookForSEOModel.TemplateLibrary">
+        <MappingFragment StoreEntitySet="TemplateLibrary">
+          <ScalarProperty Name="Tid" ColumnName="Tid" />
+          <ScalarProperty Name="Contents" ColumnName="Contents" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Demo" ColumnName="Demo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AdsCategory" TypeName="FaceBookForSEOModel.AdsCategory" StoreEntitySet="AdsCategory">
+      <EndProperty Name="Ads">
+        <ScalarProperty Name="AdID" ColumnName="AdsId" />
+      </EndProperty>
+      <EndProperty Name="Categories">
+        <ScalarProperty Name="CategoryID" ColumnName="CategoryId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ProductCategory" TypeName="FaceBookForSEOModel.ProductCategory" StoreEntitySet="ProductCategory">
+      <EndProperty Name="Categories">
+        <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+      </EndProperty>
+      <EndProperty Name="Products">
+        <ScalarProperty Name="ProdouctID" ColumnName="ProductID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="Clicks_Issue">
+      <EntityTypeMapping TypeName="FaceBookForSEOModel.Clicks_Issue">
+        <MappingFragment StoreEntitySet="Clicks_Issue">
+          <ScalarProperty Name="siteid" ColumnName="siteid" />
+          <ScalarProperty Name="ClickDate" ColumnName="ClickDate" />
+          <ScalarProperty Name="ClickUrl" ColumnName="ClickUrl" />
+          <ScalarProperty Name="SubEmail" ColumnName="SubEmail" />
+          <ScalarProperty Name="SpreadCampId" ColumnName="SpreadCampId" />
+          <ScalarProperty Name="IssueID" ColumnName="IssueID" />
+          <ScalarProperty Name="ClickID" ColumnName="ClickID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Convertions_Issue">
+      <EntityTypeMapping TypeName="FaceBookForSEOModel.Convertions_Issue">
+        <MappingFragment StoreEntitySet="Convertions_Issue">
+          <ScalarProperty Name="siteid" ColumnName="siteid" />
+          <ScalarProperty Name="ConvertTime" ColumnName="ConvertTime" />
+          <ScalarProperty Name="ConvertValue" ColumnName="ConvertValue" />
+          <ScalarProperty Name="ConvertUrl" ColumnName="ConvertUrl" />
+          <ScalarProperty Name="ConvertType" ColumnName="ConvertType" />
+          <ScalarProperty Name="SubEmail" ColumnName="SubEmail" />
+          <ScalarProperty Name="SpreadCampId" ColumnName="SpreadCampId" />
+          <ScalarProperty Name="IssueID" ColumnName="IssueID" />
+          <ScalarProperty Name="ConvertID" ColumnName="ConvertID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Opens_Issue">
+      <EntityTypeMapping TypeName="FaceBookForSEOModel.Opens_Issue">
+        <MappingFragment StoreEntitySet="Opens_Issue">
+          <ScalarProperty Name="siteid" ColumnName="siteid" />
+          <ScalarProperty Name="OpenDate" ColumnName="OpenDate" />
+          <ScalarProperty Name="SubEmail" ColumnName="SubEmail" />
+          <ScalarProperty Name="SpreadCampId" ColumnName="SpreadCampId" />
+          <ScalarProperty Name="IssueID" ColumnName="IssueID" />
+          <ScalarProperty Name="OpenID" ColumnName="OpenID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KeyWords">
+      <EntityTypeMapping TypeName="FaceBookForSEOModel.KeyWord">
+        <MappingFragment StoreEntitySet="KeyWords">
+          <ScalarProperty Name="Siteid" ColumnName="Siteid" />
+          <ScalarProperty Name="KeyUrl" ColumnName="KeyUrl" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="KeyWord1" ColumnName="KeyWord" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tokens">
+      <EntityTypeMapping TypeName="FaceBookForSEOModel.Token">
+        <MappingFragment StoreEntitySet="Token">
+          <ScalarProperty Name="longTokenExpireDate" ColumnName="longTokenExpireDate" />
+          <ScalarProperty Name="longTimeToken" ColumnName="longTimeToken" />
+          <ScalarProperty Name="shortTimeToken" ColumnName="shortTimeToken" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

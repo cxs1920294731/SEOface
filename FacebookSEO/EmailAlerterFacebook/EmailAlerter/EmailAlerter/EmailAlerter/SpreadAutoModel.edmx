@@ -1,0 +1,2019 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SpreadAutoModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="SpreadAutoModelStoreContainer">
+          <EntitySet Name="Ads" EntityType="SpreadAutoModel.Store.Ads" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Ads_Issue" EntityType="SpreadAutoModel.Store.Ads_Issue" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AdsCategory" EntityType="SpreadAutoModel.Store.AdsCategory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AutomationPlan" EntityType="SpreadAutoModel.Store.AutomationPlan" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AutomationSites" EntityType="SpreadAutoModel.Store.AutomationSites" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Categories" EntityType="SpreadAutoModel.Store.Categories" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Clicks_Issue" EntityType="SpreadAutoModel.Store.Clicks_Issue" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ContactLists_Issue" EntityType="SpreadAutoModel.Store.ContactLists_Issue" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Convertions_Issue" EntityType="SpreadAutoModel.Store.Convertions_Issue" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Issues" EntityType="SpreadAutoModel.Store.Issues" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Opens_Issue" EntityType="SpreadAutoModel.Store.Opens_Issue" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PlanTypes" EntityType="SpreadAutoModel.Store.PlanTypes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductCategory" EntityType="SpreadAutoModel.Store.ProductCategory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Products" EntityType="SpreadAutoModel.Store.Products" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Products_Issue" EntityType="SpreadAutoModel.Store.Products_Issue" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RssContactLists" EntityType="SpreadAutoModel.Store.RssContactLists" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RssSubscriptions" EntityType="SpreadAutoModel.Store.RssSubscriptions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Sections" EntityType="SpreadAutoModel.Store.Sections" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SentLogs" EntityType="SpreadAutoModel.Store.SentLogs" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SplitContactLists" EntityType="SpreadAutoModel.Store.SplitContactLists" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Template" EntityType="SpreadAutoModel.Store.Template" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TemplateInfo" EntityType="SpreadAutoModel.Store.TemplateInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TemplateLibrary" EntityType="SpreadAutoModel.Store.TemplateLibrary" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Ads_AutomationSites" Association="SpreadAutoModel.Store.FK_Ads_AutomationSites">
+            <End Role="AutomationSites" EntitySet="AutomationSites" />
+            <End Role="Ads" EntitySet="Ads" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ads_Issue_Ads" Association="SpreadAutoModel.Store.FK_Ads_Issue_Ads">
+            <End Role="Ads" EntitySet="Ads" />
+            <End Role="Ads_Issue" EntitySet="Ads_Issue" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ads_Issue_AutomationSites" Association="SpreadAutoModel.Store.FK_Ads_Issue_AutomationSites">
+            <End Role="AutomationSites" EntitySet="AutomationSites" />
+            <End Role="Ads_Issue" EntitySet="Ads_Issue" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ads_Issue_Issue" Association="SpreadAutoModel.Store.FK_Ads_Issue_Issue">
+            <End Role="Issues" EntitySet="Issues" />
+            <End Role="Ads_Issue" EntitySet="Ads_Issue" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AdsCategory_Ads" Association="SpreadAutoModel.Store.FK_AdsCategory_Ads">
+            <End Role="Ads" EntitySet="Ads" />
+            <End Role="AdsCategory" EntitySet="AdsCategory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AdsCategory_Categories" Association="SpreadAutoModel.Store.FK_AdsCategory_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="AdsCategory" EntitySet="AdsCategory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AutomationPlan_AutomationSites" Association="SpreadAutoModel.Store.FK_AutomationPlan_AutomationSites">
+            <End Role="AutomationSites" EntitySet="AutomationSites" />
+            <End Role="AutomationPlan" EntitySet="AutomationPlan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AutomationPlan_PlanType" Association="SpreadAutoModel.Store.FK_AutomationPlan_PlanType">
+            <End Role="PlanTypes" EntitySet="PlanTypes" />
+            <End Role="AutomationPlan" EntitySet="AutomationPlan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AutomationPlan_Template" Association="SpreadAutoModel.Store.FK_AutomationPlan_Template">
+            <End Role="Template" EntitySet="Template" />
+            <End Role="AutomationPlan" EntitySet="AutomationPlan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Categories_AutomationSites" Association="SpreadAutoModel.Store.FK_Categories_AutomationSites">
+            <End Role="AutomationSites" EntitySet="AutomationSites" />
+            <End Role="Categories" EntitySet="Categories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ContactLists_Issue_Issue" Association="SpreadAutoModel.Store.FK_ContactLists_Issue_Issue">
+            <End Role="Issues" EntitySet="Issues" />
+            <End Role="ContactLists_Issue" EntitySet="ContactLists_Issue" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Issues_Ads_Issue" Association="SpreadAutoModel.Store.FK_Issues_Ads_Issue">
+            <End Role="Issues" EntitySet="Issues" />
+            <End Role="Issues1" EntitySet="Issues" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Issues_AutomationSites" Association="SpreadAutoModel.Store.FK_Issues_AutomationSites">
+            <End Role="AutomationSites" EntitySet="AutomationSites" />
+            <End Role="Issues" EntitySet="Issues" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Issues_PlanTypes" Association="SpreadAutoModel.Store.FK_Issues_PlanTypes">
+            <End Role="PlanTypes" EntitySet="PlanTypes" />
+            <End Role="Issues" EntitySet="Issues" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductCategory_Categories" Association="SpreadAutoModel.Store.FK_ProductCategory_Categories">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="ProductCategory" EntitySet="ProductCategory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductCategory_Products" Association="SpreadAutoModel.Store.FK_ProductCategory_Products">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="ProductCategory" EntitySet="ProductCategory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Products_AutomationSites" Association="SpreadAutoModel.Store.FK_Products_AutomationSites">
+            <End Role="AutomationSites" EntitySet="AutomationSites" />
+            <End Role="Products" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Products_Issue_AutomationSites" Association="SpreadAutoModel.Store.FK_Products_Issue_AutomationSites">
+            <End Role="AutomationSites" EntitySet="AutomationSites" />
+            <End Role="Products_Issue" EntitySet="Products_Issue" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Products_Issue_Issue" Association="SpreadAutoModel.Store.FK_Products_Issue_Issue">
+            <End Role="Issues" EntitySet="Issues" />
+            <End Role="Products_Issue" EntitySet="Products_Issue" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Products_Issue_Products" Association="SpreadAutoModel.Store.FK_Products_Issue_Products">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="Products_Issue" EntitySet="Products_Issue" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Products_Issue_Sections" Association="SpreadAutoModel.Store.FK_Products_Issue_Sections">
+            <End Role="Sections" EntitySet="Sections" />
+            <End Role="Products_Issue" EntitySet="Products_Issue" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SentLogs_AutomationSites" Association="SpreadAutoModel.Store.FK_SentLogs_AutomationSites">
+            <End Role="AutomationSites" EntitySet="AutomationSites" />
+            <End Role="SentLogs" EntitySet="SentLogs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SplitContactLists_PlanTypes" Association="SpreadAutoModel.Store.FK_SplitContactLists_PlanTypes">
+            <End Role="PlanTypes" EntitySet="PlanTypes" />
+            <End Role="SplitContactLists" EntitySet="SplitContactLists" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Template_PlanTypes" Association="SpreadAutoModel.Store.FK_Template_PlanTypes">
+            <End Role="PlanTypes" EntitySet="PlanTypes" />
+            <End Role="Template" EntitySet="Template" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Ads">
+          <Key>
+            <PropertyRef Name="AdID" />
+          </Key>
+          <Property Name="AdID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Ad" Type="nvarchar" MaxLength="200" />
+          <Property Name="Url" Type="nvarchar" MaxLength="1024" />
+          <Property Name="PictureUrl" Type="nvarchar" MaxLength="1024" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="SizeHeight" Type="int" />
+          <Property Name="SizeWidth" Type="int" />
+          <Property Name="SiteID" Type="int" />
+          <Property Name="Type" Type="char" MaxLength="1" />
+          <Property Name="Lastupdate" Type="datetime" />
+          <Property Name="Price" Type="money" />
+          <Property Name="Discount" Type="money" />
+        </EntityType>
+        <EntityType Name="Ads_Issue">
+          <Key>
+            <PropertyRef Name="AdId" />
+            <PropertyRef Name="SiteId" />
+            <PropertyRef Name="IssueID" />
+          </Key>
+          <Property Name="AdId" Type="bigint" Nullable="false" />
+          <Property Name="SiteId" Type="int" Nullable="false" />
+          <Property Name="IssueID" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AdsCategory">
+          <Key>
+            <PropertyRef Name="CategoryId" />
+            <PropertyRef Name="AdsId" />
+          </Key>
+          <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="AdsId" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AutomationPlan">
+          <Key>
+            <PropertyRef Name="SiteID" />
+            <PropertyRef Name="PlanType" />
+          </Key>
+          <Property Name="SiteID" Type="int" Nullable="false" />
+          <Property Name="PlanType" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="StartAt" Type="datetime" />
+          <Property Name="EndAt" Type="datetime" />
+          <Property Name="IntervalDay" Type="float" />
+          <Property Name="WeekDays" Type="nvarchar" MaxLength="7" />
+          <Property Name="SenderName" Type="nvarchar" MaxLength="800" />
+          <Property Name="SenderEmail" Type="nvarchar" MaxLength="200" />
+          <Property Name="TemplateID" Type="int" />
+          <Property Name="Status" Type="char" MaxLength="1" />
+          <Property Name="SplitContactCount" Type="tinyint" />
+          <Property Name="URL" Type="nvarchar" MaxLength="1024" />
+          <Property Name="Categories" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Day_Of_Week" Type="nvarchar" MaxLength="7" />
+          <Property Name="ContactList" Type="nvarchar(max)" />
+          <Property Name="CampaignStatus" Type="char" MaxLength="3" />
+          <Property Name="ScheduleTimeInteval" Type="float" />
+          <Property Name="SearchAPIType" Type="char" MaxLength="3" />
+          <Property Name="SearchStartDayInterval" Type="int" />
+          <Property Name="SearchEndDayInterval" Type="int" />
+          <Property Name="UrlSpecialCode" Type="nvarchar" MaxLength="1024" />
+          <Property Name="ListType" Type="char" MaxLength="3" />
+          <Property Name="LimitQuantity" Type="bigint" />
+          <Property Name="SellerEmail" Type="nvarchar" MaxLength="1024" />
+          <Property Name="TimeLimit" Type="nvarchar" MaxLength="1024" />
+          <Property Name="TriggerForNFC" Type="int" />
+          <Property Name="SubjectForNFC" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="AutomationSites">
+          <Key>
+            <PropertyRef Name="siteid" />
+          </Key>
+          <Property Name="siteid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SiteName" Type="nvarchar" MaxLength="100" />
+          <Property Name="SpreadLogin" Type="nvarchar" MaxLength="200" />
+          <Property Name="AppID" Type="nvarchar" MaxLength="200" />
+          <Property Name="DllType" Type="nvarchar" MaxLength="50" />
+          <Property Name="SiteUrl" Type="nvarchar" MaxLength="1024" />
+          <Property Name="Description" Type="nvarchar" MaxLength="250" />
+          <Property Name="volumn" Type="bigint" />
+          <Property Name="LogoImgUrl" Type="nvarchar" MaxLength="1024" />
+        </EntityType>
+        <EntityType Name="Categories">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ParentID" Type="int" />
+          <Property Name="Category" Type="nvarchar" MaxLength="400" />
+          <Property Name="SiteID" Type="int" />
+          <Property Name="LastUpdate" Type="datetime" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="Url" Type="nvarchar" MaxLength="1024" />
+          <Property Name="PictureUrl" Type="nvarchar" MaxLength="1024" />
+          <Property Name="PictureAlt" Type="nvarchar" MaxLength="300" />
+          <Property Name="SizeHeight" Type="int" />
+          <Property Name="SizeWidth" Type="int" />
+          <Property Name="Gender" Type="char" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Clicks_Issue">
+          <Key>
+            <PropertyRef Name="ClickID" />
+          </Key>
+          <Property Name="ClickID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IssueID" Type="bigint" />
+          <Property Name="SpreadCampId" Type="bigint" />
+          <Property Name="SubEmail" Type="nvarchar" MaxLength="1024" />
+          <Property Name="ClickUrl" Type="nvarchar" MaxLength="1024" />
+          <Property Name="ClickDate" Type="date" />
+          <Property Name="siteid" Type="int" />
+        </EntityType>
+        <EntityType Name="ContactLists_Issue">
+          <Key>
+            <PropertyRef Name="IssueID" />
+            <PropertyRef Name="ContactList" />
+          </Key>
+          <Property Name="IssueID" Type="bigint" Nullable="false" />
+          <Property Name="ContactList" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="SendTime" Type="datetime" />
+          <Property Name="SendingStatus" Type="char" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Convertions_Issue">
+          <Key>
+            <PropertyRef Name="ConvertID" />
+          </Key>
+          <Property Name="ConvertID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IssueID" Type="bigint" />
+          <Property Name="SpreadCampId" Type="bigint" />
+          <Property Name="SubEmail" Type="nvarchar" MaxLength="1024" />
+          <Property Name="ConvertType" Type="nvarchar" MaxLength="50" />
+          <Property Name="ConvertUrl" Type="nvarchar" MaxLength="1024" />
+          <Property Name="ConvertValue" Type="nchar" MaxLength="10" />
+          <Property Name="ConvertTime" Type="date" />
+          <Property Name="siteid" Type="int" />
+        </EntityType>
+        <EntityType Name="Issues">
+          <Key>
+            <PropertyRef Name="IssueID" />
+          </Key>
+          <Property Name="IssueID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IssueDate" Type="datetime" Nullable="false" />
+          <Property Name="Subject" Type="nvarchar" MaxLength="250" />
+          <Property Name="SiteID" Type="int" />
+          <Property Name="PlanType" Type="char" MaxLength="4" />
+          <Property Name="SentStatus" Type="char" MaxLength="2" />
+          <Property Name="SpreadCampId" Type="bigint" />
+        </EntityType>
+        <EntityType Name="Opens_Issue">
+          <Key>
+            <PropertyRef Name="OpenID" />
+          </Key>
+          <Property Name="OpenID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IssueID" Type="bigint" />
+          <Property Name="SpreadCampId" Type="bigint" />
+          <Property Name="SubEmail" Type="nvarchar" MaxLength="1024" />
+          <Property Name="OpenDate" Type="date" />
+          <Property Name="siteid" Type="int" />
+        </EntityType>
+        <EntityType Name="PlanTypes">
+          <Key>
+            <PropertyRef Name="PlanType" />
+          </Key>
+          <Property Name="PlanType" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="Description" Type="nchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="ProductCategory">
+          <Key>
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="ProductID" Type="bigint" Nullable="false" />
+          <Property Name="CategoryID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Products">
+          <Key>
+            <PropertyRef Name="ProdouctID" />
+          </Key>
+          <Property Name="ProdouctID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Prodouct" Type="nvarchar" MaxLength="250" />
+          <Property Name="Url" Type="nvarchar" MaxLength="1024" />
+          <Property Name="Price" Type="money" />
+          <Property Name="Discount" Type="money" />
+          <Property Name="Sales" Type="int" />
+          <Property Name="PictureUrl" Type="nvarchar" MaxLength="1024" />
+          <Property Name="LastUpdate" Type="datetime" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="SiteID" Type="int" />
+          <Property Name="Currency" Type="char" MaxLength="3" />
+          <Property Name="PictureAlt" Type="nvarchar" MaxLength="1024" />
+          <Property Name="SizeHeight" Type="int" />
+          <Property Name="SizeWidth" Type="int" />
+          <Property Name="TbScore" Type="money" />
+          <Property Name="TbComment" Type="int" />
+          <Property Name="FreeShippingImg" Type="nvarchar" MaxLength="1024" />
+          <Property Name="ShipsImg" Type="nvarchar" MaxLength="1024" />
+          <Property Name="ExpiredDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Products_Issue">
+          <Key>
+            <PropertyRef Name="ProductId" />
+            <PropertyRef Name="SiteId" />
+            <PropertyRef Name="IssueID" />
+            <PropertyRef Name="SectionID" />
+          </Key>
+          <Property Name="ProductId" Type="bigint" Nullable="false" />
+          <Property Name="SiteId" Type="int" Nullable="false" />
+          <Property Name="IssueID" Type="bigint" Nullable="false" />
+          <Property Name="SectionID" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="Priority" Type="int" />
+        </EntityType>
+        <EntityType Name="RssContactLists">
+          <Key>
+            <PropertyRef Name="ContactListId" />
+          </Key>
+          <Property Name="ContactListId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RssId" Type="int" />
+          <Property Name="ContactListName" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="RssSubscriptions">
+          <Key>
+            <PropertyRef Name="RssId" />
+          </Key>
+          <Property Name="RssId" Type="int" Nullable="false" />
+          <Property Name="URL" Type="nvarchar" MaxLength="1000" />
+          <Property Name="SpreadLogin" Type="nvarchar" MaxLength="200" />
+          <Property Name="StartAt" Type="datetime" />
+          <Property Name="EndAt" Type="datetime" />
+          <Property Name="IntervalDay" Type="float" />
+          <Property Name="WeekDays" Type="nvarchar" MaxLength="7" />
+          <Property Name="SenderName" Type="nvarchar" MaxLength="800" />
+          <Property Name="SenderEmail" Type="nvarchar" MaxLength="200" />
+          <Property Name="Template" Type="nvarchar(max)" />
+          <Property Name="Status" Type="char" MaxLength="1" />
+          <Property Name="ExcludeSubject" Type="nvarchar(max)" />
+          <Property Name="DefaultSubject" Type="nvarchar" MaxLength="1000" />
+          <Property Name="rssType" Type="char" MaxLength="10" />
+          <Property Name="AppID" Type="nvarchar" MaxLength="200" />
+          <Property Name="Categories" Type="nvarchar" MaxLength="1000" />
+          <Property Name="SiteID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="Sections">
+          <Key>
+            <PropertyRef Name="SectionID" />
+          </Key>
+          <Property Name="SectionID" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="Section" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="SentLogs">
+          <Key>
+            <PropertyRef Name="SentLogId" />
+          </Key>
+          <Property Name="SentLogId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RssId" Type="int" />
+          <Property Name="Subject" Type="nvarchar" MaxLength="1000" />
+          <Property Name="LastSentAt" Type="datetime" />
+          <Property Name="SiteID" Type="int" />
+          <Property Name="PlanType" Type="char" MaxLength="4" />
+        </EntityType>
+        <EntityType Name="SplitContactLists">
+          <Key>
+            <PropertyRef Name="SplitID" />
+          </Key>
+          <Property Name="ShopName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ContactListName" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="RssType" Type="varchar" MaxLength="20" />
+          <Property Name="Flag" Type="bit" Nullable="false" />
+          <Property Name="SiteID" Type="int" />
+          <Property Name="PlanType" Type="char" MaxLength="4" />
+          <Property Name="SplitID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SendTime" Type="datetime" />
+          <Property Name="SendingStatus" Type="char" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Template">
+          <Key>
+            <PropertyRef Name="Tid" />
+          </Key>
+          <Property Name="Tid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="TemplateName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Contents" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="RssID" Type="int" />
+          <Property Name="SiteID" Type="int" />
+          <Property Name="tType" Type="char" MaxLength="1" />
+          <Property Name="PlanType" Type="char" MaxLength="4" />
+        </EntityType>
+        <EntityType Name="TemplateInfo">
+          <Key>
+            <PropertyRef Name="SiteId" />
+          </Key>
+          <Property Name="SiteId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PlanType" Type="char" MaxLength="2" />
+          <Property Name="SortedCates" Type="nvarchar" MaxLength="1000" />
+          <Property Name="DisplayCount" Type="int" />
+          <Property Name="Modified" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TemplateLibrary">
+          <Key>
+            <PropertyRef Name="Tid" />
+          </Key>
+          <Property Name="Tid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Contents" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar" MaxLength="250" />
+          <Property Name="Demo" Type="nvarchar(max)" />
+          <Property Name="CategoryId" Type="bigint" />
+        </EntityType>
+        <Association Name="FK_Ads_AutomationSites">
+          <End Role="AutomationSites" Type="SpreadAutoModel.Store.AutomationSites" Multiplicity="0..1" />
+          <End Role="Ads" Type="SpreadAutoModel.Store.Ads" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AutomationSites">
+              <PropertyRef Name="siteid" />
+            </Principal>
+            <Dependent Role="Ads">
+              <PropertyRef Name="SiteID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ads_Issue_Ads">
+          <End Role="Ads" Type="SpreadAutoModel.Store.Ads" Multiplicity="1" />
+          <End Role="Ads_Issue" Type="SpreadAutoModel.Store.Ads_Issue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ads">
+              <PropertyRef Name="AdID" />
+            </Principal>
+            <Dependent Role="Ads_Issue">
+              <PropertyRef Name="AdId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ads_Issue_AutomationSites">
+          <End Role="AutomationSites" Type="SpreadAutoModel.Store.AutomationSites" Multiplicity="1" />
+          <End Role="Ads_Issue" Type="SpreadAutoModel.Store.Ads_Issue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AutomationSites">
+              <PropertyRef Name="siteid" />
+            </Principal>
+            <Dependent Role="Ads_Issue">
+              <PropertyRef Name="SiteId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ads_Issue_Issue">
+          <End Role="Issues" Type="SpreadAutoModel.Store.Issues" Multiplicity="1" />
+          <End Role="Ads_Issue" Type="SpreadAutoModel.Store.Ads_Issue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Issues">
+              <PropertyRef Name="IssueID" />
+            </Principal>
+            <Dependent Role="Ads_Issue">
+              <PropertyRef Name="IssueID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AdsCategory_Ads">
+          <End Role="Ads" Type="SpreadAutoModel.Store.Ads" Multiplicity="1" />
+          <End Role="AdsCategory" Type="SpreadAutoModel.Store.AdsCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ads">
+              <PropertyRef Name="AdID" />
+            </Principal>
+            <Dependent Role="AdsCategory">
+              <PropertyRef Name="AdsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AdsCategory_Categories">
+          <End Role="Categories" Type="SpreadAutoModel.Store.Categories" Multiplicity="1" />
+          <End Role="AdsCategory" Type="SpreadAutoModel.Store.AdsCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="AdsCategory">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AutomationPlan_AutomationSites">
+          <End Role="AutomationSites" Type="SpreadAutoModel.Store.AutomationSites" Multiplicity="1" />
+          <End Role="AutomationPlan" Type="SpreadAutoModel.Store.AutomationPlan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AutomationSites">
+              <PropertyRef Name="siteid" />
+            </Principal>
+            <Dependent Role="AutomationPlan">
+              <PropertyRef Name="SiteID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AutomationPlan_PlanType">
+          <End Role="PlanTypes" Type="SpreadAutoModel.Store.PlanTypes" Multiplicity="1" />
+          <End Role="AutomationPlan" Type="SpreadAutoModel.Store.AutomationPlan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PlanTypes">
+              <PropertyRef Name="PlanType" />
+            </Principal>
+            <Dependent Role="AutomationPlan">
+              <PropertyRef Name="PlanType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AutomationPlan_Template">
+          <End Role="Template" Type="SpreadAutoModel.Store.Template" Multiplicity="0..1" />
+          <End Role="AutomationPlan" Type="SpreadAutoModel.Store.AutomationPlan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Template">
+              <PropertyRef Name="Tid" />
+            </Principal>
+            <Dependent Role="AutomationPlan">
+              <PropertyRef Name="TemplateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Categories_AutomationSites">
+          <End Role="AutomationSites" Type="SpreadAutoModel.Store.AutomationSites" Multiplicity="0..1" />
+          <End Role="Categories" Type="SpreadAutoModel.Store.Categories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AutomationSites">
+              <PropertyRef Name="siteid" />
+            </Principal>
+            <Dependent Role="Categories">
+              <PropertyRef Name="SiteID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ContactLists_Issue_Issue">
+          <End Role="Issues" Type="SpreadAutoModel.Store.Issues" Multiplicity="1" />
+          <End Role="ContactLists_Issue" Type="SpreadAutoModel.Store.ContactLists_Issue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Issues">
+              <PropertyRef Name="IssueID" />
+            </Principal>
+            <Dependent Role="ContactLists_Issue">
+              <PropertyRef Name="IssueID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Issues_Ads_Issue">
+          <End Role="Issues" Type="SpreadAutoModel.Store.Issues" Multiplicity="1" />
+          <End Role="Issues1" Type="SpreadAutoModel.Store.Issues" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Issues">
+              <PropertyRef Name="IssueID" />
+            </Principal>
+            <Dependent Role="Issues1">
+              <PropertyRef Name="IssueID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Issues_AutomationSites">
+          <End Role="AutomationSites" Type="SpreadAutoModel.Store.AutomationSites" Multiplicity="0..1" />
+          <End Role="Issues" Type="SpreadAutoModel.Store.Issues" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AutomationSites">
+              <PropertyRef Name="siteid" />
+            </Principal>
+            <Dependent Role="Issues">
+              <PropertyRef Name="SiteID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Issues_PlanTypes">
+          <End Role="PlanTypes" Type="SpreadAutoModel.Store.PlanTypes" Multiplicity="0..1" />
+          <End Role="Issues" Type="SpreadAutoModel.Store.Issues" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PlanTypes">
+              <PropertyRef Name="PlanType" />
+            </Principal>
+            <Dependent Role="Issues">
+              <PropertyRef Name="PlanType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductCategory_Categories">
+          <End Role="Categories" Type="SpreadAutoModel.Store.Categories" Multiplicity="1" />
+          <End Role="ProductCategory" Type="SpreadAutoModel.Store.ProductCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="ProductCategory">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductCategory_Products">
+          <End Role="Products" Type="SpreadAutoModel.Store.Products" Multiplicity="1" />
+          <End Role="ProductCategory" Type="SpreadAutoModel.Store.ProductCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="ProdouctID" />
+            </Principal>
+            <Dependent Role="ProductCategory">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Products_AutomationSites">
+          <End Role="AutomationSites" Type="SpreadAutoModel.Store.AutomationSites" Multiplicity="0..1" />
+          <End Role="Products" Type="SpreadAutoModel.Store.Products" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AutomationSites">
+              <PropertyRef Name="siteid" />
+            </Principal>
+            <Dependent Role="Products">
+              <PropertyRef Name="SiteID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Products_Issue_AutomationSites">
+          <End Role="AutomationSites" Type="SpreadAutoModel.Store.AutomationSites" Multiplicity="1" />
+          <End Role="Products_Issue" Type="SpreadAutoModel.Store.Products_Issue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AutomationSites">
+              <PropertyRef Name="siteid" />
+            </Principal>
+            <Dependent Role="Products_Issue">
+              <PropertyRef Name="SiteId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Products_Issue_Issue">
+          <End Role="Issues" Type="SpreadAutoModel.Store.Issues" Multiplicity="1" />
+          <End Role="Products_Issue" Type="SpreadAutoModel.Store.Products_Issue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Issues">
+              <PropertyRef Name="IssueID" />
+            </Principal>
+            <Dependent Role="Products_Issue">
+              <PropertyRef Name="IssueID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Products_Issue_Products">
+          <End Role="Products" Type="SpreadAutoModel.Store.Products" Multiplicity="1" />
+          <End Role="Products_Issue" Type="SpreadAutoModel.Store.Products_Issue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="ProdouctID" />
+            </Principal>
+            <Dependent Role="Products_Issue">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Products_Issue_Sections">
+          <End Role="Sections" Type="SpreadAutoModel.Store.Sections" Multiplicity="1" />
+          <End Role="Products_Issue" Type="SpreadAutoModel.Store.Products_Issue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sections">
+              <PropertyRef Name="SectionID" />
+            </Principal>
+            <Dependent Role="Products_Issue">
+              <PropertyRef Name="SectionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SentLogs_AutomationSites">
+          <End Role="AutomationSites" Type="SpreadAutoModel.Store.AutomationSites" Multiplicity="0..1" />
+          <End Role="SentLogs" Type="SpreadAutoModel.Store.SentLogs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AutomationSites">
+              <PropertyRef Name="siteid" />
+            </Principal>
+            <Dependent Role="SentLogs">
+              <PropertyRef Name="SiteID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SplitContactLists_PlanTypes">
+          <End Role="PlanTypes" Type="SpreadAutoModel.Store.PlanTypes" Multiplicity="0..1" />
+          <End Role="SplitContactLists" Type="SpreadAutoModel.Store.SplitContactLists" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PlanTypes">
+              <PropertyRef Name="PlanType" />
+            </Principal>
+            <Dependent Role="SplitContactLists">
+              <PropertyRef Name="PlanType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Template_PlanTypes">
+          <End Role="PlanTypes" Type="SpreadAutoModel.Store.PlanTypes" Multiplicity="0..1" />
+          <End Role="Template" Type="SpreadAutoModel.Store.Template" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PlanTypes">
+              <PropertyRef Name="PlanType" />
+            </Principal>
+            <Dependent Role="Template">
+              <PropertyRef Name="PlanType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SpreadAutoModel" Alias="Self"
+              xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation"
+              xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="SpreadAutoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AutoAds" EntityType="SpreadAutoModel.AutoAd" />
+          <EntitySet Name="AutoAds_Issue" EntityType="SpreadAutoModel.AutoAds_Issue" />
+          <EntitySet Name="AutomationPlans" EntityType="SpreadAutoModel.AutomationPlan" />
+          <EntitySet Name="AutoCategories" EntityType="SpreadAutoModel.AutoCategory" />
+          <EntitySet Name="AutoContactLists_Issue" EntityType="SpreadAutoModel.AutoContactLists_Issue" />
+          <EntitySet Name="AutoIssues" EntityType="SpreadAutoModel.AutoIssue" />
+          <EntitySet Name="AutoPlanTypes" EntityType="SpreadAutoModel.AutoPlanType" />
+          <EntitySet Name="AutoProducts" EntityType="SpreadAutoModel.AutoProduct" />
+          <EntitySet Name="AutoProducts_Issue" EntityType="SpreadAutoModel.AutoProducts_Issue" />
+          <EntitySet Name="AutoRssContactLists" EntityType="SpreadAutoModel.AutoRssContactList" />
+          <EntitySet Name="AutoRssSubscriptions" EntityType="SpreadAutoModel.AutoRssSubscription" />
+          <EntitySet Name="AutoSections" EntityType="SpreadAutoModel.AutoSection" />
+          <EntitySet Name="AutoSentLogs" EntityType="SpreadAutoModel.AutoSentLog" />
+          <EntitySet Name="AutoSplitContactLists" EntityType="SpreadAutoModel.AutoSplitContactList" />
+          <EntitySet Name="AutoTemplates" EntityType="SpreadAutoModel.AutoTemplate" />
+          <AssociationSet Name="FK_Ads_Issue_Ads" Association="SpreadAutoModel.FK_Ads_Issue_Ads">
+            <End Role="Ad" EntitySet="AutoAds" />
+            <End Role="Ads_Issue" EntitySet="AutoAds_Issue" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ads_Issue_Issue" Association="SpreadAutoModel.FK_Ads_Issue_Issue">
+            <End Role="Issue" EntitySet="AutoIssues" />
+            <End Role="Ads_Issue" EntitySet="AutoAds_Issue" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AutomationPlan_PlanType" Association="SpreadAutoModel.FK_AutomationPlan_PlanType">
+            <End Role="PlanType" EntitySet="AutoPlanTypes" />
+            <End Role="AutomationPlan" EntitySet="AutomationPlans" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AutomationPlan_Template" Association="SpreadAutoModel.FK_AutomationPlan_Template">
+            <End Role="Template" EntitySet="AutoTemplates" />
+            <End Role="AutomationPlan" EntitySet="AutomationPlans" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ContactLists_Issue_Issue" Association="SpreadAutoModel.FK_ContactLists_Issue_Issue">
+            <End Role="Issue" EntitySet="AutoIssues" />
+            <End Role="ContactLists_Issue" EntitySet="AutoContactLists_Issue" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Issues_Ads_Issue" Association="SpreadAutoModel.FK_Issues_Ads_Issue">
+            <End Role="Issue" EntitySet="AutoIssues" />
+            <End Role="Issue1" EntitySet="AutoIssues" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Issues_PlanTypes" Association="SpreadAutoModel.FK_Issues_PlanTypes">
+            <End Role="PlanType" EntitySet="AutoPlanTypes" />
+            <End Role="Issue" EntitySet="AutoIssues" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Products_Issue_Issue" Association="SpreadAutoModel.FK_Products_Issue_Issue">
+            <End Role="Issue" EntitySet="AutoIssues" />
+            <End Role="Products_Issue" EntitySet="AutoProducts_Issue" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Products_Issue_Products" Association="SpreadAutoModel.FK_Products_Issue_Products">
+            <End Role="Product" EntitySet="AutoProducts" />
+            <End Role="Products_Issue" EntitySet="AutoProducts_Issue" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Products_Issue_Sections" Association="SpreadAutoModel.FK_Products_Issue_Sections">
+            <End Role="Section" EntitySet="AutoSections" />
+            <End Role="Products_Issue" EntitySet="AutoProducts_Issue" />
+          </AssociationSet>
+          <AssociationSet Name="AdsCategory" Association="SpreadAutoModel.AdsCategory">
+            <End Role="Ad" EntitySet="AutoAds" />
+            <End Role="Category" EntitySet="AutoCategories" />
+          </AssociationSet>
+          <AssociationSet Name="ProductCategory" Association="SpreadAutoModel.ProductCategory">
+            <End Role="Category" EntitySet="AutoCategories" />
+            <End Role="Product" EntitySet="AutoProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Template_PlanTypes" Association="SpreadAutoModel.FK_Template_PlanTypes">
+            <End Role="AutoPlanType" EntitySet="AutoPlanTypes" />
+            <End Role="AutoTemplate" EntitySet="AutoTemplates" />
+          </AssociationSet>
+          <EntitySet Name="AutomationSites" EntityType="SpreadAutoModel.AutomationSite" />
+          <AssociationSet Name="FK_Ads_AutomationSites" Association="SpreadAutoModel.FK_Ads_AutomationSites">
+            <End Role="AutomationSite" EntitySet="AutomationSites" />
+            <End Role="AutoAd" EntitySet="AutoAds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ads_Issue_AutomationSites"
+                          Association="SpreadAutoModel.FK_Ads_Issue_AutomationSites">
+            <End Role="AutomationSite" EntitySet="AutomationSites" />
+            <End Role="AutoAds_Issue" EntitySet="AutoAds_Issue" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AutomationPlan_AutomationSites"
+                          Association="SpreadAutoModel.FK_AutomationPlan_AutomationSites">
+            <End Role="AutomationSite" EntitySet="AutomationSites" />
+            <End Role="AutoAutomationPlan" EntitySet="AutomationPlans" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Categories_AutomationSites"
+                          Association="SpreadAutoModel.FK_Categories_AutomationSites">
+            <End Role="AutomationSite" EntitySet="AutomationSites" />
+            <End Role="AutoCategory" EntitySet="AutoCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Issues_AutomationSites" Association="SpreadAutoModel.FK_Issues_AutomationSites">
+            <End Role="AutomationSite" EntitySet="AutomationSites" />
+            <End Role="AutoIssue" EntitySet="AutoIssues" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Products_AutomationSites" Association="SpreadAutoModel.FK_Products_AutomationSites">
+            <End Role="AutomationSite" EntitySet="AutomationSites" />
+            <End Role="AutoProduct" EntitySet="AutoProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Products_Issue_AutomationSites"
+                          Association="SpreadAutoModel.FK_Products_Issue_AutomationSites">
+            <End Role="AutomationSite" EntitySet="AutomationSites" />
+            <End Role="AutoProducts_Issue" EntitySet="AutoProducts_Issue" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SentLogs_AutomationSites" Association="SpreadAutoModel.FK_SentLogs_AutomationSites">
+            <End Role="AutomationSite" EntitySet="AutomationSites" />
+            <End Role="AutoSentLog" EntitySet="AutoSentLogs" />
+          </AssociationSet>
+          <EntitySet Name="TemplateLibraries" EntityType="SpreadAutoModel.TemplateLibrary" />
+          <AssociationSet Name="FK_SplitContactLists_PlanTypes"
+                          Association="SpreadAutoModel.FK_SplitContactLists_PlanTypes">
+            <End Role="AutoPlanType" EntitySet="AutoPlanTypes" />
+            <End Role="AutoSplitContactList" EntitySet="AutoSplitContactLists" />
+          </AssociationSet>
+          <EntitySet Name="TemplateInfoes" EntityType="SpreadAutoModel.TemplateInfo" />
+          <EntitySet Name="Clicks_Issue" EntityType="SpreadAutoModel.Clicks_Issue" />
+          <EntitySet Name="Convertions_Issue" EntityType="SpreadAutoModel.Convertions_Issue" />
+          <EntitySet Name="Opens_Issue" EntityType="SpreadAutoModel.Opens_Issue" />
+        </EntityContainer>
+        <EntityType Name="AutoAd">
+          <Key>
+            <PropertyRef Name="AdID" />
+          </Key>
+          <Property Type="Int64" Name="AdID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Ad1" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Url" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PictureUrl" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="SizeHeight" />
+          <Property Type="Int32" Name="SizeWidth" />
+          <Property Type="Int32" Name="SiteID" />
+          <Property Type="String" Name="Type" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="DateTime" Name="Lastupdate" />
+          <NavigationProperty Name="Ads_Issue" Relationship="SpreadAutoModel.FK_Ads_Issue_Ads" FromRole="Ad"
+                              ToRole="Ads_Issue" />
+          <NavigationProperty Name="Categories" Relationship="SpreadAutoModel.AdsCategory" FromRole="Ad"
+                              ToRole="Category" />
+          <NavigationProperty Name="AutomationSite" Relationship="SpreadAutoModel.FK_Ads_AutomationSites"
+                              FromRole="AutoAd" ToRole="AutomationSite" />
+          <Property Type="Decimal" Name="Price" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="Discount" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="AutoAds_Issue">
+          <Key>
+            <PropertyRef Name="AdId" />
+            <PropertyRef Name="SiteId" />
+            <PropertyRef Name="IssueID" />
+          </Key>
+          <Property Type="Int64" Name="AdId" Nullable="false" />
+          <Property Type="Int32" Name="SiteId" Nullable="false" />
+          <Property Type="Int64" Name="IssueID" Nullable="false" />
+          <NavigationProperty Name="Ad" Relationship="SpreadAutoModel.FK_Ads_Issue_Ads" FromRole="Ads_Issue"
+                              ToRole="Ad" />
+          <NavigationProperty Name="Issue" Relationship="SpreadAutoModel.FK_Ads_Issue_Issue" FromRole="Ads_Issue"
+                              ToRole="Issue" />
+          <NavigationProperty Name="AutomationSite" Relationship="SpreadAutoModel.FK_Ads_Issue_AutomationSites"
+                              FromRole="AutoAds_Issue" ToRole="AutomationSite" />
+        </EntityType>
+        <EntityType Name="AutomationPlan">
+          <Key>
+            <PropertyRef Name="SiteID" />
+            <PropertyRef Name="PlanType" />
+          </Key>
+          <Property Type="Int32" Name="SiteID" Nullable="false" />
+          <Property Type="String" Name="PlanType" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Type="DateTime" Name="StartAt" />
+          <Property Type="DateTime" Name="EndAt" />
+          <Property Type="Double" Name="IntervalDay" />
+          <Property Type="String" Name="WeekDays" MaxLength="7" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SenderName" MaxLength="800" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SenderEmail" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="TemplateID" />
+          <Property Type="String" Name="Status" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="Byte" Name="SplitContactCount" />
+          <Property Type="String" Name="URL" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PlanType1" Relationship="SpreadAutoModel.FK_AutomationPlan_PlanType"
+                              FromRole="AutomationPlan" ToRole="PlanType" />
+          <NavigationProperty Name="Template" Relationship="SpreadAutoModel.FK_AutomationPlan_Template"
+                              FromRole="AutomationPlan" ToRole="Template" />
+          <Property Type="String" Name="Categories" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AutomationSite" Relationship="SpreadAutoModel.FK_AutomationPlan_AutomationSites"
+                              FromRole="AutoAutomationPlan" ToRole="AutomationSite" />
+          <Property Type="String" Name="Day_Of_Week" MaxLength="7" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactList" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CampaignStatus" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="Double" Name="ScheduleTimeInteval" />
+          <Property Type="String" Name="SearchAPIType" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="SearchStartDayInterval" />
+          <Property Type="Int32" Name="SearchEndDayInterval" />
+          <Property Type="String" Name="UrlSpecialCode" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ListType" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="SellerEmail" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TimeLimit" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Type="Int64" Name="LimitQuantity" />
+          <Property Type="Int32" Name="TriggerForNFC" />
+          <Property Type="String" Name="SubjectForNFC" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AutoCategory">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Type="Int32" Name="CategoryID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="ParentID" />
+          <Property Type="String" Name="Category1" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="SiteID" />
+          <Property Type="DateTime" Name="LastUpdate" />
+          <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Url" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PictureUrl" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PictureAlt" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="SizeHeight" />
+          <Property Type="Int32" Name="SizeWidth" />
+          <Property Type="String" Name="Gender" MaxLength="10" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Ads" Relationship="SpreadAutoModel.AdsCategory" FromRole="Category" ToRole="Ad" />
+          <NavigationProperty Name="Products" Relationship="SpreadAutoModel.ProductCategory" FromRole="Category"
+                              ToRole="Product" />
+          <NavigationProperty Name="AutomationSite" Relationship="SpreadAutoModel.FK_Categories_AutomationSites"
+                              FromRole="AutoCategory" ToRole="AutomationSite" />
+        </EntityType>
+        <EntityType Name="AutoContactLists_Issue">
+          <Key>
+            <PropertyRef Name="IssueID" />
+            <PropertyRef Name="ContactList" />
+          </Key>
+          <Property Type="Int64" Name="IssueID" Nullable="false" />
+          <Property Type="String" Name="ContactList" Nullable="false" MaxLength="250" FixedLength="false"
+                    Unicode="true" />
+          <Property Type="DateTime" Name="SendTime" />
+          <NavigationProperty Name="Issue" Relationship="SpreadAutoModel.FK_ContactLists_Issue_Issue"
+                              FromRole="ContactLists_Issue" ToRole="Issue" />
+          <Property Type="String" Name="SendingStatus" MaxLength="10" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="AutoIssue">
+          <Key>
+            <PropertyRef Name="IssueID" />
+          </Key>
+          <Property Type="Int64" Name="IssueID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="IssueDate" Nullable="false" />
+          <Property Type="String" Name="Subject" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="SiteID" />
+          <Property Type="String" Name="PlanType" MaxLength="2" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Ads_Issue" Relationship="SpreadAutoModel.FK_Ads_Issue_Issue" FromRole="Issue"
+                              ToRole="Ads_Issue" />
+          <NavigationProperty Name="ContactLists_Issue" Relationship="SpreadAutoModel.FK_ContactLists_Issue_Issue"
+                              FromRole="Issue" ToRole="ContactLists_Issue" />
+          <NavigationProperty Name="Issues1" Relationship="SpreadAutoModel.FK_Issues_Ads_Issue" FromRole="Issue"
+                              ToRole="Issue1" />
+          <NavigationProperty Name="Issue1" Relationship="SpreadAutoModel.FK_Issues_Ads_Issue" FromRole="Issue1"
+                              ToRole="Issue" />
+          <NavigationProperty Name="PlanType1" Relationship="SpreadAutoModel.FK_Issues_PlanTypes" FromRole="Issue"
+                              ToRole="PlanType" />
+          <NavigationProperty Name="Products_Issue" Relationship="SpreadAutoModel.FK_Products_Issue_Issue"
+                              FromRole="Issue" ToRole="Products_Issue" />
+          <NavigationProperty Name="AutomationSite" Relationship="SpreadAutoModel.FK_Issues_AutomationSites"
+                              FromRole="AutoIssue" ToRole="AutomationSite" />
+          <Property Type="String" Name="SentStatus" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Type="Int64" Name="SpreadCampId" />
+        </EntityType>
+        <EntityType Name="AutoPlanType">
+          <Key>
+            <PropertyRef Name="PlanType1" />
+          </Key>
+          <Property Type="String" Name="PlanType1" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="Description" MaxLength="100" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="AutomationPlans" Relationship="SpreadAutoModel.FK_AutomationPlan_PlanType"
+                              FromRole="PlanType" ToRole="AutomationPlan" />
+          <NavigationProperty Name="Issues" Relationship="SpreadAutoModel.FK_Issues_PlanTypes" FromRole="PlanType"
+                              ToRole="Issue" />
+          <NavigationProperty Name="Templates" Relationship="SpreadAutoModel.FK_Template_PlanTypes"
+                              FromRole="AutoPlanType" ToRole="AutoTemplate" />
+          <NavigationProperty Name="SplitContactLists" Relationship="SpreadAutoModel.FK_SplitContactLists_PlanTypes"
+                              FromRole="AutoPlanType" ToRole="AutoSplitContactList" />
+        </EntityType>
+        <EntityType Name="AutoProduct">
+          <Key>
+            <PropertyRef Name="ProdouctID" />
+          </Key>
+          <Property Type="Int64" Name="ProdouctID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Prodouct" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Url" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Price" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="Discount" Precision="19" Scale="4" />
+          <Property Type="Int32" Name="Sales" />
+          <Property Type="String" Name="PictureUrl" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="LastUpdate" />
+          <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="SiteID" />
+          <Property Type="String" Name="Currency" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="PictureAlt" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="SizeHeight" />
+          <Property Type="Int32" Name="SizeWidth" />
+          <Property Type="Decimal" Name="TbScore" Precision="19" Scale="4" />
+          <Property Type="Int32" Name="TbComment" />
+          <Property Type="String" Name="FreeShippingImg" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShipsImg" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Products_Issue" Relationship="SpreadAutoModel.FK_Products_Issue_Products"
+                              FromRole="Product" ToRole="Products_Issue" />
+          <NavigationProperty Name="Categories" Relationship="SpreadAutoModel.ProductCategory" FromRole="Product"
+                              ToRole="Category" />
+          <NavigationProperty Name="AutomationSite" Relationship="SpreadAutoModel.FK_Products_AutomationSites"
+                              FromRole="AutoProduct" ToRole="AutomationSite" />
+          <Property Type="DateTime" Name="ExpiredDate" />
+        </EntityType>
+        <EntityType Name="AutoProducts_Issue">
+          <Key>
+            <PropertyRef Name="ProductId" />
+            <PropertyRef Name="SiteId" />
+            <PropertyRef Name="IssueID" />
+            <PropertyRef Name="SectionID" />
+          </Key>
+          <Property Type="Int64" Name="ProductId" Nullable="false" />
+          <Property Type="Int32" Name="SiteId" Nullable="false" />
+          <Property Type="Int64" Name="IssueID" Nullable="false" />
+          <Property Type="String" Name="SectionID" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Issue" Relationship="SpreadAutoModel.FK_Products_Issue_Issue"
+                              FromRole="Products_Issue" ToRole="Issue" />
+          <NavigationProperty Name="Product" Relationship="SpreadAutoModel.FK_Products_Issue_Products"
+                              FromRole="Products_Issue" ToRole="Product" />
+          <NavigationProperty Name="Section" Relationship="SpreadAutoModel.FK_Products_Issue_Sections"
+                              FromRole="Products_Issue" ToRole="Section" />
+          <NavigationProperty Name="AutomationSite" Relationship="SpreadAutoModel.FK_Products_Issue_AutomationSites"
+                              FromRole="AutoProducts_Issue" ToRole="AutomationSite" />
+          <Property Type="Int32" Name="Priority" />
+        </EntityType>
+        <EntityType Name="AutoRssContactList">
+          <Key>
+            <PropertyRef Name="ContactListId" />
+          </Key>
+          <Property Type="Int32" Name="ContactListId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="RssId" />
+          <Property Type="String" Name="ContactListName" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AutoRssSubscription">
+          <Key>
+            <PropertyRef Name="RssId" />
+          </Key>
+          <Property Type="Int32" Name="RssId" Nullable="false" />
+          <Property Type="String" Name="URL" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SpreadLogin" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="StartAt" />
+          <Property Type="DateTime" Name="EndAt" />
+          <Property Type="Double" Name="IntervalDay" />
+          <Property Type="String" Name="WeekDays" MaxLength="7" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SenderName" MaxLength="800" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SenderEmail" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Template" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Status" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="ExcludeSubject" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DefaultSubject" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="rssType" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="AppID" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Categories" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="SiteID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="AutoSection">
+          <Key>
+            <PropertyRef Name="SectionID" />
+          </Key>
+          <Property Type="String" Name="SectionID" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="Section1" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Products_Issue" Relationship="SpreadAutoModel.FK_Products_Issue_Sections"
+                              FromRole="Section" ToRole="Products_Issue" />
+        </EntityType>
+        <EntityType Name="AutoSentLog">
+          <Key>
+            <PropertyRef Name="SentLogId" />
+          </Key>
+          <Property Type="Int32" Name="SentLogId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="RssId" Nullable="false" />
+          <Property Type="String" Name="Subject" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="LastSentAt" />
+          <Property Type="Int32" Name="SiteID" />
+          <Property Type="String" Name="PlanType" MaxLength="2" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="AutomationSite" Relationship="SpreadAutoModel.FK_SentLogs_AutomationSites"
+                              FromRole="AutoSentLog" ToRole="AutomationSite" />
+        </EntityType>
+        <EntityType Name="AutoSplitContactList">
+          <Key>
+            <PropertyRef Name="SplitID" />
+          </Key>
+          <Property Type="String" Name="ShopName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContactListName" Nullable="false" MaxLength="200" FixedLength="false"
+                    Unicode="true" />
+          <Property Type="String" Name="RssType" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Flag" Nullable="false" />
+          <Property Type="Int32" Name="SiteID" />
+          <Property Type="String" Name="PlanType" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="SplitID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="SendTime" />
+          <Property Type="String" Name="SendingStatus" MaxLength="10" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="PlanType1" Relationship="SpreadAutoModel.FK_SplitContactLists_PlanTypes"
+                              FromRole="AutoSplitContactList" ToRole="AutoPlanType" />
+        </EntityType>
+        <EntityType Name="AutoTemplate">
+          <Key>
+            <PropertyRef Name="Tid" />
+          </Key>
+          <Property Type="Int32" Name="Tid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TemplateName" Nullable="false" MaxLength="50" FixedLength="false"
+                    Unicode="true" />
+          <Property Type="String" Name="Contents" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="RssID" />
+          <Property Type="Int32" Name="SiteID" />
+          <NavigationProperty Name="AutomationPlans" Relationship="SpreadAutoModel.FK_AutomationPlan_Template"
+                              FromRole="Template" ToRole="AutomationPlan" />
+          <Property Type="String" Name="PlanType" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="tType" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="PlanType1" Relationship="SpreadAutoModel.FK_Template_PlanTypes"
+                              FromRole="AutoTemplate" ToRole="AutoPlanType" />
+        </EntityType>
+        <Association Name="FK_Ads_Issue_Ads">
+          <End Type="SpreadAutoModel.AutoAd" Role="Ad" Multiplicity="1" />
+          <End Type="SpreadAutoModel.AutoAds_Issue" Role="Ads_Issue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ad">
+              <PropertyRef Name="AdID" />
+            </Principal>
+            <Dependent Role="Ads_Issue">
+              <PropertyRef Name="AdId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ads_Issue_Issue">
+          <End Type="SpreadAutoModel.AutoIssue" Role="Issue" Multiplicity="1" />
+          <End Type="SpreadAutoModel.AutoAds_Issue" Role="Ads_Issue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Issue">
+              <PropertyRef Name="IssueID" />
+            </Principal>
+            <Dependent Role="Ads_Issue">
+              <PropertyRef Name="IssueID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AutomationPlan_PlanType">
+          <End Type="SpreadAutoModel.AutoPlanType" Role="PlanType" Multiplicity="1" />
+          <End Type="SpreadAutoModel.AutomationPlan" Role="AutomationPlan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PlanType">
+              <PropertyRef Name="PlanType1" />
+            </Principal>
+            <Dependent Role="AutomationPlan">
+              <PropertyRef Name="PlanType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AutomationPlan_Template">
+          <End Type="SpreadAutoModel.AutoTemplate" Role="Template" Multiplicity="0..1" />
+          <End Type="SpreadAutoModel.AutomationPlan" Role="AutomationPlan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Template">
+              <PropertyRef Name="Tid" />
+            </Principal>
+            <Dependent Role="AutomationPlan">
+              <PropertyRef Name="TemplateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ContactLists_Issue_Issue">
+          <End Type="SpreadAutoModel.AutoIssue" Role="Issue" Multiplicity="1" />
+          <End Type="SpreadAutoModel.AutoContactLists_Issue" Role="ContactLists_Issue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Issue">
+              <PropertyRef Name="IssueID" />
+            </Principal>
+            <Dependent Role="ContactLists_Issue">
+              <PropertyRef Name="IssueID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Issues_Ads_Issue">
+          <End Type="SpreadAutoModel.AutoIssue" Role="Issue" Multiplicity="1" />
+          <End Type="SpreadAutoModel.AutoIssue" Role="Issue1" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Issue">
+              <PropertyRef Name="IssueID" />
+            </Principal>
+            <Dependent Role="Issue1">
+              <PropertyRef Name="IssueID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Issues_PlanTypes">
+          <End Type="SpreadAutoModel.AutoPlanType" Role="PlanType" Multiplicity="0..1" />
+          <End Type="SpreadAutoModel.AutoIssue" Role="Issue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PlanType">
+              <PropertyRef Name="PlanType1" />
+            </Principal>
+            <Dependent Role="Issue">
+              <PropertyRef Name="PlanType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Products_Issue_Issue">
+          <End Type="SpreadAutoModel.AutoIssue" Role="Issue" Multiplicity="1" />
+          <End Type="SpreadAutoModel.AutoProducts_Issue" Role="Products_Issue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Issue">
+              <PropertyRef Name="IssueID" />
+            </Principal>
+            <Dependent Role="Products_Issue">
+              <PropertyRef Name="IssueID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Products_Issue_Products">
+          <End Type="SpreadAutoModel.AutoProduct" Role="Product" Multiplicity="1" />
+          <End Type="SpreadAutoModel.AutoProducts_Issue" Role="Products_Issue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProdouctID" />
+            </Principal>
+            <Dependent Role="Products_Issue">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Products_Issue_Sections">
+          <End Type="SpreadAutoModel.AutoSection" Role="Section" Multiplicity="1" />
+          <End Type="SpreadAutoModel.AutoProducts_Issue" Role="Products_Issue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Section">
+              <PropertyRef Name="SectionID" />
+            </Principal>
+            <Dependent Role="Products_Issue">
+              <PropertyRef Name="SectionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AdsCategory">
+          <End Type="SpreadAutoModel.AutoAd" Role="Ad" Multiplicity="*" />
+          <End Type="SpreadAutoModel.AutoCategory" Role="Category" Multiplicity="*" />
+        </Association>
+        <Association Name="ProductCategory">
+          <End Type="SpreadAutoModel.AutoCategory" Role="Category" Multiplicity="*" />
+          <End Type="SpreadAutoModel.AutoProduct" Role="Product" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_Template_PlanTypes">
+          <End Type="SpreadAutoModel.AutoPlanType" Role="AutoPlanType" Multiplicity="0..1" />
+          <End Type="SpreadAutoModel.AutoTemplate" Role="AutoTemplate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AutoPlanType">
+              <PropertyRef Name="PlanType1" />
+            </Principal>
+            <Dependent Role="AutoTemplate">
+              <PropertyRef Name="PlanType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="AutomationSite">
+          <Key>
+            <PropertyRef Name="siteid" />
+          </Key>
+          <Property Type="Int32" Name="siteid" Nullable="false" />
+          <Property Type="String" Name="SiteName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SpreadLogin" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AppID" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DllType" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SiteUrl" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Ads" Relationship="SpreadAutoModel.FK_Ads_AutomationSites"
+                              FromRole="AutomationSite" ToRole="AutoAd" />
+          <NavigationProperty Name="Ads_Issue" Relationship="SpreadAutoModel.FK_Ads_Issue_AutomationSites"
+                              FromRole="AutomationSite" ToRole="AutoAds_Issue" />
+          <NavigationProperty Name="AutomationPlans" Relationship="SpreadAutoModel.FK_AutomationPlan_AutomationSites"
+                              FromRole="AutomationSite" ToRole="AutoAutomationPlan" />
+          <NavigationProperty Name="Categories" Relationship="SpreadAutoModel.FK_Categories_AutomationSites"
+                              FromRole="AutomationSite" ToRole="AutoCategory" />
+          <NavigationProperty Name="Issues" Relationship="SpreadAutoModel.FK_Issues_AutomationSites"
+                              FromRole="AutomationSite" ToRole="AutoIssue" />
+          <NavigationProperty Name="Products" Relationship="SpreadAutoModel.FK_Products_AutomationSites"
+                              FromRole="AutomationSite" ToRole="AutoProduct" />
+          <NavigationProperty Name="Products_Issue" Relationship="SpreadAutoModel.FK_Products_Issue_AutomationSites"
+                              FromRole="AutomationSite" ToRole="AutoProducts_Issue" />
+          <NavigationProperty Name="SentLogs" Relationship="SpreadAutoModel.FK_SentLogs_AutomationSites"
+                              FromRole="AutomationSite" ToRole="AutoSentLog" />
+          <Property Type="Int64" Name="volumn" />
+          <Property Type="String" Name="LogoImgUrl" MaxLength="1024" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_Ads_AutomationSites">
+          <End Type="SpreadAutoModel.AutomationSite" Role="AutomationSite" Multiplicity="0..1" />
+          <End Type="SpreadAutoModel.AutoAd" Role="AutoAd" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AutomationSite">
+              <PropertyRef Name="siteid" />
+            </Principal>
+            <Dependent Role="AutoAd">
+              <PropertyRef Name="SiteID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ads_Issue_AutomationSites">
+          <End Type="SpreadAutoModel.AutomationSite" Role="AutomationSite" Multiplicity="1" />
+          <End Type="SpreadAutoModel.AutoAds_Issue" Role="AutoAds_Issue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AutomationSite">
+              <PropertyRef Name="siteid" />
+            </Principal>
+            <Dependent Role="AutoAds_Issue">
+              <PropertyRef Name="SiteId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AutomationPlan_AutomationSites">
+          <End Type="SpreadAutoModel.AutomationSite" Role="AutomationSite" Multiplicity="1" />
+          <End Type="SpreadAutoModel.AutomationPlan" Role="AutoAutomationPlan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AutomationSite">
+              <PropertyRef Name="siteid" />
+            </Principal>
+            <Dependent Role="AutoAutomationPlan">
+              <PropertyRef Name="SiteID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Categories_AutomationSites">
+          <End Type="SpreadAutoModel.AutomationSite" Role="AutomationSite" Multiplicity="0..1" />
+          <End Type="SpreadAutoModel.AutoCategory" Role="AutoCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AutomationSite">
+              <PropertyRef Name="siteid" />
+            </Principal>
+            <Dependent Role="AutoCategory">
+              <PropertyRef Name="SiteID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Issues_AutomationSites">
+          <End Type="SpreadAutoModel.AutomationSite" Role="AutomationSite" Multiplicity="0..1" />
+          <End Type="SpreadAutoModel.AutoIssue" Role="AutoIssue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AutomationSite">
+              <PropertyRef Name="siteid" />
+            </Principal>
+            <Dependent Role="AutoIssue">
+              <PropertyRef Name="SiteID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Products_AutomationSites">
+          <End Type="SpreadAutoModel.AutomationSite" Role="AutomationSite" Multiplicity="0..1" />
+          <End Type="SpreadAutoModel.AutoProduct" Role="AutoProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AutomationSite">
+              <PropertyRef Name="siteid" />
+            </Principal>
+            <Dependent Role="AutoProduct">
+              <PropertyRef Name="SiteID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Products_Issue_AutomationSites">
+          <End Type="SpreadAutoModel.AutomationSite" Role="AutomationSite" Multiplicity="1" />
+          <End Type="SpreadAutoModel.AutoProducts_Issue" Role="AutoProducts_Issue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AutomationSite">
+              <PropertyRef Name="siteid" />
+            </Principal>
+            <Dependent Role="AutoProducts_Issue">
+              <PropertyRef Name="SiteId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SentLogs_AutomationSites">
+          <End Type="SpreadAutoModel.AutomationSite" Role="AutomationSite" Multiplicity="0..1" />
+          <End Type="SpreadAutoModel.AutoSentLog" Role="AutoSentLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AutomationSite">
+              <PropertyRef Name="siteid" />
+            </Principal>
+            <Dependent Role="AutoSentLog">
+              <PropertyRef Name="SiteID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TemplateLibrary">
+          <Key>
+            <PropertyRef Name="Tid" />
+          </Key>
+          <Property Type="Int64" Name="Tid" Nullable="false" />
+          <Property Type="String" Name="Contents" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Demo" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int64" Name="CategoryId" />
+        </EntityType>
+        <Association Name="FK_SplitContactLists_PlanTypes">
+          <End Type="SpreadAutoModel.AutoPlanType" Role="AutoPlanType" Multiplicity="0..1" />
+          <End Type="SpreadAutoModel.AutoSplitContactList" Role="AutoSplitContactList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AutoPlanType">
+              <PropertyRef Name="PlanType1" />
+            </Principal>
+            <Dependent Role="AutoSplitContactList">
+              <PropertyRef Name="PlanType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TemplateInfo">
+          <Key>
+            <PropertyRef Name="SiteId" />
+          </Key>
+          <Property Type="Int64" Name="SiteId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="PlanType" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="SortedCates" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="DisplayCount" />
+          <Property Type="DateTime" Name="Modified" />
+        </EntityType>
+        <EntityType Name="Clicks_Issue">
+          <Key>
+            <PropertyRef Name="ClickID" />
+          </Key>
+          <Property Type="Int64" Name="ClickID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="IssueID" />
+          <Property Type="Int64" Name="SpreadCampId" />
+          <Property Type="String" Name="SubEmail" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ClickUrl" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="ClickDate" />
+          <Property Type="Int32" Name="siteid" />
+        </EntityType>
+        <EntityType Name="Convertions_Issue">
+          <Key>
+            <PropertyRef Name="ConvertID" />
+          </Key>
+          <Property Type="Int64" Name="ConvertID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="IssueID" />
+          <Property Type="Int64" Name="SpreadCampId" />
+          <Property Type="String" Name="SubEmail" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ConvertType" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ConvertUrl" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ConvertValue" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="DateTime" Name="ConvertTime" />
+          <Property Type="Int32" Name="siteid" />
+        </EntityType>
+        <EntityType Name="Opens_Issue">
+          <Key>
+            <PropertyRef Name="OpenID" />
+          </Key>
+          <Property Type="Int64" Name="OpenID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="IssueID" />
+          <Property Type="Int64" Name="SpreadCampId" />
+          <Property Type="String" Name="SubEmail" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="OpenDate" />
+          <Property Type="Int32" Name="siteid" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SpreadAutoModelStoreContainer"
+                                CdmEntityContainer="SpreadAutoEntities">
+          <EntitySetMapping Name="AutoAds">
+            <EntityTypeMapping TypeName="SpreadAutoModel.AutoAd">
+              <MappingFragment StoreEntitySet="Ads">
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Lastupdate" ColumnName="Lastupdate" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="SizeWidth" ColumnName="SizeWidth" />
+                <ScalarProperty Name="SizeHeight" ColumnName="SizeHeight" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="PictureUrl" ColumnName="PictureUrl" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Ad1" ColumnName="Ad" />
+                <ScalarProperty Name="AdID" ColumnName="AdID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AutoAds_Issue">
+            <EntityTypeMapping TypeName="SpreadAutoModel.AutoAds_Issue">
+              <MappingFragment StoreEntitySet="Ads_Issue">
+                <ScalarProperty Name="IssueID" ColumnName="IssueID" />
+                <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+                <ScalarProperty Name="AdId" ColumnName="AdId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AutomationPlans">
+            <EntityTypeMapping TypeName="SpreadAutoModel.AutomationPlan">
+              <MappingFragment StoreEntitySet="AutomationPlan">
+                <ScalarProperty Name="SubjectForNFC" ColumnName="SubjectForNFC" />
+                <ScalarProperty Name="TriggerForNFC" ColumnName="TriggerForNFC" />
+                <ScalarProperty Name="LimitQuantity" ColumnName="LimitQuantity" />
+                <ScalarProperty Name="TimeLimit" ColumnName="TimeLimit" />
+                <ScalarProperty Name="SellerEmail" ColumnName="SellerEmail" />
+                <ScalarProperty Name="ListType" ColumnName="ListType" />
+                <ScalarProperty Name="UrlSpecialCode" ColumnName="UrlSpecialCode" />
+                <ScalarProperty Name="SearchEndDayInterval" ColumnName="SearchEndDayInterval" />
+                <ScalarProperty Name="SearchStartDayInterval" ColumnName="SearchStartDayInterval" />
+                <ScalarProperty Name="SearchAPIType" ColumnName="SearchAPIType" />
+                <ScalarProperty Name="ScheduleTimeInteval" ColumnName="ScheduleTimeInteval" />
+                <ScalarProperty Name="CampaignStatus" ColumnName="CampaignStatus" />
+                <ScalarProperty Name="ContactList" ColumnName="ContactList" />
+                <ScalarProperty Name="Day_Of_Week" ColumnName="Day_Of_Week" />
+                <ScalarProperty Name="Categories" ColumnName="Categories" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="SplitContactCount" ColumnName="SplitContactCount" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+                <ScalarProperty Name="SenderEmail" ColumnName="SenderEmail" />
+                <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+                <ScalarProperty Name="WeekDays" ColumnName="WeekDays" />
+                <ScalarProperty Name="IntervalDay" ColumnName="IntervalDay" />
+                <ScalarProperty Name="EndAt" ColumnName="EndAt" />
+                <ScalarProperty Name="StartAt" ColumnName="StartAt" />
+                <ScalarProperty Name="PlanType" ColumnName="PlanType" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AutoCategories">
+            <EntityTypeMapping TypeName="SpreadAutoModel.AutoCategory">
+              <MappingFragment StoreEntitySet="Categories">
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="SizeWidth" ColumnName="SizeWidth" />
+                <ScalarProperty Name="SizeHeight" ColumnName="SizeHeight" />
+                <ScalarProperty Name="PictureAlt" ColumnName="PictureAlt" />
+                <ScalarProperty Name="PictureUrl" ColumnName="PictureUrl" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="Category1" ColumnName="Category" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AutoContactLists_Issue">
+            <EntityTypeMapping TypeName="SpreadAutoModel.AutoContactLists_Issue">
+              <MappingFragment StoreEntitySet="ContactLists_Issue">
+                <ScalarProperty Name="SendingStatus" ColumnName="SendingStatus" />
+                <ScalarProperty Name="SendTime" ColumnName="SendTime" />
+                <ScalarProperty Name="ContactList" ColumnName="ContactList" />
+                <ScalarProperty Name="IssueID" ColumnName="IssueID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AutoIssues">
+            <EntityTypeMapping TypeName="SpreadAutoModel.AutoIssue">
+              <MappingFragment StoreEntitySet="Issues">
+                <ScalarProperty Name="SpreadCampId" ColumnName="SpreadCampId" />
+                <ScalarProperty Name="SentStatus" ColumnName="SentStatus" />
+                <ScalarProperty Name="PlanType" ColumnName="PlanType" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="IssueDate" ColumnName="IssueDate" />
+                <ScalarProperty Name="IssueID" ColumnName="IssueID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AutoPlanTypes">
+            <EntityTypeMapping TypeName="SpreadAutoModel.AutoPlanType">
+              <MappingFragment StoreEntitySet="PlanTypes">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="PlanType1" ColumnName="PlanType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AutoProducts">
+            <EntityTypeMapping TypeName="SpreadAutoModel.AutoProduct">
+              <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="ExpiredDate" ColumnName="ExpiredDate" />
+                <ScalarProperty Name="ShipsImg" ColumnName="ShipsImg" />
+                <ScalarProperty Name="FreeShippingImg" ColumnName="FreeShippingImg" />
+                <ScalarProperty Name="TbComment" ColumnName="TbComment" />
+                <ScalarProperty Name="TbScore" ColumnName="TbScore" />
+                <ScalarProperty Name="SizeWidth" ColumnName="SizeWidth" />
+                <ScalarProperty Name="SizeHeight" ColumnName="SizeHeight" />
+                <ScalarProperty Name="PictureAlt" ColumnName="PictureAlt" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+                <ScalarProperty Name="PictureUrl" ColumnName="PictureUrl" />
+                <ScalarProperty Name="Sales" ColumnName="Sales" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Prodouct" ColumnName="Prodouct" />
+                <ScalarProperty Name="ProdouctID" ColumnName="ProdouctID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AutoProducts_Issue">
+            <EntityTypeMapping TypeName="SpreadAutoModel.AutoProducts_Issue">
+              <MappingFragment StoreEntitySet="Products_Issue">
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+                <ScalarProperty Name="IssueID" ColumnName="IssueID" />
+                <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AutoRssContactLists">
+            <EntityTypeMapping TypeName="SpreadAutoModel.AutoRssContactList">
+              <MappingFragment StoreEntitySet="RssContactLists">
+                <ScalarProperty Name="ContactListName" ColumnName="ContactListName" />
+                <ScalarProperty Name="RssId" ColumnName="RssId" />
+                <ScalarProperty Name="ContactListId" ColumnName="ContactListId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AutoRssSubscriptions">
+            <EntityTypeMapping TypeName="SpreadAutoModel.AutoRssSubscription">
+              <MappingFragment StoreEntitySet="RssSubscriptions">
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="Categories" ColumnName="Categories" />
+                <ScalarProperty Name="AppID" ColumnName="AppID" />
+                <ScalarProperty Name="rssType" ColumnName="rssType" />
+                <ScalarProperty Name="DefaultSubject" ColumnName="DefaultSubject" />
+                <ScalarProperty Name="ExcludeSubject" ColumnName="ExcludeSubject" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Template" ColumnName="Template" />
+                <ScalarProperty Name="SenderEmail" ColumnName="SenderEmail" />
+                <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+                <ScalarProperty Name="WeekDays" ColumnName="WeekDays" />
+                <ScalarProperty Name="IntervalDay" ColumnName="IntervalDay" />
+                <ScalarProperty Name="EndAt" ColumnName="EndAt" />
+                <ScalarProperty Name="StartAt" ColumnName="StartAt" />
+                <ScalarProperty Name="SpreadLogin" ColumnName="SpreadLogin" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="RssId" ColumnName="RssId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AutoSections">
+            <EntityTypeMapping TypeName="SpreadAutoModel.AutoSection">
+              <MappingFragment StoreEntitySet="Sections">
+                <ScalarProperty Name="Section1" ColumnName="Section" />
+                <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AutoSentLogs">
+            <EntityTypeMapping TypeName="SpreadAutoModel.AutoSentLog">
+              <MappingFragment StoreEntitySet="SentLogs">
+                <ScalarProperty Name="PlanType" ColumnName="PlanType" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="LastSentAt" ColumnName="LastSentAt" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="RssId" ColumnName="RssId" />
+                <ScalarProperty Name="SentLogId" ColumnName="SentLogId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AutoSplitContactLists">
+            <EntityTypeMapping TypeName="SpreadAutoModel.AutoSplitContactList">
+              <MappingFragment StoreEntitySet="SplitContactLists">
+                <ScalarProperty Name="SendingStatus" ColumnName="SendingStatus" />
+                <ScalarProperty Name="SendTime" ColumnName="SendTime" />
+                <ScalarProperty Name="SplitID" ColumnName="SplitID" />
+                <ScalarProperty Name="PlanType" ColumnName="PlanType" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="RssType" ColumnName="RssType" />
+                <ScalarProperty Name="ContactListName" ColumnName="ContactListName" />
+                <ScalarProperty Name="ShopName" ColumnName="ShopName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AutoTemplates">
+            <EntityTypeMapping TypeName="SpreadAutoModel.AutoTemplate">
+              <MappingFragment StoreEntitySet="Template">
+                <ScalarProperty Name="tType" ColumnName="tType" />
+                <ScalarProperty Name="PlanType" ColumnName="PlanType" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="RssID" ColumnName="RssID" />
+                <ScalarProperty Name="Contents" ColumnName="Contents" />
+                <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Tid" ColumnName="Tid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="AdsCategory" TypeName="SpreadAutoModel.AdsCategory" StoreEntitySet="AdsCategory">
+            <EndProperty Name="Category">
+              <ScalarProperty Name="CategoryID" ColumnName="CategoryId" />
+            </EndProperty>
+            <EndProperty Name="Ad">
+              <ScalarProperty Name="AdID" ColumnName="AdsId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="ProductCategory" TypeName="SpreadAutoModel.ProductCategory"
+                                 StoreEntitySet="ProductCategory">
+            <EndProperty Name="Product">
+              <ScalarProperty Name="ProdouctID" ColumnName="ProductID" />
+            </EndProperty>
+            <EndProperty Name="Category">
+              <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <EntitySetMapping Name="AutomationSites">
+            <EntityTypeMapping TypeName="SpreadAutoModel.AutomationSite">
+              <MappingFragment StoreEntitySet="AutomationSites">
+                <ScalarProperty Name="LogoImgUrl" ColumnName="LogoImgUrl" />
+                <ScalarProperty Name="volumn" ColumnName="volumn" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="SiteUrl" ColumnName="SiteUrl" />
+                <ScalarProperty Name="DllType" ColumnName="DllType" />
+                <ScalarProperty Name="AppID" ColumnName="AppID" />
+                <ScalarProperty Name="SpreadLogin" ColumnName="SpreadLogin" />
+                <ScalarProperty Name="SiteName" ColumnName="SiteName" />
+                <ScalarProperty Name="siteid" ColumnName="siteid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TemplateLibraries">
+            <EntityTypeMapping TypeName="SpreadAutoModel.TemplateLibrary">
+              <MappingFragment StoreEntitySet="TemplateLibrary">
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="Demo" ColumnName="Demo" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Contents" ColumnName="Contents" />
+                <ScalarProperty Name="Tid" ColumnName="Tid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TemplateInfoes">
+            <EntityTypeMapping TypeName="SpreadAutoModel.TemplateInfo">
+              <MappingFragment StoreEntitySet="TemplateInfo">
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="DisplayCount" ColumnName="DisplayCount" />
+                <ScalarProperty Name="SortedCates" ColumnName="SortedCates" />
+                <ScalarProperty Name="PlanType" ColumnName="PlanType" />
+                <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Clicks_Issue">
+            <EntityTypeMapping TypeName="SpreadAutoModel.Clicks_Issue">
+              <MappingFragment StoreEntitySet="Clicks_Issue">
+                <ScalarProperty Name="siteid" ColumnName="siteid" />
+                <ScalarProperty Name="ClickDate" ColumnName="ClickDate" />
+                <ScalarProperty Name="ClickUrl" ColumnName="ClickUrl" />
+                <ScalarProperty Name="SubEmail" ColumnName="SubEmail" />
+                <ScalarProperty Name="SpreadCampId" ColumnName="SpreadCampId" />
+                <ScalarProperty Name="IssueID" ColumnName="IssueID" />
+                <ScalarProperty Name="ClickID" ColumnName="ClickID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Convertions_Issue">
+            <EntityTypeMapping TypeName="SpreadAutoModel.Convertions_Issue">
+              <MappingFragment StoreEntitySet="Convertions_Issue">
+                <ScalarProperty Name="siteid" ColumnName="siteid" />
+                <ScalarProperty Name="ConvertTime" ColumnName="ConvertTime" />
+                <ScalarProperty Name="ConvertValue" ColumnName="ConvertValue" />
+                <ScalarProperty Name="ConvertUrl" ColumnName="ConvertUrl" />
+                <ScalarProperty Name="ConvertType" ColumnName="ConvertType" />
+                <ScalarProperty Name="SubEmail" ColumnName="SubEmail" />
+                <ScalarProperty Name="SpreadCampId" ColumnName="SpreadCampId" />
+                <ScalarProperty Name="IssueID" ColumnName="IssueID" />
+                <ScalarProperty Name="ConvertID" ColumnName="ConvertID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Opens_Issue">
+            <EntityTypeMapping TypeName="SpreadAutoModel.Opens_Issue">
+              <MappingFragment StoreEntitySet="Opens_Issue">
+                <ScalarProperty Name="siteid" ColumnName="siteid" />
+                <ScalarProperty Name="OpenDate" ColumnName="OpenDate" />
+                <ScalarProperty Name="SubEmail" ColumnName="SubEmail" />
+                <ScalarProperty Name="SpreadCampId" ColumnName="SpreadCampId" />
+                <ScalarProperty Name="IssueID" ColumnName="IssueID" />
+                <ScalarProperty Name="OpenID" ColumnName="OpenID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="SpreadAutoModel">
+        <EntityTypeShape EntityType="SpreadAutoModel.AutoAd" Width="1.5" PointX="1.5" PointY="21.625"
+                         Height="3.5186979166666674" />
+        <EntityTypeShape EntityType="SpreadAutoModel.AutoAds_Issue" Width="1.5" PointX="5.25" PointY="11"
+                         Height="1.9802864583333388" />
+        <EntityTypeShape EntityType="SpreadAutoModel.AutomationPlan" Width="1.75" PointX="3.25" PointY="4.375"
+                         Height="6.21091796875" />
+        <EntityTypeShape EntityType="SpreadAutoModel.AutoCategory" Width="1.5" PointX="0.75" PointY="14.875"
+                         Height="3.7109993489583388" />
+        <EntityTypeShape EntityType="SpreadAutoModel.AutoContactLists_Issue" Width="2" PointX="6.25" PointY="14.75"
+                         Height="1.9802864583333317" />
+        <EntityTypeShape EntityType="SpreadAutoModel.AutoIssue" Width="1.5" PointX="3" PointY="10.375"
+                         Height="3.1340950520833317" />
+        <EntityTypeShape EntityType="SpreadAutoModel.AutoPlanType" Width="1.5" PointX="0.75" PointY="7"
+                         Height="1.9802864583333335" />
+        <EntityTypeShape EntityType="SpreadAutoModel.AutoProduct" Width="1.5" PointX="3.375" PointY="14.875"
+                         Height="5.0571093750000031" />
+        <EntityTypeShape EntityType="SpreadAutoModel.AutoProducts_Issue" Width="1.75" PointX="5.75" PointY="7.75"
+                         Height="2.5571907552083317" />
+        <EntityTypeShape EntityType="SpreadAutoModel.AutoRssContactList" Width="1.625" PointX="5.5" PointY="0.75"
+                         Height="1.5956835937500102" />
+        <EntityTypeShape EntityType="SpreadAutoModel.AutoRssSubscription" Width="1.75" PointX="7.75" PointY="0.75"
+                         Height="4.2879036458333246" />
+        <EntityTypeShape EntityType="SpreadAutoModel.AutoSection" Width="1.5" PointX="5.5" PointY="2.875"
+                         Height="1.595683593749996" />
+        <EntityTypeShape EntityType="SpreadAutoModel.AutoSentLog" Width="1.5" PointX="9.125" PointY="10.875"
+                         Height="2.3648893229166656" />
+        <EntityTypeShape EntityType="SpreadAutoModel.AutoSplitContactList" Width="1.75" PointX="10.375" PointY="0.75"
+                         Height="2.7494921875" />
+        <EntityTypeShape EntityType="SpreadAutoModel.AutoTemplate" Width="1.5" PointX="0.75" PointY="3.25"
+                         Height="2.3648893229166674" />
+        <AssociationConnector Association="SpreadAutoModel.FK_Ads_Issue_Ads">
+          <ConnectorPoint PointX="3" PointY="23.576650390625" />
+          <ConnectorPoint PointX="5.8847671875" PointY="23.576650390625" />
+          <ConnectorPoint PointX="5.8847671875" PointY="13.172587890625" />
+        </AssociationConnector>
+        <AssociationConnector Association="SpreadAutoModel.FK_Ads_Issue_Issue">
+          <ConnectorPoint PointX="4.5" PointY="12.0862939453125" />
+          <ConnectorPoint PointX="4.885416666666667" PointY="12.0862939453125" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="12.0862939453125" />
+          <ConnectorPoint PointX="5.25" PointY="12.0862939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="SpreadAutoModel.FK_AutomationPlan_PlanType">
+          <ConnectorPoint PointX="2.25" PointY="8.0862939453125" />
+          <ConnectorPoint PointX="3.25" PointY="8.0862939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="SpreadAutoModel.FK_AutomationPlan_Template">
+          <ConnectorPoint PointX="2.25" PointY="5.2833968098958328" />
+          <ConnectorPoint PointX="2.4166666666666665" PointY="5.2833968098958319" />
+          <ConnectorPoint PointX="2.5833333333333335" PointY="5.2833968098958328" />
+          <ConnectorPoint PointX="3.25" PointY="5.2833968098958328" />
+        </AssociationConnector>
+        <AssociationConnector Association="SpreadAutoModel.FK_ContactLists_Issue_Issue">
+          <ConnectorPoint PointX="3.15625" PointY="14.085999348958332" />
+          <ConnectorPoint PointX="3.15625" PointY="14.78125" />
+          <ConnectorPoint PointX="4.041666666666667" PointY="14.78125" />
+          <ConnectorPoint PointX="4.208333333333333" PointY="14.78125" />
+          <ConnectorPoint PointX="5.8118099283854168" PointY="14.78125" />
+          <ConnectorPoint PointX="5.9784765950520828" PointY="14.78125" />
+          <ConnectorPoint PointX="6.25" PointY="14.78125" />
+        </AssociationConnector>
+        <AssociationConnector Association="SpreadAutoModel.FK_Issues_Ads_Issue">
+          <ConnectorPoint PointX="3.5319230769230767" PointY="10.375" />
+          <ConnectorPoint PointX="3.5319230769230767" PointY="10.125" />
+          <ConnectorPoint PointX="3.9784615384615383" PointY="10.125" />
+          <ConnectorPoint PointX="3.9784615384615383" PointY="10.375" />
+        </AssociationConnector>
+        <AssociationConnector Association="SpreadAutoModel.FK_Issues_PlanTypes">
+          <ConnectorPoint PointX="2.2499999999999996" PointY="9.172587890625" />
+          <ConnectorPoint PointX="2.625" PointY="9.547587890625" />
+          <ConnectorPoint PointX="2.625" PointY="11.833997837239583" />
+          <ConnectorPoint PointX="3" PointY="11.833997837239583" />
+        </AssociationConnector>
+        <AssociationConnector Association="SpreadAutoModel.FK_Products_Issue_Issue">
+          <ConnectorPoint PointX="4.5" PointY="13.717958470678376" />
+          <ConnectorPoint PointX="4.885416666666667" PointY="13.717958470678376" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="13.717958470678376" />
+          <ConnectorPoint PointX="5.4579857975260415" PointY="13.717958470678376" />
+          <ConnectorPoint PointX="5.6246524641927076" PointY="13.717958470678376" />
+          <ConnectorPoint PointX="5.8118099283854168" PointY="13.717958470678376" />
+          <ConnectorPoint PointX="5.9784765950520828" PointY="13.717958470678376" />
+          <ConnectorPoint PointX="6.916666666666667" PointY="13.717958470678376" />
+          <ConnectorPoint PointX="7.083333333333333" PointY="13.717958470678376" />
+          <ConnectorPoint PointX="7.15625" PointY="13.717958470678376" />
+          <ConnectorPoint PointX="7.15625" PointY="10.4994921875" />
+        </AssociationConnector>
+        <AssociationConnector Association="SpreadAutoModel.FK_Products_Issue_Products">
+          <ConnectorPoint PointX="4.125" PointY="14.875" />
+          <ConnectorPoint PointX="4.125" PointY="14.398499348958332" />
+          <ConnectorPoint PointX="5" PointY="14.398499348958332" />
+          <ConnectorPoint PointX="5" PointY="10.75" />
+          <ConnectorPoint PointX="5.25" PointY="10.75" />
+          <ConnectorPoint PointX="5.25" PointY="9.12474609375" />
+          <ConnectorPoint PointX="5.75" PointY="9.12474609375" />
+        </AssociationConnector>
+        <AssociationConnector Association="SpreadAutoModel.FK_Products_Issue_Sections">
+          <ConnectorPoint PointX="6.375" PointY="4.470683593749996" />
+          <ConnectorPoint PointX="6.375" PointY="7.75" />
+        </AssociationConnector>
+        <AssociationConnector Association="SpreadAutoModel.AdsCategory">
+          <ConnectorPoint PointX="1.875" PointY="21.625" />
+          <ConnectorPoint PointX="1.875" PointY="18.778300781250003" />
+        </AssociationConnector>
+        <AssociationConnector Association="SpreadAutoModel.ProductCategory">
+          <ConnectorPoint PointX="2.25" PointY="17.298940414995933" />
+          <ConnectorPoint PointX="2.5416691666666664" PointY="17.298940414995933" />
+          <ConnectorPoint PointX="2.7083358333333334" PointY="17.298940414995933" />
+          <ConnectorPoint PointX="3.375" PointY="17.298940414995933" />
+        </AssociationConnector>
+        <AssociationConnector Association="SpreadAutoModel.FK_Template_PlanTypes">
+          <ConnectorPoint PointX="1.5" PointY="7" />
+          <ConnectorPoint PointX="1.5" PointY="6.1917936197916656" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="SpreadAutoModel.AutomationSite" Width="1.5" PointX="0.75" PointY="12.625"
+                         Height="3.903300781249996" />
+        <AssociationConnector Association="SpreadAutoModel.FK_Ads_AutomationSites">
+          <ConnectorPoint PointX="2.25" PointY="15.274548167311693" />
+          <ConnectorPoint PointX="2.6250025" PointY="15.274548167311693" />
+          <ConnectorPoint PointX="2.6250025" PointY="21.625" />
+        </AssociationConnector>
+        <AssociationConnector Association="SpreadAutoModel.FK_Ads_Issue_AutomationSites">
+          <ConnectorPoint PointX="2.25" PointY="14.304749348958332" />
+          <ConnectorPoint PointX="3.0729166666666665" PointY="14.304749348958332" />
+          <ConnectorPoint PointX="3.2395833333333335" PointY="14.304749348958332" />
+          <ConnectorPoint PointX="4.885416666666667" PointY="14.304749348958332" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="14.304749348958332" />
+          <ConnectorPoint PointX="5.5413191308593746" PointY="14.304749348958332" />
+          <ConnectorPoint PointX="5.5413191308593746" PointY="13.172587890625" />
+        </AssociationConnector>
+        <AssociationConnector Association="SpreadAutoModel.FK_AutomationPlan_AutomationSites">
+          <ConnectorPoint PointX="2.25" PointY="14.480499674479166" />
+          <ConnectorPoint PointX="3.0729166666666665" PointY="14.480499674479166" />
+          <ConnectorPoint PointX="3.2395833333333335" PointY="14.480499674479166" />
+          <ConnectorPoint PointX="4.96875" PointY="14.480499674479166" />
+          <ConnectorPoint PointX="4.96875" PointY="10.58591796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="SpreadAutoModel.FK_Categories_AutomationSites">
+          <ConnectorPoint PointX="0.75" PointY="14.576650390624998" />
+          <ConnectorPoint PointX="0.5" PointY="14.576650390624998" />
+          <ConnectorPoint PointX="0.5" PointY="16.826650390625" />
+          <ConnectorPoint PointX="0.75" PointY="16.826650390625" />
+        </AssociationConnector>
+        <AssociationConnector Association="SpreadAutoModel.FK_Issues_AutomationSites">
+          <ConnectorPoint PointX="2.25" PointY="13.097769366887015" />
+          <ConnectorPoint PointX="3" PointY="13.097769366887015" />
+        </AssociationConnector>
+        <AssociationConnector Association="SpreadAutoModel.FK_Products_AutomationSites">
+          <ConnectorPoint PointX="2.25" PointY="15.961622376290054" />
+          <ConnectorPoint PointX="2.5416691666666664" PointY="15.961622376290054" />
+          <ConnectorPoint PointX="2.7083358333333334" PointY="15.961622376290054" />
+          <ConnectorPoint PointX="3.375" PointY="15.961622376290054" />
+        </AssociationConnector>
+        <AssociationConnector Association="SpreadAutoModel.FK_Products_Issue_AutomationSites">
+          <ConnectorPoint PointX="2.25" PointY="14.99176201923077" />
+          <ConnectorPoint PointX="3.0625" PointY="14.99176201923077" />
+          <ConnectorPoint PointX="3.0625" PointY="14.5625" />
+          <ConnectorPoint PointX="3.0729166666666665" PointY="14.5625" />
+          <ConnectorPoint PointX="3.2395833333333335" PointY="14.5625" />
+          <ConnectorPoint PointX="4.041666666666667" PointY="14.5625" />
+          <ConnectorPoint PointX="4.208333333333333" PointY="14.5625" />
+          <ConnectorPoint PointX="5.8118099283854168" PointY="14.5625" />
+          <ConnectorPoint PointX="5.9784765950520828" PointY="14.5625" />
+          <ConnectorPoint PointX="7" PointY="14.5625" />
+          <ConnectorPoint PointX="7" PointY="10.8744921875" />
+          <ConnectorPoint PointX="6.421873" PointY="10.8744921875" />
+          <ConnectorPoint PointX="6.421873" PointY="10.4994921875" />
+        </AssociationConnector>
+        <AssociationConnector Association="SpreadAutoModel.FK_SentLogs_AutomationSites">
+          <ConnectorPoint PointX="2.25" PointY="14.625" />
+          <ConnectorPoint PointX="3.0729166666666665" PointY="14.625" />
+          <ConnectorPoint PointX="3.2395833333333335" PointY="14.625" />
+          <ConnectorPoint PointX="4.041666666666667" PointY="14.625" />
+          <ConnectorPoint PointX="4.208333333333333" PointY="14.625" />
+          <ConnectorPoint PointX="5.8118099283854168" PointY="14.625" />
+          <ConnectorPoint PointX="5.9784765950520828" PointY="14.625" />
+          <ConnectorPoint PointX="9.875" PointY="14.625" />
+          <ConnectorPoint PointX="9.875" PointY="13.239889322916666" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="SpreadAutoModel.TemplateLibrary" Width="1.5" PointX="0.75" PointY="0.75"
+                         Height="1.5956835937500031" />
+        <AssociationConnector Association="SpreadAutoModel.FK_SplitContactLists_PlanTypes">
+          <ConnectorPoint PointX="1.7690442968749998" PointY="7" />
+          <ConnectorPoint PointX="1.7690442968749998" PointY="6.4417936197916656" />
+          <ConnectorPoint PointX="2.5" PointY="6.4417936197916656" />
+          <ConnectorPoint PointX="2.5" PointY="0.5" />
+          <ConnectorPoint PointX="10" PointY="0.5" />
+          <ConnectorPoint PointX="10" PointY="2.2208968098958333" />
+          <ConnectorPoint PointX="10.375" PointY="2.2208968098958333" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="SpreadAutoModel.TemplateInfo" Width="1.5" PointX="8.375" PointY="6.75"
+                         Height="1.9802864583333388" />
+        <EntityTypeShape EntityType="SpreadAutoModel.Clicks_Issue" Width="1.5" PointX="10.375" PointY="4.75"
+                         Height="2.3648893229166656" />
+        <EntityTypeShape EntityType="SpreadAutoModel.Convertions_Issue" Width="1.5" PointX="11.375" PointY="7.75"
+                         Height="2.7494921874999996" />
+        <EntityTypeShape EntityType="SpreadAutoModel.Opens_Issue" Width="1.5" PointX="11.375" PointY="11.75"
+                         Height="1.9802864583333388" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

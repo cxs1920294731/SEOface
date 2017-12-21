@@ -1,0 +1,2101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+                  xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+                  xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/"
+                  xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TryAuth">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TryAuthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TryAuthResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetServerSettings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ServerID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetServerSettingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsGetServerSettingsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetAllServerSettings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetAllServerSettingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsGetAllServerSettingsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetDeliveryDomainSettings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetDeliveryDomainSettingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsGetDeliveryDomainSettingsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetUserDeliveryDomainSettings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetUserDeliveryDomainSettingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsGetUserDeliveryDomainSettingsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetEngineServers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="EngineID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetEngineServersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsGetEngineServersResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetDomainPreferredServers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EngineID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetDomainPreferredServersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsGetDomainPreferredServersResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateServerActive">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ServerID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="isActive" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateServerActiveResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="dsGetCampaignSubscribers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ServerID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Preplan" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetCampaignSubscribersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsGetCampaignSubscribersResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetActiveCampaignSubscribers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ServerID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Preplan" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="GetQuantity" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetActiveCampaignSubscribersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsGetActiveCampaignSubscribersResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetHeaderFooter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetHeaderFooterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsGetHeaderFooterResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CompleteBatch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ServerID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CampaignID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="BeginSubscriberID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CompleteBatchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CompleteBatchResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BatchUpdateCampaignCategorySubscriber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SentLog">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema"
+                         processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="BulkCopy" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="BatchSize" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BatchUpdateCampaignCategorySubscriberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BatchUpdateCampaignCategorySubscriberResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateEmailSent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="campaignId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sentCount" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateEmailSentResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="BatchUpdateFailedSentLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FailedSentLog">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema"
+                         processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="BulkCopy" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="BatchSize" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BatchUpdateFailedSentLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BatchUpdateFailedSentLogResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BatchUpdateSMSTransLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SMSTransLog">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema"
+                         processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="BulkCopy" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="BatchSize" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BatchUpdateSMSTransLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BatchUpdateSMSTransLogResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateServerStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ServerID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FreeDiskSpaceMB" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FreeDiskSpacePercent" type="s:float" />
+            <s:element minOccurs="1" maxOccurs="1" name="SMTPQueueLength" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateServerStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateServerStatusResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HealthCheck">
+        <s:complexType />
+      </s:element>
+      <s:element name="HealthCheckResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetUserTimezoneIndex">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserTimezoneIndexResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetUserTimezoneIndexResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserReturnPath">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserReturnPathResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserReturnPathResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetUserDomains">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetUserDomainsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsGetUserDomainsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetUserReturnPaths">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetUserReturnPathsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsGetUserReturnPathsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetUserSettings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetUserSettingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsGetUserSettingsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAliveServer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAliveServerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAliveServerResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCampaignSentCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CampaignID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCampaignSentCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetCampaignSentCountResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetCampaignLinks">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CampaignID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetCampaignLinksResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsGetCampaignLinksResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewCampaignLink">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CampaignID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewCampaignLinkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddNewCampaignLinkResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetActiveSMSCampaignSubscribers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetActiveSMSCampaignSubscribersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsGetActiveSMSCampaignSubscribersResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CompleteSMSCampaign">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CampaignID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sentCount" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CompleteSMSCampaignResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UnsubscribePhone">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SubscriberId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UnsubscribePhoneResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="dsGetServersInGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="GroupNum" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetServersInGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsGetServersInGroupResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetCampaignCreatives">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="campaignID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetCampaignCreativesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsGetCampaignCreativesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetURLTrackings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CampaignName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetURLTrackingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsGetURLTrackingsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetCategoryTrackings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetCategoryTrackingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsGetCategoryTrackingsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CompleteWhatsAppCampaign">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CampaignID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="whatsAppChannelGroup" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="begin_subscriber_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sendCount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="accountType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CompleteWhatsAppCampaignResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UploadWhatsAppStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema"
+                         processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadWhatsAppStatusResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="dsGetActiveWhatsAppCampaignSubscribers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="whatsAppChannelGroup" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetActiveWhatsAppCampaignSubscribersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsGetActiveWhatsAppCampaignSubscribersResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetActiveWhatsAppChannel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="whatsAppChannelGroup" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsGetActiveWhatsAppChannelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsGetActiveWhatsAppChannelResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetWhatsAppStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="countryCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="number" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetWhatsAppStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetWhatsAppStatusResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountLang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountLangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountLangResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="TryAuthSoapIn">
+    <wsdl:part name="parameters" element="tns:TryAuth" />
+  </wsdl:message>
+  <wsdl:message name="TryAuthSoapOut">
+    <wsdl:part name="parameters" element="tns:TryAuthResponse" />
+  </wsdl:message>
+  <wsdl:message name="dsGetServerSettingsSoapIn">
+    <wsdl:part name="parameters" element="tns:dsGetServerSettings" />
+  </wsdl:message>
+  <wsdl:message name="dsGetServerSettingsSoapOut">
+    <wsdl:part name="parameters" element="tns:dsGetServerSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="dsGetAllServerSettingsSoapIn">
+    <wsdl:part name="parameters" element="tns:dsGetAllServerSettings" />
+  </wsdl:message>
+  <wsdl:message name="dsGetAllServerSettingsSoapOut">
+    <wsdl:part name="parameters" element="tns:dsGetAllServerSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="dsGetDeliveryDomainSettingsSoapIn">
+    <wsdl:part name="parameters" element="tns:dsGetDeliveryDomainSettings" />
+  </wsdl:message>
+  <wsdl:message name="dsGetDeliveryDomainSettingsSoapOut">
+    <wsdl:part name="parameters" element="tns:dsGetDeliveryDomainSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="dsGetUserDeliveryDomainSettingsSoapIn">
+    <wsdl:part name="parameters" element="tns:dsGetUserDeliveryDomainSettings" />
+  </wsdl:message>
+  <wsdl:message name="dsGetUserDeliveryDomainSettingsSoapOut">
+    <wsdl:part name="parameters" element="tns:dsGetUserDeliveryDomainSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="dsGetEngineServersSoapIn">
+    <wsdl:part name="parameters" element="tns:dsGetEngineServers" />
+  </wsdl:message>
+  <wsdl:message name="dsGetEngineServersSoapOut">
+    <wsdl:part name="parameters" element="tns:dsGetEngineServersResponse" />
+  </wsdl:message>
+  <wsdl:message name="dsGetDomainPreferredServersSoapIn">
+    <wsdl:part name="parameters" element="tns:dsGetDomainPreferredServers" />
+  </wsdl:message>
+  <wsdl:message name="dsGetDomainPreferredServersSoapOut">
+    <wsdl:part name="parameters" element="tns:dsGetDomainPreferredServersResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServerActiveSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateServerActive" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServerActiveSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateServerActiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="dsGetCampaignSubscribersSoapIn">
+    <wsdl:part name="parameters" element="tns:dsGetCampaignSubscribers" />
+  </wsdl:message>
+  <wsdl:message name="dsGetCampaignSubscribersSoapOut">
+    <wsdl:part name="parameters" element="tns:dsGetCampaignSubscribersResponse" />
+  </wsdl:message>
+  <wsdl:message name="dsGetActiveCampaignSubscribersSoapIn">
+    <wsdl:part name="parameters" element="tns:dsGetActiveCampaignSubscribers" />
+  </wsdl:message>
+  <wsdl:message name="dsGetActiveCampaignSubscribersSoapOut">
+    <wsdl:part name="parameters" element="tns:dsGetActiveCampaignSubscribersResponse" />
+  </wsdl:message>
+  <wsdl:message name="dsGetHeaderFooterSoapIn">
+    <wsdl:part name="parameters" element="tns:dsGetHeaderFooter" />
+  </wsdl:message>
+  <wsdl:message name="dsGetHeaderFooterSoapOut">
+    <wsdl:part name="parameters" element="tns:dsGetHeaderFooterResponse" />
+  </wsdl:message>
+  <wsdl:message name="CompleteBatchSoapIn">
+    <wsdl:part name="parameters" element="tns:CompleteBatch" />
+  </wsdl:message>
+  <wsdl:message name="CompleteBatchSoapOut">
+    <wsdl:part name="parameters" element="tns:CompleteBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="BatchUpdateCampaignCategorySubscriberSoapIn">
+    <wsdl:part name="parameters" element="tns:BatchUpdateCampaignCategorySubscriber" />
+  </wsdl:message>
+  <wsdl:message name="BatchUpdateCampaignCategorySubscriberSoapOut">
+    <wsdl:part name="parameters" element="tns:BatchUpdateCampaignCategorySubscriberResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateEmailSentSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateEmailSent" />
+  </wsdl:message>
+  <wsdl:message name="UpdateEmailSentSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateEmailSentResponse" />
+  </wsdl:message>
+  <wsdl:message name="BatchUpdateFailedSentLogSoapIn">
+    <wsdl:part name="parameters" element="tns:BatchUpdateFailedSentLog" />
+  </wsdl:message>
+  <wsdl:message name="BatchUpdateFailedSentLogSoapOut">
+    <wsdl:part name="parameters" element="tns:BatchUpdateFailedSentLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="BatchUpdateSMSTransLogSoapIn">
+    <wsdl:part name="parameters" element="tns:BatchUpdateSMSTransLog" />
+  </wsdl:message>
+  <wsdl:message name="BatchUpdateSMSTransLogSoapOut">
+    <wsdl:part name="parameters" element="tns:BatchUpdateSMSTransLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServerStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateServerStatus" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServerStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateServerStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServerStatusRPCSoapIn">
+    <wsdl:part name="APIKey" type="s:string" />
+    <wsdl:part name="ServerID" type="s:int" />
+    <wsdl:part name="FreeDiskSpaceMB" type="s:int" />
+    <wsdl:part name="FreeDiskSpacePercent" type="s:float" />
+    <wsdl:part name="SMTPQueueLength" type="s:int" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServerStatusRPCSoapOut">
+    <wsdl:part name="UpdateServerStatusRPCResult" type="s:int" />
+  </wsdl:message>
+  <wsdl:message name="HealthCheckSoapIn">
+    <wsdl:part name="parameters" element="tns:HealthCheck" />
+  </wsdl:message>
+  <wsdl:message name="HealthCheckSoapOut">
+    <wsdl:part name="parameters" element="tns:HealthCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserTimezoneIndexSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserTimezoneIndex" />
+  </wsdl:message>
+  <wsdl:message name="GetUserTimezoneIndexSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserTimezoneIndexResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserReturnPathSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserReturnPath" />
+  </wsdl:message>
+  <wsdl:message name="GetUserReturnPathSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserReturnPathResponse" />
+  </wsdl:message>
+  <wsdl:message name="dsGetUserDomainsSoapIn">
+    <wsdl:part name="parameters" element="tns:dsGetUserDomains" />
+  </wsdl:message>
+  <wsdl:message name="dsGetUserDomainsSoapOut">
+    <wsdl:part name="parameters" element="tns:dsGetUserDomainsResponse" />
+  </wsdl:message>
+  <wsdl:message name="dsGetUserReturnPathsSoapIn">
+    <wsdl:part name="parameters" element="tns:dsGetUserReturnPaths" />
+  </wsdl:message>
+  <wsdl:message name="dsGetUserReturnPathsSoapOut">
+    <wsdl:part name="parameters" element="tns:dsGetUserReturnPathsResponse" />
+  </wsdl:message>
+  <wsdl:message name="dsGetUserSettingsSoapIn">
+    <wsdl:part name="parameters" element="tns:dsGetUserSettings" />
+  </wsdl:message>
+  <wsdl:message name="dsGetUserSettingsSoapOut">
+    <wsdl:part name="parameters" element="tns:dsGetUserSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAliveServerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAliveServer" />
+  </wsdl:message>
+  <wsdl:message name="GetAliveServerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAliveServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCampaignSentCountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCampaignSentCount" />
+  </wsdl:message>
+  <wsdl:message name="GetCampaignSentCountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCampaignSentCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="dsGetCampaignLinksSoapIn">
+    <wsdl:part name="parameters" element="tns:dsGetCampaignLinks" />
+  </wsdl:message>
+  <wsdl:message name="dsGetCampaignLinksSoapOut">
+    <wsdl:part name="parameters" element="tns:dsGetCampaignLinksResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddNewCampaignLinkSoapIn">
+    <wsdl:part name="parameters" element="tns:AddNewCampaignLink" />
+  </wsdl:message>
+  <wsdl:message name="AddNewCampaignLinkSoapOut">
+    <wsdl:part name="parameters" element="tns:AddNewCampaignLinkResponse" />
+  </wsdl:message>
+  <wsdl:message name="dsGetActiveSMSCampaignSubscribersSoapIn">
+    <wsdl:part name="parameters" element="tns:dsGetActiveSMSCampaignSubscribers" />
+  </wsdl:message>
+  <wsdl:message name="dsGetActiveSMSCampaignSubscribersSoapOut">
+    <wsdl:part name="parameters" element="tns:dsGetActiveSMSCampaignSubscribersResponse" />
+  </wsdl:message>
+  <wsdl:message name="CompleteSMSCampaignSoapIn">
+    <wsdl:part name="parameters" element="tns:CompleteSMSCampaign" />
+  </wsdl:message>
+  <wsdl:message name="CompleteSMSCampaignSoapOut">
+    <wsdl:part name="parameters" element="tns:CompleteSMSCampaignResponse" />
+  </wsdl:message>
+  <wsdl:message name="UnsubscribePhoneSoapIn">
+    <wsdl:part name="parameters" element="tns:UnsubscribePhone" />
+  </wsdl:message>
+  <wsdl:message name="UnsubscribePhoneSoapOut">
+    <wsdl:part name="parameters" element="tns:UnsubscribePhoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="dsGetServersInGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:dsGetServersInGroup" />
+  </wsdl:message>
+  <wsdl:message name="dsGetServersInGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:dsGetServersInGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="dsGetCampaignCreativesSoapIn">
+    <wsdl:part name="parameters" element="tns:dsGetCampaignCreatives" />
+  </wsdl:message>
+  <wsdl:message name="dsGetCampaignCreativesSoapOut">
+    <wsdl:part name="parameters" element="tns:dsGetCampaignCreativesResponse" />
+  </wsdl:message>
+  <wsdl:message name="dsGetURLTrackingsSoapIn">
+    <wsdl:part name="parameters" element="tns:dsGetURLTrackings" />
+  </wsdl:message>
+  <wsdl:message name="dsGetURLTrackingsSoapOut">
+    <wsdl:part name="parameters" element="tns:dsGetURLTrackingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="dsGetCategoryTrackingsSoapIn">
+    <wsdl:part name="parameters" element="tns:dsGetCategoryTrackings" />
+  </wsdl:message>
+  <wsdl:message name="dsGetCategoryTrackingsSoapOut">
+    <wsdl:part name="parameters" element="tns:dsGetCategoryTrackingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CompleteWhatsAppCampaignSoapIn">
+    <wsdl:part name="parameters" element="tns:CompleteWhatsAppCampaign" />
+  </wsdl:message>
+  <wsdl:message name="CompleteWhatsAppCampaignSoapOut">
+    <wsdl:part name="parameters" element="tns:CompleteWhatsAppCampaignResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadWhatsAppStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadWhatsAppStatus" />
+  </wsdl:message>
+  <wsdl:message name="UploadWhatsAppStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadWhatsAppStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="dsGetActiveWhatsAppCampaignSubscribersSoapIn">
+    <wsdl:part name="parameters" element="tns:dsGetActiveWhatsAppCampaignSubscribers" />
+  </wsdl:message>
+  <wsdl:message name="dsGetActiveWhatsAppCampaignSubscribersSoapOut">
+    <wsdl:part name="parameters" element="tns:dsGetActiveWhatsAppCampaignSubscribersResponse" />
+  </wsdl:message>
+  <wsdl:message name="dsGetActiveWhatsAppChannelSoapIn">
+    <wsdl:part name="parameters" element="tns:dsGetActiveWhatsAppChannel" />
+  </wsdl:message>
+  <wsdl:message name="dsGetActiveWhatsAppChannelSoapOut">
+    <wsdl:part name="parameters" element="tns:dsGetActiveWhatsAppChannelResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetWhatsAppStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:SetWhatsAppStatus" />
+  </wsdl:message>
+  <wsdl:message name="SetWhatsAppStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:SetWhatsAppStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountLangSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountLang" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountLangSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountLangResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TryAuth">
+      <wsdl:input message="tns:TryAuthSoapIn" />
+      <wsdl:output message="tns:TryAuthSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dsGetServerSettings">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Get the credentials of the server specified by the server ID
+      </wsdl:documentation>
+      <wsdl:input message="tns:dsGetServerSettingsSoapIn" />
+      <wsdl:output message="tns:dsGetServerSettingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dsGetAllServerSettings">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Get the credentials of the server specified by all server
+      </wsdl:documentation>
+      <wsdl:input message="tns:dsGetAllServerSettingsSoapIn" />
+      <wsdl:output message="tns:dsGetAllServerSettingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dsGetDeliveryDomainSettings">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Get Delivery domain settings
+      </wsdl:documentation>
+      <wsdl:input message="tns:dsGetDeliveryDomainSettingsSoapIn" />
+      <wsdl:output message="tns:dsGetDeliveryDomainSettingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dsGetUserDeliveryDomainSettings">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Get Delivery domain settings
+      </wsdl:documentation>
+      <wsdl:input message="tns:dsGetUserDeliveryDomainSettingsSoapIn" />
+      <wsdl:output message="tns:dsGetUserDeliveryDomainSettingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dsGetEngineServers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Get ServerSetting which delivered by EngineID
+      </wsdl:documentation>
+      <wsdl:input message="tns:dsGetEngineServersSoapIn" />
+      <wsdl:output message="tns:dsGetEngineServersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dsGetDomainPreferredServers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Get domain preferred server by user
+      </wsdl:documentation>
+      <wsdl:input message="tns:dsGetDomainPreferredServersSoapIn" />
+      <wsdl:output message="tns:dsGetDomainPreferredServersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServerActive">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Update Smtp Server Active Status
+      </wsdl:documentation>
+      <wsdl:input message="tns:UpdateServerActiveSoapIn" />
+      <wsdl:output message="tns:UpdateServerActiveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dsGetCampaignSubscribers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Get the campaign and the corresponding list of subscribers to be sent by the server specified by the server ID
+      </wsdl:documentation>
+      <wsdl:input message="tns:dsGetCampaignSubscribersSoapIn" />
+      <wsdl:output message="tns:dsGetCampaignSubscribersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dsGetActiveCampaignSubscribers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Get the campaign and the corresponding list of subscribers to be sent by the server specified by the server ID
+      </wsdl:documentation>
+      <wsdl:input message="tns:dsGetActiveCampaignSubscribersSoapIn" />
+      <wsdl:output message="tns:dsGetActiveCampaignSubscribersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dsGetHeaderFooter">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Get the header and footer content specified by the user ID
+      </wsdl:documentation>
+      <wsdl:input message="tns:dsGetHeaderFooterSoapIn" />
+      <wsdl:output message="tns:dsGetHeaderFooterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CompleteBatch">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Sends a notification to the database that the server specified by the server ID has finished sending
+      </wsdl:documentation>
+      <wsdl:input message="tns:CompleteBatchSoapIn" />
+      <wsdl:output message="tns:CompleteBatchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BatchUpdateCampaignCategorySubscriber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Update sent subscribers in a campaign
+      </wsdl:documentation>
+      <wsdl:input message="tns:BatchUpdateCampaignCategorySubscriberSoapIn" />
+      <wsdl:output message="tns:BatchUpdateCampaignCategorySubscriberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmailSent">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Update Email Sent Count
+      </wsdl:documentation>
+      <wsdl:input message="tns:UpdateEmailSentSoapIn" />
+      <wsdl:output message="tns:UpdateEmailSentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BatchUpdateFailedSentLog">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Update failed sent subscribers in a campaign
+      </wsdl:documentation>
+      <wsdl:input message="tns:BatchUpdateFailedSentLogSoapIn" />
+      <wsdl:output message="tns:BatchUpdateFailedSentLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BatchUpdateSMSTransLog">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Update SMS transation Log
+      </wsdl:documentation>
+      <wsdl:input message="tns:BatchUpdateSMSTransLogSoapIn" />
+      <wsdl:output message="tns:BatchUpdateSMSTransLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServerStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Update the server status
+      </wsdl:documentation>
+      <wsdl:input message="tns:UpdateServerStatusSoapIn" />
+      <wsdl:output message="tns:UpdateServerStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServerStatusRPC">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Update the server status (RPC) mode
+      </wsdl:documentation>
+      <wsdl:input message="tns:UpdateServerStatusRPCSoapIn" />
+      <wsdl:output message="tns:UpdateServerStatusRPCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HealthCheck">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Update the  status</wsdl:documentation>
+      <wsdl:input message="tns:HealthCheckSoapIn" />
+      <wsdl:output message="tns:HealthCheckSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserTimezoneIndex">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get user timezone</wsdl:documentation>
+      <wsdl:input message="tns:GetUserTimezoneIndexSoapIn" />
+      <wsdl:output message="tns:GetUserTimezoneIndexSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserReturnPath">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get user return path</wsdl:documentation>
+      <wsdl:input message="tns:GetUserReturnPathSoapIn" />
+      <wsdl:output message="tns:GetUserReturnPathSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dsGetUserDomains">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Get User's personal domain setting
+      </wsdl:documentation>
+      <wsdl:input message="tns:dsGetUserDomainsSoapIn" />
+      <wsdl:output message="tns:dsGetUserDomainsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dsGetUserReturnPaths">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Get user return paths as dataset
+      </wsdl:documentation>
+      <wsdl:input message="tns:dsGetUserReturnPathsSoapIn" />
+      <wsdl:output message="tns:dsGetUserReturnPathsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dsGetUserSettings">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Get user setting as dataset,includes returnpath, customheader, userdomains
+      </wsdl:documentation>
+      <wsdl:input message="tns:dsGetUserSettingsSoapIn" />
+      <wsdl:output message="tns:dsGetUserSettingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAliveServer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Get An Alive SMTP Server
+      </wsdl:documentation>
+      <wsdl:input message="tns:GetAliveServerSoapIn" />
+      <wsdl:output message="tns:GetAliveServerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignSentCount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Get Campaign Sent Count
+      </wsdl:documentation>
+      <wsdl:input message="tns:GetCampaignSentCountSoapIn" />
+      <wsdl:output message="tns:GetCampaignSentCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dsGetCampaignLinks">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Campaign Links</wsdl:documentation>
+      <wsdl:input message="tns:dsGetCampaignLinksSoapIn" />
+      <wsdl:output message="tns:dsGetCampaignLinksSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewCampaignLink">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Add New Link to Campaign
+      </wsdl:documentation>
+      <wsdl:input message="tns:AddNewCampaignLinkSoapIn" />
+      <wsdl:output message="tns:AddNewCampaignLinkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dsGetActiveSMSCampaignSubscribers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Get SMS campaign subscriber version 0.9 send Sms ,only one spread engine
+      </wsdl:documentation>
+      <wsdl:input message="tns:dsGetActiveSMSCampaignSubscribersSoapIn" />
+      <wsdl:output message="tns:dsGetActiveSMSCampaignSubscribersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CompleteSMSCampaign">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Complete SMS Sending, version 0.9 only
+      </wsdl:documentation>
+      <wsdl:input message="tns:CompleteSMSCampaignSoapIn" />
+      <wsdl:output message="tns:CompleteSMSCampaignSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UnsubscribePhone">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        unsubscribe SMS Phone, version 0.9 only
+      </wsdl:documentation>
+      <wsdl:input message="tns:UnsubscribePhoneSoapIn" />
+      <wsdl:output message="tns:UnsubscribePhoneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dsGetServersInGroup">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Get the Servers settings in Group. If GroupNum &lt; 0 then return all servers
+      </wsdl:documentation>
+      <wsdl:input message="tns:dsGetServersInGroupSoapIn" />
+      <wsdl:output message="tns:dsGetServersInGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dsGetCampaignCreatives">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Get Campaign's multi Creatives
+      </wsdl:documentation>
+      <wsdl:input message="tns:dsGetCampaignCreativesSoapIn" />
+      <wsdl:output message="tns:dsGetCampaignCreativesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dsGetURLTrackings">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Get the popular urls of the campaign(for automatic email)
+      </wsdl:documentation>
+      <wsdl:input message="tns:dsGetURLTrackingsSoapIn" />
+      <wsdl:output message="tns:dsGetURLTrackingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dsGetCategoryTrackings">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Get the popular urls of the campaign(for automatic email)
+      </wsdl:documentation>
+      <wsdl:input message="tns:dsGetCategoryTrackingsSoapIn" />
+      <wsdl:output message="tns:dsGetCategoryTrackingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CompleteWhatsAppCampaign">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Complete WhatsApp Sending, version 0.9 only
+      </wsdl:documentation>
+      <wsdl:input message="tns:CompleteWhatsAppCampaignSoapIn" />
+      <wsdl:output message="tns:CompleteWhatsAppCampaignSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadWhatsAppStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Complete whatsapp Sending, version 0.9 only
+      </wsdl:documentation>
+      <wsdl:input message="tns:UploadWhatsAppStatusSoapIn" />
+      <wsdl:output message="tns:UploadWhatsAppStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dsGetActiveWhatsAppCampaignSubscribers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Get whatsapp campaign subscriber version 0.9 send whatsapp ,only one spread engine
+      </wsdl:documentation>
+      <wsdl:input message="tns:dsGetActiveWhatsAppCampaignSubscribersSoapIn" />
+      <wsdl:output message="tns:dsGetActiveWhatsAppCampaignSubscribersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dsGetActiveWhatsAppChannel">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Get whatsapp channel version 0.9 send whatsapp ,only one spread engine
+      </wsdl:documentation>
+      <wsdl:input message="tns:dsGetActiveWhatsAppChannelSoapIn" />
+      <wsdl:output message="tns:dsGetActiveWhatsAppChannelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetWhatsAppStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Set whatsapp account status version 0.9 send whatsapp ,only one spread engine
+      </wsdl:documentation>
+      <wsdl:input message="tns:SetWhatsAppStatusSoapIn" />
+      <wsdl:output message="tns:SetWhatsAppStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountLang">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        Get account language setting for complete mail.
+      </wsdl:documentation>
+      <wsdl:input message="tns:GetAccountLangSoapIn" />
+      <wsdl:output message="tns:GetAccountLangSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TryAuth">
+      <soap:operation soapAction="http://tempuri.org/TryAuth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetServerSettings">
+      <soap:operation soapAction="http://tempuri.org/dsGetServerSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetAllServerSettings">
+      <soap:operation soapAction="http://tempuri.org/dsGetAllServerSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetDeliveryDomainSettings">
+      <soap:operation soapAction="http://tempuri.org/dsGetDeliveryDomainSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetUserDeliveryDomainSettings">
+      <soap:operation soapAction="http://tempuri.org/dsGetUserDeliveryDomainSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetEngineServers">
+      <soap:operation soapAction="http://tempuri.org/dsGetEngineServers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetDomainPreferredServers">
+      <soap:operation soapAction="http://tempuri.org/dsGetDomainPreferredServers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServerActive">
+      <soap:operation soapAction="http://tempuri.org/UpdateServerActive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetCampaignSubscribers">
+      <soap:operation soapAction="http://tempuri.org/dsGetCampaignSubscribers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetActiveCampaignSubscribers">
+      <soap:operation soapAction="http://tempuri.org/dsGetActiveCampaignSubscribers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetHeaderFooter">
+      <soap:operation soapAction="http://tempuri.org/dsGetHeaderFooter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompleteBatch">
+      <soap:operation soapAction="http://tempuri.org/CompleteBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchUpdateCampaignCategorySubscriber">
+      <soap:operation soapAction="http://tempuri.org/BatchUpdateCampaignCategorySubscriber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmailSent">
+      <soap:operation soapAction="http://tempuri.org/UpdateEmailSent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchUpdateFailedSentLog">
+      <soap:operation soapAction="http://tempuri.org/BatchUpdateFailedSentLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchUpdateSMSTransLog">
+      <soap:operation soapAction="http://tempuri.org/BatchUpdateSMSTransLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServerStatus">
+      <soap:operation soapAction="http://tempuri.org/UpdateServerStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServerStatusRPC">
+      <soap:operation soapAction="http://newintra.reasonables.com/UpdateServerStatusRPC" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HealthCheck">
+      <soap:operation soapAction="http://tempuri.org/HealthCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserTimezoneIndex">
+      <soap:operation soapAction="http://tempuri.org/GetUserTimezoneIndex" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserReturnPath">
+      <soap:operation soapAction="http://tempuri.org/GetUserReturnPath" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetUserDomains">
+      <soap:operation soapAction="http://tempuri.org/dsGetUserDomains" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetUserReturnPaths">
+      <soap:operation soapAction="http://tempuri.org/dsGetUserReturnPaths" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetUserSettings">
+      <soap:operation soapAction="http://tempuri.org/dsGetUserSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAliveServer">
+      <soap:operation soapAction="http://tempuri.org/GetAliveServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignSentCount">
+      <soap:operation soapAction="http://tempuri.org/GetCampaignSentCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetCampaignLinks">
+      <soap:operation soapAction="http://tempuri.org/dsGetCampaignLinks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewCampaignLink">
+      <soap:operation soapAction="http://tempuri.org/AddNewCampaignLink" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetActiveSMSCampaignSubscribers">
+      <soap:operation soapAction="http://tempuri.org/dsGetActiveSMSCampaignSubscribers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompleteSMSCampaign">
+      <soap:operation soapAction="http://tempuri.org/CompleteSMSCampaign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnsubscribePhone">
+      <soap:operation soapAction="http://tempuri.org/UnsubscribePhone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetServersInGroup">
+      <soap:operation soapAction="http://tempuri.org/dsGetServersInGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetCampaignCreatives">
+      <soap:operation soapAction="http://tempuri.org/dsGetCampaignCreatives" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetURLTrackings">
+      <soap:operation soapAction="http://tempuri.org/dsGetURLTrackings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetCategoryTrackings">
+      <soap:operation soapAction="http://tempuri.org/dsGetCategoryTrackings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompleteWhatsAppCampaign">
+      <soap:operation soapAction="http://tempuri.org/CompleteWhatsAppCampaign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadWhatsAppStatus">
+      <soap:operation soapAction="http://tempuri.org/UploadWhatsAppStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetActiveWhatsAppCampaignSubscribers">
+      <soap:operation soapAction="http://tempuri.org/dsGetActiveWhatsAppCampaignSubscribers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetActiveWhatsAppChannel">
+      <soap:operation soapAction="http://tempuri.org/dsGetActiveWhatsAppChannel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetWhatsAppStatus">
+      <soap:operation soapAction="http://tempuri.org/SetWhatsAppStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountLang">
+      <soap:operation soapAction="http://tempuri.org/GetAccountLang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TryAuth">
+      <soap12:operation soapAction="http://tempuri.org/TryAuth" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetServerSettings">
+      <soap12:operation soapAction="http://tempuri.org/dsGetServerSettings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetAllServerSettings">
+      <soap12:operation soapAction="http://tempuri.org/dsGetAllServerSettings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetDeliveryDomainSettings">
+      <soap12:operation soapAction="http://tempuri.org/dsGetDeliveryDomainSettings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetUserDeliveryDomainSettings">
+      <soap12:operation soapAction="http://tempuri.org/dsGetUserDeliveryDomainSettings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetEngineServers">
+      <soap12:operation soapAction="http://tempuri.org/dsGetEngineServers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetDomainPreferredServers">
+      <soap12:operation soapAction="http://tempuri.org/dsGetDomainPreferredServers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServerActive">
+      <soap12:operation soapAction="http://tempuri.org/UpdateServerActive" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetCampaignSubscribers">
+      <soap12:operation soapAction="http://tempuri.org/dsGetCampaignSubscribers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetActiveCampaignSubscribers">
+      <soap12:operation soapAction="http://tempuri.org/dsGetActiveCampaignSubscribers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetHeaderFooter">
+      <soap12:operation soapAction="http://tempuri.org/dsGetHeaderFooter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompleteBatch">
+      <soap12:operation soapAction="http://tempuri.org/CompleteBatch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchUpdateCampaignCategorySubscriber">
+      <soap12:operation soapAction="http://tempuri.org/BatchUpdateCampaignCategorySubscriber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmailSent">
+      <soap12:operation soapAction="http://tempuri.org/UpdateEmailSent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchUpdateFailedSentLog">
+      <soap12:operation soapAction="http://tempuri.org/BatchUpdateFailedSentLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchUpdateSMSTransLog">
+      <soap12:operation soapAction="http://tempuri.org/BatchUpdateSMSTransLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServerStatus">
+      <soap12:operation soapAction="http://tempuri.org/UpdateServerStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServerStatusRPC">
+      <soap12:operation soapAction="http://newintra.reasonables.com/UpdateServerStatusRPC" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HealthCheck">
+      <soap12:operation soapAction="http://tempuri.org/HealthCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserTimezoneIndex">
+      <soap12:operation soapAction="http://tempuri.org/GetUserTimezoneIndex" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserReturnPath">
+      <soap12:operation soapAction="http://tempuri.org/GetUserReturnPath" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetUserDomains">
+      <soap12:operation soapAction="http://tempuri.org/dsGetUserDomains" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetUserReturnPaths">
+      <soap12:operation soapAction="http://tempuri.org/dsGetUserReturnPaths" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetUserSettings">
+      <soap12:operation soapAction="http://tempuri.org/dsGetUserSettings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAliveServer">
+      <soap12:operation soapAction="http://tempuri.org/GetAliveServer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignSentCount">
+      <soap12:operation soapAction="http://tempuri.org/GetCampaignSentCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetCampaignLinks">
+      <soap12:operation soapAction="http://tempuri.org/dsGetCampaignLinks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewCampaignLink">
+      <soap12:operation soapAction="http://tempuri.org/AddNewCampaignLink" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetActiveSMSCampaignSubscribers">
+      <soap12:operation soapAction="http://tempuri.org/dsGetActiveSMSCampaignSubscribers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompleteSMSCampaign">
+      <soap12:operation soapAction="http://tempuri.org/CompleteSMSCampaign" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnsubscribePhone">
+      <soap12:operation soapAction="http://tempuri.org/UnsubscribePhone" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetServersInGroup">
+      <soap12:operation soapAction="http://tempuri.org/dsGetServersInGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetCampaignCreatives">
+      <soap12:operation soapAction="http://tempuri.org/dsGetCampaignCreatives" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetURLTrackings">
+      <soap12:operation soapAction="http://tempuri.org/dsGetURLTrackings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetCategoryTrackings">
+      <soap12:operation soapAction="http://tempuri.org/dsGetCategoryTrackings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompleteWhatsAppCampaign">
+      <soap12:operation soapAction="http://tempuri.org/CompleteWhatsAppCampaign" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadWhatsAppStatus">
+      <soap12:operation soapAction="http://tempuri.org/UploadWhatsAppStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetActiveWhatsAppCampaignSubscribers">
+      <soap12:operation soapAction="http://tempuri.org/dsGetActiveWhatsAppCampaignSubscribers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsGetActiveWhatsAppChannel">
+      <soap12:operation soapAction="http://tempuri.org/dsGetActiveWhatsAppChannel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetWhatsAppStatus">
+      <soap12:operation soapAction="http://tempuri.org/SetWhatsAppStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountLang">
+      <soap12:operation soapAction="http://tempuri.org/GetAccountLang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://iws.reasonablespread.com/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://iws.reasonablespread.com/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
